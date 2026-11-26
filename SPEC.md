@@ -16,7 +16,7 @@
 
 ## 3. Respuesta a los problemas
   - Los alumnos se saltan vídeos: Opción de contenido corto y resumido.
-  - Los itinerarios son iguales para todos: Test inicial para valorar el conocimiento y así poder saltar a la parte del curso que no conoce.
+  - Los itinerarios son iguales para todos: Test inicial en el módulo para valorar el conocimiento y así poder saltar a la parte que no conoce.
   - No sabemos si el alumno aprende: Tests gamificados (por cada lección), obligando al usuario a volver a ver las partes del vídeo en las que ha fallado.
   - El acompañamiento no llega a todos: Tutor digital, mediante un chatbot.
 
@@ -33,7 +33,7 @@
   ![Diagrama de arquitectura](docs/img/arquitectura.jpg)
 
 ## 6. Modelo de datos y flujo hacia la IA
-  Utilizaremos la IA para un chatbot, edición de video y generación de tests dinámicos. Los datos que saldrían serían los que el usuario exponga en el chatbot. Para que haya privacidad en la información, utilizaríamos una IA local para que no salieran los datos a luz.
+  Utilizaremos la IA para un chatbot, edición+transcripción de video y generación de tests dinámicos. Los datos que saldrían serían los que el usuario exponga en el chatbot. Para que haya privacidad en la información, utilizaríamos una IA local para que el tratamiento de datos dependiera exclusivamente de la empresa y no de externas (explicar en un apartado de la app o en el chatbot si preguntan los procesos de eliminación de chats pasados para no conservar información personal)
 
 ## 7. Agentes de IA
 
@@ -52,6 +52,11 @@
 ## 10. Idea original
 
   - Introducción de shorts: Mejora el aprendizaje del alumno haciéndolo de manera mas interactiva.
+  - Introducción de test: pruebas de conocimiento tanto para aprender como dinamizar lo que el alumno debe estudiar, lo que ayuda a reiterar contenidos o saltarlos.
+  - Sectorización de vídeos con descripción: índices especiales en los vídeos para saltarlos según tema y para saber qué debe de ver un estudiante si falla una pregunta del test.
+  - Tutor digital: chat para resolver dudas del temario que pida el estudiante o respecto todo lo que envuelve el producto (480 Academy).
+
+
 
 ## 11. Alcance para el 30/11
 
