@@ -46,6 +46,8 @@
   - **Transcribir vídeos:** pasa el audio de los vídeos a texto y lo guarda en la BBDD.
   - **Editor de vídeos:** corta los vídeos largos en shorts y los guarda en la BBDD.
 
+  La IA frontera, la transcripción y el editor de vídeos son un paso previo y externo a la app: se usan una sola vez para preparar el catálogo y la app nunca procesa vídeos.
+
   Los datos del alumno solo pasan por la app, la BBDD y la IA local. La IA frontera solo trabaja con el contenido de los cursos, nunca con datos de alumnos.
 
   Este es el diseño final. Para la demo del 30/11 la IA local queda fuera porque se sale del alcance de una demo (ver apartado 11).
@@ -96,6 +98,7 @@
 
   Estaría fuera de nuestro alcance el uso de IA local, ya sería inviable por el tema hardware, la implementación del chatbot ya que no disponemos de IA local.
   Entra todo el flujo de la interacción con un curso.
+  Para la demo, los shorts y las transcripciones de los vídeos del curso ya estarán preparados de antes, así que no construimos el editor de vídeos.
 
 
 
