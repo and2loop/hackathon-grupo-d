@@ -1,5 +1,6 @@
 ## 1. El alumno y su problema
-  La solución propuesta, principalmente, es para los alumnos que se saltan los videos, ya sea por aburrimiento, tendencias, contenido poco dinámico...
+  La solución propuesta, principalmente, es para los alumnos de 480 Academy que hacen los cursos online desde el móvil.
+  Hoy en día muchos se saltan los vídeos, ya sea por aburrimiento, tendencias (están acostumbrados a contenido corto), contenido poco dinámico...
 
 ## 2. Flujo del alumno
 
@@ -72,8 +73,6 @@
   - Introducción de test: pruebas de conocimiento tanto para aprender como dinamizar lo que el alumno debe estudiar, lo que ayuda a reiterar contenidos o saltarlos.
   - Sectorización de vídeos con descripción: índices especiales en los vídeos para saltarlos según tema y para saber qué debe de ver un estudiante si falla una pregunta del test.
   - Tutor digital: chat para resolver dudas del temario que pida el estudiante o respecto todo lo que envuelve el producto (480 Academy).
-
-
 
 ## 11. Alcance para el 30/11
 
