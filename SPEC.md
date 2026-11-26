@@ -3,6 +3,17 @@
 
 ## 2. Flujo del alumno
 
+  ![Boceto del flujo del alumno](docs/img/flujo-alumno.jpg)
+
+  1. **Login:** el alumno entra con su usuario y contraseña, o se registra si es la primera vez.
+  2. **Home:** ve los cursos nuevos, los que son tendencia y los que se están promocionando, y elige uno.
+  3. **Mis cursos:** aparecen los cursos que está haciendo, con el temario dividido en lecciones (1.1, 1.2...) para ver por dónde va.
+  4. **Vídeos / Módulo:** ve el vídeo de la lección y, al terminar, puede hacer el test de ese módulo.
+  5. **Shorts / Módulo:** la misma lección en vídeos cortos que se van pasando deslizando, como en YouTube Shorts o TikTok.
+  6. **Repaso / Tutor:** chat con el tutor digital para resolver dudas y repasar lo que ha fallado en los tests.
+
+  La barra de abajo tiene cuatro accesos: inicio, tests/repaso, cursos y perfil.
+
 ## 3. Respuesta a los problemas
   - Los alumnos se saltan vídeos: Opción de contenido corto y resumido.
   - Los itinerarios son iguales para todos: Test inicial para valorar el conocimiento y así poder saltar a la parte del curso que no conoce.
@@ -19,6 +30,8 @@
 
 ## 5. Arquitectura
 
+  ![Diagrama de arquitectura](docs/img/arquitectura.jpg)
+
 ## 6. Modelo de datos y flujo hacia la IA
   Utilizaremos la IA para un chatbot, edición de video y generación de tests dinámicos. Los datos que saldrían serían los que el usuario exponga en el chatbot. Para que haya privacidad en la información, utilizaríamos una IA local para que no salieran los datos a luz.
 
@@ -29,7 +42,7 @@
   | Chatbot | Es el encargado de manejar el chatbot | Qwen3 8B, ya que consume muy pocos recursos y es suficiente para hacer un chatbot | Texto | Texto | Límite de solicitudes/tokens y límites de respuesta, para que no se salga del contexto |
   | Editor de video | Coge vídeos ya creados y crea shorts a partir de ellos, y además particiona los vídeos | Modelo frontera + MCP editor | Vídeos | Vídeos | No añadir contenido inventado |
   | Generación de test | Coge la trascripción del vídeo y genera tests a partir de las transcripciones | Qwen3 8B, ya que no se necesita ningún modelo grande para hacer esto | Texto | Texto | Contenido que no se salga de lo impartido |
-  | Trascripción | Convertir audio a texto | WhisperX, porque es el mejor modelo de transcripción | Vídeo | Texto | No generar texto que esté en el vídeo |
+  | Trascripción | Convertir audio a texto | WhisperX, porque es el mejor modelo de transcripción | Vídeo | Texto | No generar texto que no esté en el vídeo |
 
 ## 8. Contenido
 
