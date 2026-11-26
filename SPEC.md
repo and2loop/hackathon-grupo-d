@@ -16,17 +16,20 @@
 
 ## 3. Respuesta a los problemas
   - Los alumnos se saltan vídeos: Opción de contenido corto y resumido.
-  - Los itinerarios son iguales para todos: Test inicial en el módulo para valorar el conocimiento y así poder saltar a la parte que no conoce.
+  - Los itinerarios son iguales para todos: Test inicial para valorar el conocimiento y así poder saltar a la parte del curso que no conoce.
   - No sabemos si el alumno aprende: Tests gamificados (por cada lección), obligando al usuario a volver a ver las partes del vídeo en las que ha fallado.
   - El acompañamiento no llega a todos: Tutor digital, mediante un chatbot.
 
 ## 4. Historias de usuario
-  | Como... | Quiero... | Para... | Prioridad (imprecindible / deseable / fuera) | Criterios de aceptación
+  | Como... | Quiero... | Para... | Prioridad (imprescindible / deseable / fuera) | Criterios de aceptación
   | --- | --- | --- | --- | --- |
-  | Usuario | Acceder un curso de la manera más eficiente | tener un aprendizaje que sea amable con mi tiempo | deseable | 
-  | Usuario | Una intefaz accesible e intuitiva | Facilitarme el uso de la aplicación | imprescindible | 
-  | Usuario | Privacidad en mis datos | Que ninguna IA se aproveche de ellos | imprescindible | Que sea trasparente todo el flujo de mis datos
-  | Usuario |
+  | Usuario | Acceder un curso de la manera más eficiente | tener un aprendizaje que sea amable con mi tiempo | deseable | Que desde la home pueda entrar a un curso y seguir por donde lo dejé en pocos pasos
+  | Usuario | Una interfaz accesible e intuitiva | Facilitarme el uso de la aplicación | imprescindible | Que se pueda llegar a todas las pantallas desde la barra de abajo
+  | Usuario | Privacidad en mis datos | Que ninguna IA se aproveche de ellos | imprescindible | Que sea transparente todo el flujo de mis datos
+  | Usuario | Ver el contenido en vídeos cortos | Aprender sin tener que ver el vídeo entero | imprescindible | Que cada lección tenga sus shorts y se puedan pasar deslizando
+  | Usuario | Hacer un test al acabar cada lección | Saber si he entendido el contenido | imprescindible | Que si fallo una pregunta me lleve a la parte del vídeo donde se explica
+  | Usuario | Hacer un test al empezar un módulo | Saltarme lo que ya sé | deseable | Que según el resultado se salten las lecciones que ya domino
+  | Usuario | Un tutor digital al que preguntarle dudas | Resolverlas sin tener que esperar a un tutor | fuera | Que responda solo sobre el temario del curso y la plataforma
 
 ## 5. Arquitectura
 
@@ -47,7 +50,7 @@
   Este es el diseño final. Para la demo del 30/11 la IA local queda fuera porque se sale del alcance de una demo (ver apartado 11).
 
 ## 6. Modelo de datos y flujo hacia la IA
-  Utilizaremos la IA para un chatbot, edición+transcripción de video y generación de tests dinámicos. Los datos que saldrían serían los que el usuario exponga en el chatbot. Para que haya privacidad en la información, utilizaríamos una IA local para que el tratamiento de datos dependiera exclusivamente de la empresa y no de externas (explicar en un apartado de la app o en el chatbot si preguntan los procesos de eliminación de chats pasados para no conservar información personal)
+  Utilizaremos la IA para un chatbot, edición de video y generación de tests dinámicos. Los datos que saldrían serían los que el usuario exponga en el chatbot. Para que haya privacidad en la información, utilizaríamos una IA local para que no salieran los datos a luz.
 
 ## 7. Agentes de IA
 
@@ -66,11 +69,6 @@
 ## 10. Idea original
 
   - Introducción de shorts: Mejora el aprendizaje del alumno haciéndolo de manera mas interactiva.
-  - Introducción de test: pruebas de conocimiento tanto para aprender como dinamizar lo que el alumno debe estudiar, lo que ayuda a reiterar contenidos o saltarlos.
-  - Sectorización de vídeos con descripción: índices especiales en los vídeos para saltarlos según tema y para saber qué debe de ver un estudiante si falla una pregunta del test.
-  - Tutor digital: chat para resolver dudas del temario que pida el estudiante o respecto todo lo que envuelve el producto (480 Academy).
-
-
 
 ## 11. Alcance para el 30/11
 
