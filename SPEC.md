@@ -16,7 +16,7 @@
 
 ## 3. Respuesta a los problemas
   - Los alumnos se saltan vídeos: Opción de contenido corto y resumido.
-  - Los itinerarios son iguales para todos: Test inicial en el módulo para valorar el conocimiento y así poder saltar a la parte que no conoce.
+  - Los itinerarios son iguales para todos: Test inicial para valorar el conocimiento y así poder saltar a la parte del curso que no conoce.
   - No sabemos si el alumno aprende: Tests gamificados (por cada lección), obligando al usuario a volver a ver las partes del vídeo en las que ha fallado.
   - El acompañamiento no llega a todos: Tutor digital, mediante un chatbot.
 
@@ -32,8 +32,22 @@
 
   ![Diagrama de arquitectura](docs/img/arquitectura.jpg)
 
+  - **Cliente:** el alumno, que usa la app desde el móvil.
+  - **Aplicación:** la app móvil. Es la pieza central: muestra los cursos, los vídeos, los shorts y los tests, y se comunica con la BBDD y con las IAs.
+  - **BBDD:** guarda los cursos, los usuarios, el progreso, los shorts y las transcripciones. La app y las IAs leen y escriben aquí.
+  - **Cursos:** el contenido original de 480 Academy (vídeos y textos), que se carga en la BBDD.
+  - **IA local (tutor digital):** el chatbot que resuelve dudas del alumno. Consulta los cursos en la BBDD para responder. Es local para que los datos del alumno no salgan fuera.
+  - **Test:** los tests de cada módulo, que genera la IA local a partir de las transcripciones. El alumno los hace desde la app.
+  - **IA frontera:** coge la información de los cursos de la BBDD, organiza el trabajo de transcribir y editar los vídeos y vuelve a subir el resultado.
+  - **Transcribir vídeos:** pasa el audio de los vídeos a texto y lo guarda en la BBDD.
+  - **Editor de vídeos:** corta los vídeos largos en shorts y los guarda en la BBDD.
+
+  Los datos del alumno solo pasan por la app, la BBDD y la IA local. La IA frontera solo trabaja con el contenido de los cursos, nunca con datos de alumnos.
+
+  Este es el diseño final. Para la demo del 30/11 la IA local queda fuera porque se sale del alcance de una demo (ver apartado 11).
+
 ## 6. Modelo de datos y flujo hacia la IA
-  Utilizaremos la IA para un chatbot, edición+transcripción de video y generación de tests dinámicos. Los datos que saldrían serían los que el usuario exponga en el chatbot. Para que haya privacidad en la información, utilizaríamos una IA local para que el tratamiento de datos dependiera exclusivamente de la empresa y no de externas (explicar en un apartado de la app o en el chatbot si preguntan los procesos de eliminación de chats pasados para no conservar información personal)
+  Utilizaremos la IA para un chatbot, edición de video y generación de tests dinámicos. Los datos que saldrían serían los que el usuario exponga en el chatbot. Para que haya privacidad en la información, utilizaríamos una IA local para que no salieran los datos a luz.
 
 ## 7. Agentes de IA
 
@@ -52,11 +66,6 @@
 ## 10. Idea original
 
   - Introducción de shorts: Mejora el aprendizaje del alumno haciéndolo de manera mas interactiva.
-  - Introducción de test: pruebas de conocimiento tanto para aprender como dinamizar lo que el alumno debe estudiar, lo que ayuda a reiterar contenidos o saltarlos.
-  - Sectorización de vídeos con descripción: índices especiales en los vídeos para saltarlos según tema y para saber qué debe de ver un estudiante si falla una pregunta del test.
-  - Tutor digital: chat para resolver dudas del temario que pida el estudiante o respecto todo lo que envuelve el producto (480 Academy).
-
-
 
 ## 11. Alcance para el 30/11
 
