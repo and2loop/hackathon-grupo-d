@@ -53,6 +53,22 @@
 ## 6. Modelo de datos y flujo hacia la IA
   Utilizaremos la IA para un chatbot, edición+transcripción de video y generación de tests dinámicos. Los datos que saldrían serían los que el usuario exponga en el chatbot. Para que haya privacidad en la información, utilizaríamos una IA local para que el tratamiento de datos dependiera exclusivamente de la empresa y no de externas (explicar en un apartado de la app o en el chatbot si preguntan los procesos de eliminación de chats pasados para no conservar información personal)
 
+  **Entidades principales:**
+  - **Alumno:** id, nombre, email y los cursos que hace.
+  - **Curso:** título, descripción y si es nuevo, tendencia o promocionado.
+  - **Módulo / Lección:** parte de un curso, con su orden (1.1, 1.2...).
+  - **Vídeo:** el vídeo de la lección, con su transcripción y dividido por temas.
+  - **Short:** trozo corto de un vídeo.
+  - **Test:** preguntas de cada lección, cada una enlazada a la parte del vídeo donde se explica.
+  - **Progreso:** qué ha visto el alumno y qué ha acertado o fallado en los tests.
+  - **Conversación:** los mensajes del alumno con el tutor.
+
+  **Datos del alumno que van a la IA:**
+  - Tutor digital: lo que escribe en el chat y su progreso, para saber qué tiene que repasar.
+  - Generación de tests, transcripción y shorts: ningún dato del alumno, solo el contenido de los cursos.
+
+  Como hay alumnos menores de 18 años y estamos sujetos al RGPD, a la IA nunca le llega el nombre ni el email del alumno, solo un id. Además, al ser una IA local, los datos no salen de la empresa.
+
 ## 7. Agentes de IA
 
   | Agente | Qué hace | Modelo y por qué | Entrada | Salida | Límites
@@ -73,6 +89,8 @@
   - Introducción de test: pruebas de conocimiento tanto para aprender como dinamizar lo que el alumno debe estudiar, lo que ayuda a reiterar contenidos o saltarlos.
   - Sectorización de vídeos con descripción: índices especiales en los vídeos para saltarlos según tema y para saber qué debe de ver un estudiante si falla una pregunta del test.
   - Tutor digital: chat para resolver dudas del temario que pida el estudiante o respecto todo lo que envuelve el producto (480 Academy).
+
+
 
 ## 11. Alcance para el 30/11
 
