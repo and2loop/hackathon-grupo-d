@@ -96,7 +96,7 @@
 
 ## 11. Alcance para el 30/11
 
-  Estaría fuera de nuestro alcance el uso de IA local, ya sería inviable por el tema hardware, la implementación del chatbot ya que no disponemos de IA local.
+  Estaría fuera de nuestro alcance el uso de IA local, ya que sería inviable por el tema hardware.
   Entra todo el flujo de la interacción con un curso.
   Para la demo, los shorts y las transcripciones de los vídeos del curso ya estarán preparados de antes, así que no construimos el editor de vídeos.
 
