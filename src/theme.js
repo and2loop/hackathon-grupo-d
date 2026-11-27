@@ -6,6 +6,7 @@ export const colors = {
   line: '#E2E6E6',
   graphite: '#1F2222',
   green: '#39FE90',
+  greenText: '#178045',
   onGreen: '#10231A',
   cyan: '#1CF9FC',
   onCyan: '#0B2A2B',

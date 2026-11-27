@@ -1,21 +1,8 @@
 import { Pressable, StyleSheet, Text, View } from 'react-native';
+import LessonVideoPreview from '../leccion/LessonVideoPreview';
+import { resumeLesson } from '../leccion/lesson';
 import { colors } from '../theme';
 import HomeIcon from './HomeIcon';
-
-export const resumeLesson = {
-  course: 'React desde cero',
-  title: '2.3 Listas y keys',
-  elapsed: '03:12',
-  duration: '09:40',
-  progress: 33,
-  remaining: 'te quedan 6 minutos',
-};
-
-export const resumeLessonDetail = {
-  title: resumeLesson.title,
-  description: `${resumeLesson.course} · ${resumeLesson.elapsed} / ${resumeLesson.duration}`,
-  message: 'La reproducción estará disponible cuando se incorpore el vídeo de esta lección.',
-};
 
 const courses = [
   {
@@ -34,7 +21,7 @@ const courses = [
   },
 ];
 
-export default function HomeScreen({ fonts, onOpenDetail }) {
+export default function HomeScreen({ fonts, onOpenDetail, onOpenLesson }) {
   return (
     <View style={styles.content}>
       <Text accessibilityRole="header" style={[styles.greeting, fonts.bold]}>
@@ -45,22 +32,10 @@ export default function HomeScreen({ fonts, onOpenDetail }) {
         accessibilityRole="button"
         accessibilityLabel={`Continuar ${resumeLesson.course}`}
         accessibilityHint={`${resumeLesson.title}, ${resumeLesson.remaining}`}
-        onPress={() => onOpenDetail(resumeLessonDetail)}
+        onPress={onOpenLesson}
         style={({ pressed }) => pressed && styles.pressed}
       >
-        <View style={styles.videoPreview}>
-          <View style={styles.greenCircle} />
-          <View style={styles.cyanCircle} />
-          <View style={styles.playButton}>
-            <HomeIcon name="play" color={colors.ink} />
-          </View>
-          <Text style={[styles.timestamp, fonts.semibold]}>
-            {resumeLesson.elapsed} / {resumeLesson.duration}
-          </Text>
-          <View style={styles.progressTrack}>
-            <View style={[styles.progressFill, { width: `${resumeLesson.progress}%` }]} />
-          </View>
-        </View>
+        <LessonVideoPreview lesson={resumeLesson} fonts={fonts} />
         <Text style={[styles.lessonTitle, fonts.bold]}>Continuar {resumeLesson.course}</Text>
         <Text style={[styles.lessonMeta, fonts.regular]}>
           {resumeLesson.title}, {resumeLesson.remaining}
@@ -98,25 +73,6 @@ export default function HomeScreen({ fonts, onOpenDetail }) {
 const styles = StyleSheet.create({
   content: { paddingHorizontal: 20 },
   greeting: { color: colors.ink, fontSize: 28, lineHeight: 31, letterSpacing: -0.56, marginTop: 8, marginBottom: 14 },
-  videoPreview: {
-    aspectRatio: 16 / 9, alignItems: 'center', justifyContent: 'center',
-    backgroundColor: colors.graphite, borderRadius: 18, overflow: 'hidden',
-  },
-  greenCircle: {
-    position: 'absolute', top: -60, right: -40, width: 180, height: 180,
-    borderRadius: 90, backgroundColor: colors.green, opacity: 0.18,
-  },
-  cyanCircle: {
-    position: 'absolute', bottom: -50, left: -30, width: 120, height: 120,
-    borderRadius: 60, backgroundColor: colors.cyan, opacity: 0.15,
-  },
-  playButton: {
-    width: 54, height: 54, borderRadius: 27, paddingLeft: 3,
-    backgroundColor: colors.white, alignItems: 'center', justifyContent: 'center',
-  },
-  timestamp: { position: 'absolute', bottom: 14, left: 12, color: colors.white, fontSize: 13 },
-  progressTrack: { position: 'absolute', bottom: 0, left: 0, right: 0, height: 4, backgroundColor: '#FFFFFF40' },
-  progressFill: { height: '100%', backgroundColor: colors.green },
   lessonTitle: { color: colors.ink, fontSize: 19, lineHeight: 22, letterSpacing: -0.19, marginTop: 14, marginBottom: 2 },
   lessonMeta: { color: colors.muted, fontSize: 14, lineHeight: 20 },
   sectionTitle: { color: colors.ink, fontSize: 18, lineHeight: 25, letterSpacing: -0.18, marginTop: 24, marginBottom: 10 },

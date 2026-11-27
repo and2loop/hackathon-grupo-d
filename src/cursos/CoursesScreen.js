@@ -1,14 +1,15 @@
 import { useState } from 'react';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 import Svg, { Circle } from 'react-native-svg';
+import { resumeLesson } from '../leccion/lesson';
 import { colors } from '../theme';
 
 const courses = [
   {
-    title: 'React desde cero',
+    title: resumeLesson.course,
     progress: 62,
     summary: 'Lección 6 de 9',
-    nextLesson: '2.3 Listas y keys',
+    nextLesson: resumeLesson.title,
   },
   {
     title: 'Git y GitHub en equipo',
@@ -75,7 +76,7 @@ function CourseCard({ course, fonts, onPress }) {
   );
 }
 
-export default function CoursesScreen({ fonts, onOpenDetail, onScrollToTop }) {
+export default function CoursesScreen({ fonts, onOpenDetail, onOpenLesson, onOpenShorts, onScrollToTop }) {
   const [showCompleted, setShowCompleted] = useState(false);
   const visibleCourses = showCompleted ? completedCourses : courses;
 
@@ -87,7 +88,7 @@ export default function CoursesScreen({ fonts, onOpenDetail, onScrollToTop }) {
       detail.actions = [
         {
           label: 'Vídeo',
-          onPress: () => onOpenDetail({
+          onPress: title === resumeLesson.course ? onOpenLesson : () => onOpenDetail({
             title: nextLesson,
             description: title,
             message: 'La reproducción estará disponible cuando se incorpore el vídeo de esta lección.',
@@ -95,7 +96,7 @@ export default function CoursesScreen({ fonts, onOpenDetail, onScrollToTop }) {
         },
         {
           label: 'Shorts',
-          onPress: () => onOpenDetail({
+          onPress: title === resumeLesson.course ? onOpenShorts : () => onOpenDetail({
             title: nextLesson,
             description: title,
             message: 'Los shorts estarán disponibles cuando se incorporen los clips de esta lección.',

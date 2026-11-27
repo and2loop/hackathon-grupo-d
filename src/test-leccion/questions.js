@@ -1,0 +1,47 @@
+export const lessonQuestions = [
+  {
+    prompt: '¿Qué método puedes usar para convertir un array en una lista de elementos JSX?',
+    options: ['filter()', 'sort()', 'join()', 'map()'],
+    correct: 3,
+    timestamp: '01:20',
+    topic: 'map() dentro de JSX',
+    explanation: 'map() devuelve un nuevo array. Si devuelves un elemento JSX por cada dato, React puede renderizar ese array como una lista.',
+  },
+  {
+    prompt: '¿Para qué sirve la prop key?',
+    options: [
+      'Darle estilo al elemento',
+      'Que React distinga cada elemento',
+      'Ordenar la lista',
+      'Hacerlo accesible',
+    ],
+    correct: 1,
+    timestamp: '03:12',
+    topic: 'Qué es una key',
+    explanation: 'React usa la key para reconocer el mismo elemento entre renderizados, aunque cambie de posición.',
+  },
+  {
+    prompt: 'Si una lista se puede reordenar, ¿qué valor conviene usar como key?',
+    options: ['El ID estable del elemento', 'El índice del elemento', 'Un número aleatorio', 'La longitud de la lista'],
+    correct: 0,
+    timestamp: '05:30',
+    topic: 'El índice como key',
+    explanation: 'El ID identifica el dato aunque cambie de posición. El índice identifica la posición y podría acabar asociado a otro dato.',
+  },
+  {
+    prompt: '¿Entre qué elementos debe ser única una key?',
+    options: ['En toda la app', 'En todo el curso', 'Entre los hermanos de la misma lista', 'Solo entre los elementos visibles'],
+    correct: 2,
+    timestamp: '03:12',
+    topic: 'Qué es una key',
+    explanation: 'Las claves deben ser únicas entre los elementos hermanos de una lista. Puedes reutilizar los mismos IDs en listas distintas.',
+  },
+  {
+    prompt: 'Al devolver un <li> por cada tarea con map(), ¿dónde pones la key?',
+    options: ['En el <ul>', 'En cada <li> devuelto por map()', 'En el array de tareas', 'En el texto de cada tarea'],
+    correct: 1,
+    timestamp: '01:20',
+    topic: 'map() dentro de JSX',
+    explanation: 'La key va en el elemento que devuelves directamente desde map(). En este caso, se escribe en cada <li>.',
+  },
+];
