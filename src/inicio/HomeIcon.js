@@ -7,17 +7,18 @@ const paths = {
   user: 'M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6',
   bell: 'M6 16v-5a6 6 0 0 1 12 0v5l2 2H4z M10 21h4',
   play: 'M7 4l13 8-13 8z',
+  send: 'M4 12l16-8-6 17-3-7z',
   shield: 'M12 3l8 3v6c0 5-4 8-8 9-4-1-8-4-8-9V6z',
   chart: 'M4 20V10M10 20V4M16 20v-7M22 20H2',
   chevron: 'M9 5l7 7-7 7',
 };
 
-export default function HomeIcon({ name, color, size = 22 }) {
+export default function HomeIcon({ name, color, size = 22, filled = name === 'play' }) {
   return (
     <Svg width={size} height={size} viewBox="0 0 24 24" accessible={false}>
       <Path
         d={paths[name]}
-        fill={name === 'play' ? color : 'none'}
+        fill={filled ? color : 'none'}
         stroke={color}
         strokeWidth={1.9}
         strokeLinecap="round"

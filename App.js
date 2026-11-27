@@ -5,7 +5,8 @@ import { Onest_800ExtraBold } from '@expo-google-fonts/onest/800ExtraBold';
 import { useFonts } from 'expo-font';
 import { StatusBar } from 'react-native';
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
-import HomeScreen from './src/inicio/HomeScreen';
+import AcademyScreen from './src/AcademyScreen';
+import { colors, onest, system } from './src/theme';
 
 export default function App() {
   const [fontsLoaded, fontError] = useFonts({
@@ -19,9 +20,9 @@ export default function App() {
 
   return (
     <SafeAreaProvider>
-      <SafeAreaView style={{ flex: 1, backgroundColor: '#FFFFFF' }}>
+      <SafeAreaView style={{ flex: 1, backgroundColor: colors.white }}>
         <StatusBar barStyle="dark-content" />
-        <HomeScreen useOnest={fontsLoaded} />
+        <AcademyScreen fonts={fontsLoaded ? onest : system} />
       </SafeAreaView>
     </SafeAreaProvider>
   );
