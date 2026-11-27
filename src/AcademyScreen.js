@@ -1,8 +1,9 @@
-import { useRef, useState } from 'react';
-import { Modal, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { useCallback, useEffect, useRef, useState } from 'react';
+import { BackHandler, Modal, Platform, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 import CoursesScreen from './cursos/CoursesScreen';
 import HomeIcon from './inicio/HomeIcon';
 import HomeScreen, { resumeLesson, resumeLessonDetail } from './inicio/HomeScreen';
+import LessonTestScreen from './test-leccion/LessonTestScreen';
 import { colors } from './theme';
 
 const destinations = [
@@ -15,11 +16,60 @@ const destinations = [
 export default function AcademyScreen({ fonts }) {
   const scrollView = useRef(null);
   const [screen, setScreen] = useState('Inicio');
+  const [showTest, setShowTest] = useState(false);
   const [detail, setDetail] = useState(null);
   const [unread, setUnread] = useState(true);
 
-  function scrollToTop() {
+  const scrollToTop = useCallback(() => {
     scrollView.current?.scrollTo({ y: 0, animated: false });
+  }, []);
+
+  const openTest = useCallback(() => {
+    setDetail(null);
+    scrollToTop();
+    setShowTest(true);
+  }, [scrollToTop]);
+
+  const openLesson = useCallback((lessonDetail) => {
+    setShowTest(false);
+    if (lessonDetail.title === resumeLesson.title) {
+      setDetail({ ...lessonDetail, actions: [{ label: 'Hacer el test', onPress: openTest }] });
+      return;
+    }
+    setDetail(lessonDetail);
+  }, [openTest]);
+
+  const returnToLesson = useCallback(() => {
+    scrollToTop();
+    openLesson(resumeLessonDetail);
+  }, [openLesson, scrollToTop]);
+
+  useEffect(() => {
+    if (!showTest || Platform.OS !== 'android') return;
+
+    const subscription = BackHandler.addEventListener('hardwareBackPress', () => {
+      returnToLesson();
+      return true;
+    });
+    return () => subscription.remove();
+  }, [showTest, returnToLesson]);
+
+  function reviewVideoPart({ topic, timestamp, explanation }) {
+    setDetail({
+      title: `Repaso del vídeo · ${timestamp}`,
+      description: topic,
+      message: `${explanation}\n\nEl vídeo de esta lección aún no está disponible.`,
+    });
+  }
+
+  function continueCourse() {
+    scrollToTop();
+    setScreen('Cursos');
+    openLesson({
+      title: `Lección ${resumeLesson.nextNumber}`,
+      description: resumeLesson.course,
+      message: 'El contenido de esta lección estará disponible cuando se incorpore al curso.',
+    });
   }
 
   function openNotifications() {
@@ -27,13 +77,14 @@ export default function AcademyScreen({ fonts }) {
     setDetail({
       title: 'Notificaciones',
       message: `Tienes una lección pendiente en ${resumeLesson.course}.`,
-      actions: [{ label: 'Ver lección', onPress: () => setDetail(resumeLessonDetail) }],
+      actions: [{ label: 'Ver lección', onPress: returnToLesson }],
     });
   }
 
   function openDestination(label) {
     if (label === 'Inicio' || label === 'Cursos') {
       scrollToTop();
+      setShowTest(false);
       setScreen(label);
       return;
     }
@@ -45,6 +96,16 @@ export default function AcademyScreen({ fonts }) {
     <View style={styles.screen}>
       <ScrollView ref={scrollView} contentContainerStyle={styles.scrollContent}>
         <View style={styles.topBar}>
+          {showTest && (
+            <Pressable
+              accessibilityRole="button"
+              accessibilityLabel="Volver a la lección"
+              onPress={returnToLesson}
+              style={({ pressed }) => [styles.back, pressed && styles.pressed]}
+            >
+              <HomeIcon name="back" color={colors.ink} />
+            </Pressable>
+          )}
           <Text style={[styles.brand, fonts.regular]} accessibilityLabel="480 Academy">
             <Text style={fonts.extraBold}>480</Text>Academy
           </Text>
@@ -60,16 +121,28 @@ export default function AcademyScreen({ fonts }) {
           </Pressable>
         </View>
 
-        {screen === 'Cursos' ? (
-          <CoursesScreen fonts={fonts} onOpenDetail={setDetail} onScrollToTop={scrollToTop} />
-        ) : (
-          <HomeScreen fonts={fonts} onOpenDetail={setDetail} />
+        {showTest && (
+          <LessonTestScreen
+            lessonTitle={resumeLesson.title}
+            nextLessonNumber={resumeLesson.nextNumber}
+            fonts={fonts}
+            onReview={reviewVideoPart}
+            onClose={returnToLesson}
+            onContinue={continueCourse}
+            onScrollToTop={scrollToTop}
+          />
+        )}
+        {!showTest && screen === 'Cursos' && (
+          <CoursesScreen fonts={fonts} onOpenDetail={setDetail} onOpenLesson={openLesson} onScrollToTop={scrollToTop} />
+        )}
+        {!showTest && screen === 'Inicio' && (
+          <HomeScreen fonts={fonts} onOpenDetail={setDetail} onOpenLesson={openLesson} />
         )}
       </ScrollView>
 
       <View accessibilityRole="tablist" style={styles.dock}>
         {destinations.map(({ label, icon }) => {
-          const active = label === screen;
+          const active = label === (showTest ? 'Cursos' : screen);
 
           return (
             <Pressable
@@ -133,6 +206,9 @@ const styles = StyleSheet.create({
   scrollContent: { paddingBottom: 106 },
   topBar: { flexDirection: 'row', alignItems: 'center', justifyContent: 'center', height: 48 },
   brand: { fontSize: 19, letterSpacing: -0.19, color: colors.ink },
+  back: {
+    position: 'absolute', left: 12, width: 44, height: 44, alignItems: 'center', justifyContent: 'center',
+  },
   notification: {
     position: 'absolute', right: 12, width: 44, height: 44, alignItems: 'center', justifyContent: 'center',
   },

@@ -75,7 +75,7 @@ function CourseCard({ course, fonts, onPress }) {
   );
 }
 
-export default function CoursesScreen({ fonts, onOpenDetail, onScrollToTop }) {
+export default function CoursesScreen({ fonts, onOpenDetail, onOpenLesson, onScrollToTop }) {
   const [showCompleted, setShowCompleted] = useState(false);
   const visibleCourses = showCompleted ? completedCourses : courses;
 
@@ -87,7 +87,7 @@ export default function CoursesScreen({ fonts, onOpenDetail, onScrollToTop }) {
       detail.actions = [
         {
           label: 'Vídeo',
-          onPress: () => onOpenDetail({
+          onPress: () => onOpenLesson({
             title: nextLesson,
             description: title,
             message: 'La reproducción estará disponible cuando se incorpore el vídeo de esta lección.',

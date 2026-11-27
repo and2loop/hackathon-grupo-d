@@ -5,6 +5,7 @@ import HomeIcon from './HomeIcon';
 export const resumeLesson = {
   course: 'React desde cero',
   title: '2.3 Listas y keys',
+  nextNumber: '2.4',
   elapsed: '03:12',
   duration: '09:40',
   progress: 33,
@@ -34,7 +35,7 @@ const courses = [
   },
 ];
 
-export default function HomeScreen({ fonts, onOpenDetail }) {
+export default function HomeScreen({ fonts, onOpenDetail, onOpenLesson }) {
   return (
     <View style={styles.content}>
       <Text accessibilityRole="header" style={[styles.greeting, fonts.bold]}>
@@ -45,7 +46,7 @@ export default function HomeScreen({ fonts, onOpenDetail }) {
         accessibilityRole="button"
         accessibilityLabel={`Continuar ${resumeLesson.course}`}
         accessibilityHint={`${resumeLesson.title}, ${resumeLesson.remaining}`}
-        onPress={() => onOpenDetail(resumeLessonDetail)}
+        onPress={() => onOpenLesson(resumeLessonDetail)}
         style={({ pressed }) => pressed && styles.pressed}
       >
         <View style={styles.videoPreview}>

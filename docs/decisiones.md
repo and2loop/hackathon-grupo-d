@@ -9,3 +9,4 @@
 ## 3. Decisión de producto que más condiciona la solución
 
 - Mis cursos usa la variante Cuadrícula de la maqueta, con el diseño Limpio y la paleta 480 original. Los cursos, sus progresos y las próximas lecciones son datos de muestra para la demo.
+- El Test de la lección usa la variante Tarjeta (versión 3), el diseño Limpio y la paleta 480 original. Las cinco preguntas de «2.3 Listas y keys» son datos locales para la demo. Cada pregunta enlaza un minuto de repaso y el intento se mantiene en memoria mientras el test está abierto.
