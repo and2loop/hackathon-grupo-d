@@ -75,7 +75,7 @@ function CourseCard({ course, fonts, onPress }) {
   );
 }
 
-export default function CoursesScreen({ fonts, onOpenDetail, onScrollToTop }) {
+export default function CoursesScreen({ fonts, onOpenDetail, onOpenShorts, onScrollToTop }) {
   const [showCompleted, setShowCompleted] = useState(false);
   const visibleCourses = showCompleted ? completedCourses : courses;
 
@@ -95,11 +95,7 @@ export default function CoursesScreen({ fonts, onOpenDetail, onScrollToTop }) {
         },
         {
           label: 'Shorts',
-          onPress: () => onOpenDetail({
-            title: nextLesson,
-            description: title,
-            message: 'Los shorts estarán disponibles cuando se incorporen los clips de esta lección.',
-          }),
+          onPress: () => onOpenShorts(title, nextLesson),
         },
       ];
     }
