@@ -10,6 +10,8 @@ const paths = {
   shield: 'M12 3l8 3v6c0 5-4 8-8 9-4-1-8-4-8-9V6z',
   chart: 'M4 20V10M10 20V4M16 20v-7M22 20H2',
   chevron: 'M9 5l7 7-7 7',
+  down: 'M5 9l7 7 7-7',
+  spark: 'M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z',
 };
 
 export default function HomeIcon({ name, color, size = 22 }) {
