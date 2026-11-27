@@ -1,5 +1,5 @@
 ## 1. El alumno y su problema
-  La solución propuesta, principalmente, es para los alumnos de 480 Academy que hacen los cursos online desde el móvil.
+  La solución propuesta, principalmente, es para los alumnos de 480 Academy que hacen los cursos online.
   Hoy en día muchos se saltan los vídeos, ya sea por aburrimiento, tendencias (están acostumbrados a contenido corto), contenido poco dinámico...
 
 ## 2. Flujo del alumno
@@ -7,13 +7,13 @@
   ![Boceto del flujo del alumno](docs/img/flujo-alumno.jpg)
 
   1. **Login:** el alumno entra con su usuario y contraseña, o se registra si es la primera vez.
-  2. **Home:** ve los cursos nuevos, los que son tendencia y los que se están promocionando, y elige uno.
+  2. **Home:** ve los cursos nuevos, los que son tendencia y los que se están promocionando, pudiendo elegir uno para iniciar.
   3. **Mis cursos:** aparecen los cursos que está haciendo, con el temario dividido en lecciones (1.1, 1.2...) para ver por dónde va.
   4. **Vídeos / Módulo:** ve el vídeo de la lección y, al terminar, puede hacer el test de ese módulo.
   5. **Shorts / Módulo:** la misma lección en vídeos cortos que se van pasando deslizando, como en YouTube Shorts o TikTok.
   6. **Repaso / Tutor:** chat con el tutor digital para resolver dudas y repasar lo que ha fallado en los tests.
 
-  La barra de abajo tiene cuatro accesos: inicio, tests/repaso, cursos y perfil.
+  La barra de abajo tiene cuatro accesos: inicio, repaso, cursos y perfil.
 
 ## 3. Respuesta a los problemas
   - Los alumnos se saltan vídeos: Opción de contenido corto y resumido.
@@ -40,8 +40,8 @@
   - **Aplicación:** la app móvil. Es la pieza central: muestra los cursos, los vídeos, los shorts y los tests, y se comunica con la BBDD y con las IAs.
   - **BBDD:** guarda los cursos, los usuarios, el progreso, los shorts y las transcripciones. La app y las IAs leen y escriben aquí.
   - **Cursos:** el contenido original de 480 Academy (vídeos y textos), que se carga en la BBDD.
-  - **IA local (tutor digital):** el chatbot que resuelve dudas del alumno. Consulta los cursos en la BBDD para responder. Es local para que los datos del alumno no salgan fuera.
-  - **Test:** los tests de cada módulo, que genera la IA local a partir de las transcripciones. El alumno los hace desde la app.
+  - **IA local (tutor digital):** el chatbot que resuelve dudas del alumno. Consulta los cursos en la BBDD para responder. Es local para cubrir con la protección de datos.
+  - **Test:** los tests de cada módulo, que genera la IA local a partir de las transcripciones, para intentar evitar plagios. El alumno resuelve estos desde la app.
   - **IA frontera:** coge la información de los cursos de la BBDD, organiza el trabajo de transcribir y editar los vídeos y vuelve a subir el resultado.
   - **Transcribir vídeos:** pasa el audio de los vídeos a texto y lo guarda en la BBDD.
   - **Editor de vídeos:** corta los vídeos largos en shorts y los guarda en la BBDD.
@@ -50,10 +50,10 @@
 
   Los datos del alumno solo pasan por la app, la BBDD y la IA local. La IA frontera solo trabaja con el contenido de los cursos, nunca con datos de alumnos.
 
-  Este es el diseño final. Para la demo del 30/11 la IA local queda fuera porque se sale del alcance de una demo (ver apartado 11).
+  Este es el diseño final. Para la demo del 30/11 la IA local queda fuera porque se sale del alcance de una demo (apartado 11).
 
 ## 6. Modelo de datos y flujo hacia la IA
-  Utilizaremos la IA para un chatbot, edición+transcripción de video y generación de tests dinámicos. Los datos que saldrían serían los que el usuario exponga en el chatbot. Para que haya privacidad en la información, utilizaríamos una IA local para que el tratamiento de datos dependiera exclusivamente de la empresa y no de externas (explicar en un apartado de la app o en el chatbot si preguntan los procesos de eliminación de chats pasados para no conservar información personal)
+  Utilizaremos la IA para un chatbot, edición+transcripción de video, generación de vídeos cortos y generación de tests dinámicos. Los datos que saldrían serían los que el usuario exponga en el chatbot. Para que haya privacidad en la información, utilizamos una IA local para que el tratamiento de datos dependa exclusivamente de la empresa y no de externas (explicar en un apartado de la app o en el chatbot la trazabilidad de sus datos)
 
   **Entidades principales:**
   - **Alumno:** id, nombre, email y los cursos que hace.
@@ -82,8 +82,46 @@
 
 ## 8. Contenido
 
+  Para hacer la demostración hemos escogido un curso de JAVA genérico de Youtube. Hemos elegido los siguientes vídeos:
+  - https://www.youtube.com/watch?v=NFDjCN4r_68&list=PLG1qdjD__qH6ULjW5iN8E45m5nkaCNbUu
+  - https://www.youtube.com/watch?v=dfEEG4A_Hoo&list=PLG1qdjD__qH6ULjW5iN8E45m5nkaCNbUu&index=2
+  - https://www.youtube.com/watch?v=b003s0CJ2KU&list=PLG1qdjD__qH6ULjW5iN8E45m5nkaCNbUu&index=3
+  - https://www.youtube.com/watch?v=pgF8U9WxPts&list=PLG1qdjD__qH6ULjW5iN8E45m5nkaCNbUu&index=4
+  - https://www.youtube.com/watch?v=98m39gc3YpM&list=PLG1qdjD__qH6ULjW5iN8E45m5nkaCNbUu&index=5
+  - https://www.youtube.com/watch?v=GwwRkMo012Y&list=PLG1qdjD__qH6ULjW5iN8E45m5nkaCNbUu&index=6
+  - https://www.youtube.com/watch?v=taSJeALBVGk&list=PLG1qdjD__qH6ULjW5iN8E45m5nkaCNbUu&index=7
+  - https://www.youtube.com/watch?v=tldDbZ9MSoA&list=PLG1qdjD__qH6ULjW5iN8E45m5nkaCNbUu&index=8
+  - https://www.youtube.com/watch?v=gWYWRs9d_ZI&list=PLG1qdjD__qH6ULjW5iN8E45m5nkaCNbUu&index=9
+  - https://www.youtube.com/watch?v=P73Sa4dzvoc&list=PLG1qdjD__qH6ULjW5iN8E45m5nkaCNbUu&index=10
+  - https://www.youtube.com/watch?v=bRwz1J9hxEg&list=PLG1qdjD__qH6ULjW5iN8E45m5nkaCNbUu&index=11
+  - https://www.youtube.com/watch?v=ijz6rAu5Trw&list=PLG1qdjD__qH6ULjW5iN8E45m5nkaCNbUu&index=12
+  - https://www.youtube.com/watch?v=3FIomL6wFFM&list=PLG1qdjD__qH6ULjW5iN8E45m5nkaCNbUu&index=13
+  - https://www.youtube.com/watch?v=rH60985e4PM&list=PLG1qdjD__qH6ULjW5iN8E45m5nkaCNbUu&index=14
+  - https://www.youtube.com/watch?v=V-WDyYJqPnY&list=PLG1qdjD__qH6ULjW5iN8E45m5nkaCNbUu&index=15
+  - https://www.youtube.com/watch?v=ZzFF_aXLO5g&list=PLG1qdjD__qH6ULjW5iN8E45m5nkaCNbUu&index=16
+  - https://www.youtube.com/watch?v=8gkaitxt-CI&list=PLG1qdjD__qH6ULjW5iN8E45m5nkaCNbUu&index=17
+  - https://www.youtube.com/watch?v=Q_2j8aYnmYk&list=PLG1qdjD__qH6ULjW5iN8E45m5nkaCNbUu&index=18
+  - https://www.youtube.com/watch?v=AVEU8AEZ5YE&list=PLG1qdjD__qH6ULjW5iN8E45m5nkaCNbUu&index=19
+  - https://www.youtube.com/watch?v=QRDePHN91UY&list=PLG1qdjD__qH6ULjW5iN8E45m5nkaCNbUu&index=20
+
+  Las transcripciones saldrán de la IA WhisperX.
+
 ## 9. Coste
 
+  ### Hipótesis
+  - Volumen: 1.200 alumnos activos y 400 vídeos de 15 min de media (100 horas totales; el 30% ya tiene transcripción).
+  - Uso mensual por alumno: 20 mensajes al tutor digital y 4 tests dinámicos al mes.
+  - Infraestructura: Procesado previo del catálogo con IA frontera (una sola vez) y ejecución en producción de Qwen3 8B y WhisperX en un servidor GPU propio (24 GB VRAM) para cumplir el RGPD sin enviar datos de menores a terceros.
+
+  ### Estimación de costes
+  - Coste único: <5€ para transcripciones y sectorizar/cortar shorts
+  - Coste recurrente mensual: ~180 € / mes por el alquiler del servidor GPU dedicado
+  - Coste por alumno y mes: 0,15 € / alumno / mes
+
+  ### Cómo lo reduciríamos
+  - Banco de preguntas pre-generado: Generar 15-20 preguntas por vídeo una sola vez y servir 5 aleatorias por alumno.
+  - Auto-escalado horario: Apagar o reducir la instancia GPU de madrugada.
+  - Límite de contexto: Pasar a Qwen3 8B solo el fragmento de transcripción de la lección actual y los últimos 4 mensajes del chat.
 
 ## 10. Idea original
 
@@ -91,8 +129,6 @@
   - Introducción de test: pruebas de conocimiento tanto para aprender como dinamizar lo que el alumno debe estudiar, lo que ayuda a reiterar contenidos o saltarlos.
   - Sectorización de vídeos con descripción: índices especiales en los vídeos para saltarlos según tema y para saber qué debe de ver un estudiante si falla una pregunta del test.
   - Tutor digital: chat para resolver dudas del temario que pida el estudiante o respecto todo lo que envuelve el producto (480 Academy).
-
-
 
 ## 11. Alcance para el 30/11
 
