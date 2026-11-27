@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>480Academy propuestas de diseño (Copy)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&family=Onest:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Roboto+Flex:wght@400;500;600;700&family=Schibsted+Grotesk:wght@400;500;600;700;800&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* VOICE work: a design review for the team, calm and legible
+   IDEA a pin-up wall of the app's screens that all change together
+   PICTURE the eight phone mockups themselves, static, side by side
+   COLOUR quiet page; the phones carry 11 palettes: from 480's brand, typical app schemes and new ones
+   TYPE page in Onest; each design brings its own face
+   LAYOUT title and button rows on top, then a 4x2 grid of phones (3, 2, 1 columns as it narrows); a small switcher follows you down */
+:root{color-scheme:light dark;--pg:light-dark(#FFFFFF,#151718);--pi:light-dark(#16191A,#EEF1F1);--pm:light-dark(#5F6768,#A3ACAC);--pl:light-dark(#E2E6E6,#2C3132)}
+:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+html,body{margin:0}
+body{background:var(--pg);color:var(--pi);font:16px/1.5 Onest,system-ui,sans-serif;overflow-x:clip}
+button{font:inherit;color:inherit;cursor:pointer}
+button:focus-visible{outline:3px solid var(--pi);outline-offset:2px}
+.top{padding:32px max(16px,4vw) 24px;max-width:1500px;margin:0 auto;border-bottom:1px solid var(--pl)}
+h1{font-size:clamp(30px,4vw,44px);line-height:1.05;letter-spacing:-.02em;margin:0 0 8px;font-weight:700}
+.top>p{margin:0 0 22px;color:var(--pm);max-width:66ch}
+.ctl{display:grid;grid-template-columns:auto minmax(0,1fr);gap:10px 20px;align-items:start}
+.ctl>span{font-weight:600;padding-top:10px}
+.opts{display:flex;flex-wrap:wrap;gap:8px}
+.opts button{display:flex;align-items:center;gap:9px;min-height:42px;padding:6px 14px;border:1.5px solid var(--pl);background:var(--pg);border-radius:12px;font-weight:600;font-size:15px}
+.opts button[aria-pressed=true]{border-color:var(--pi);box-shadow:inset 0 0 0 1px var(--pi)}
+.grp{display:grid;gap:6px;margin-bottom:8px}
+.grp small{color:var(--pm);font-size:13px}
+.trio{display:flex}.trio i{width:18px;height:18px;border-radius:50%;border:2px solid var(--pg);margin-left:-5px}.trio i:first-child{margin-left:0}
+.desc{grid-column:2;margin:-2px 0 8px;color:var(--pm);font-size:15px;max-width:80ch}
+.wall{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:40px 28px;padding:36px max(16px,4vw) 64px;max-width:1500px;margin:0 auto}
+figure{margin:0}
+.frame{position:relative;aspect-ratio:391/812;max-width:391px;margin:0 auto}
+figcaption{max-width:391px;margin:14px auto 0;font-size:15px;color:var(--pm)}
+figcaption b{display:block;color:var(--pi);font-size:17px}
+.foot{max-width:1500px;margin:0 auto;padding:0 max(16px,4vw) 96px;color:var(--pm);font-size:14px}
+.mini{position:fixed;left:50%;bottom:16px;transform:translate(-50%,140%);display:flex;align-items:center;gap:4px;padding:6px;border-radius:99px;background:var(--pi);color:var(--pg);z-index:9;transition:transform .25s;box-shadow:0 8px 24px #0004;max-width:calc(100% - 24px)}
+.mini.on{transform:translate(-50%,0)}
+.mini button{width:40px;height:40px;border:0;border-radius:50%;background:transparent;font-size:22px;line-height:1;display:grid;place-items:center}
+.mini button:hover{background:#8884}
+.mini span{font-weight:600;font-size:14px;min-width:7.5em;text-align:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mini hr{width:1px;height:24px;border:0;background:currentColor;opacity:.3;margin:0 6px}
+@media(max-width:1280px){.wall{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:960px){.wall{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:640px){.wall{grid-template-columns:minmax(0,1fr)}.ctl{grid-template-columns:minmax(0,1fr)}.desc{grid-column:1}.ctl>span{padding-top:4px}.mini span{min-width:5.5em}}
+@media(prefers-reduced-motion:reduce){.mini{transition:none}}
+
+/* ---------- phone ---------- */
+.ph{position:absolute;left:0;top:0;width:391px;height:812px;transform:scale(var(--k,1));transform-origin:0 0;border:8px solid #202324;border-radius:48px;background:#202324}
+.scr{position:relative;height:100%;border-radius:40px;overflow:hidden;background:var(--bg);color:var(--ink);font-family:var(--f);font-size:15px;line-height:1.4}
+.i{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round;flex:none}
+
+/* palettes */
+.wall{--prt:color-mix(in oklab,var(--pri),#000 40%);--prl:color-mix(in oklab,var(--pri),#fff 28%)}
+.wall[data-p=p480]{--pri:#39FE90;--on:#10231A;--sec:#1CF9FC;--onsec:#0B2A2B;--dk:#1F2222}
+.wall[data-p=complementario]{--pri:#FF3DA5;--on:#2A0A1C;--sec:#39FE90;--onsec:#10231A;--dk:#24131D}
+.wall[data-p=cianycoral]{--pri:#1CF9FC;--on:#0B2A2B;--sec:#FF4950;--onsec:#2B0A0B;--dk:#10262A}
+.wall[data-p=ios]{--pri:#0A84FF;--on:#FFFFFF;--sec:#FF9F0A;--onsec:#2A1A00;--dk:#0F1A2B}
+.wall[data-p=indigo]{--pri:#5B5BD6;--on:#FFFFFF;--sec:#F5A524;--onsec:#2A1A00;--dk:#17162F}
+.wall[data-p=esmeralda]{--pri:#10B981;--on:#04261B;--sec:#0EA5E9;--onsec:#04202E;--dk:#0E211C}
+.wall[data-p=violeta]{--pri:#7C3AED;--on:#FFFFFF;--sec:#F472B6;--onsec:#3A0A22;--dk:#1B1430}
+.wall[data-p=mono]{--pri:#16191A;--on:#FFFFFF;--sec:#C9CFCF;--onsec:#16191A;--dk:#161819;--prt:#16191A;--prl:#F3F5F5}
+.wall[data-p=ambar]{--pri:#FFC400;--on:#241B00;--sec:#2563EB;--onsec:#FFFFFF;--dk:#1E1A0F}
+.wall[data-p=azul]{--pri:#3D5AFE;--on:#FFFFFF;--sec:#C6FF3A;--onsec:#1B2405;--dk:#12173A}
+.wall[data-p=mandarina]{--pri:#FF7A1A;--on:#2A1405;--sec:#0E8C7E;--onsec:#FFFFFF;--dk:#1F1813}
+
+/* designs: tokens */
+.wall[data-d=limpio]{--bg:#FFFFFF;--ink:#16191A;--mute:#5F6768;--surf:#F2F4F4;--line:#E2E6E6;--r:18px;--f:Onest,sans-serif}
+.wall[data-d=nocturno]{--bg:var(--dk);--ink:#F3F5F5;--mute:#A7B0AF;--surf:color-mix(in oklab,var(--dk),#fff 8%);--line:color-mix(in oklab,var(--dk),#fff 15%);--r:22px;--f:Manrope,sans-serif;--prt:var(--prl)}
+.wall[data-d=nocturno][data-p=mono]{--pri:#F3F5F5;--on:#16191A}
+.wall[data-d=bloque]{--bg:#FFFFFF;--ink:#16191A;--mute:#5F6768;--surf:#FFFFFF;--line:#DDE1E1;--r:12px;--f:'Schibsted Grotesk',sans-serif}
+.wall[data-d=tonal]{--bg:color-mix(in oklab,var(--pri) 6%,#fff);--ink:#1B1C1E;--mute:#585E61;--surf:color-mix(in oklab,var(--pri) 14%,#fff);--line:color-mix(in oklab,var(--pri) 26%,#fff);--r:24px;--f:'Roboto Flex',sans-serif}
+.wall[data-d=agrupado]{--bg:#F2F2F7;--ink:#111114;--mute:#6C6C72;--surf:#FFFFFF;--line:#E3E3E8;--r:14px;--f:Inter,sans-serif}
+.wall[data-d=contorno]{--bg:#FFFFFF;--ink:#121414;--mute:#5B6162;--surf:#FFFFFF;--line:#121414;--r:10px;--f:Sora,sans-serif}
+.wall[data-d=suave]{--bg:color-mix(in oklab,var(--sec) 13%,#fff);--ink:#1D2023;--mute:#5C6166;--surf:#FFFFFF;--line:color-mix(in oklab,var(--sec) 22%,#E6E9E9);--r:28px;--f:'Plus Jakarta Sans',sans-serif}
+
+/* shared components */
+.sb{display:flex;justify-content:space-between;align-items:center;height:44px;padding:4px 26px 0;font-weight:600;font-size:14px}
+.sb span:last-child{display:flex;gap:6px;align-items:center}
+.batt{width:22px;height:11px;border:1.5px solid currentColor;border-radius:3px;padding:1.5px}.batt i{display:block;width:70%;height:100%;background:currentColor;border-radius:1px}
+.hd{display:grid;grid-template-columns:44px 1fr 44px;align-items:center;height:48px;padding:0 12px}
+.lg{justify-self:center;font-size:19px;letter-spacing:-.01em}
+.lg b{font-weight:800}
+.bell{position:relative;width:44px;height:44px;display:grid;place-items:center}
+.bell i{position:absolute;top:10px;right:11px;width:9px;height:9px;border-radius:50%;background:var(--sec);box-shadow:0 0 0 2px var(--bg)}
+.head{padding-bottom:6px}
+.head h2{font-size:28px;line-height:1.1;letter-spacing:-.02em;margin:8px 20px 4px;font-weight:700}
+.head p{margin:0 20px 8px;color:var(--mute)}
+.bd{padding:12px 20px 0}
+.card{background:var(--surf);border-radius:var(--r);padding:16px}
+.ct{display:block;font-size:17px;font-weight:700}
+.btn{display:flex;align-items:center;justify-content:center;gap:8px;height:48px;border-radius:calc(var(--r) - 4px);background:var(--pri);color:var(--on);font-weight:700;font-size:15px}
+.btn2{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--line)}
+.prog{height:6px;border-radius:6px;background:var(--line);overflow:hidden;margin:12px 0 8px}.prog i{display:block;height:100%;background:var(--pri)}
+.m{color:var(--mute);font-size:14px}
+.sec{font-size:18px;font-weight:700;margin:24px 0 10px;letter-spacing:-.01em}
+.th{width:52px;height:52px;border-radius:calc(var(--r) - 6px);display:grid;place-items:center;flex:none}
+.th .i{width:24px;height:24px}
+.t1{background:var(--pri);color:var(--on)}.t2{background:var(--sec);color:var(--onsec)}.t3{background:var(--ink);color:var(--bg)}
+.rw{display:flex;gap:14px;align-items:center}
+.rw b{display:block;font-size:16px;line-height:1.25}
+.tabs{display:flex;gap:6px;margin-bottom:14px}
+.tabs span{padding:7px 14px;border-radius:99px;font-weight:600;font-size:14px;color:var(--mute)}
+.tabs span.on{background:var(--ink);color:var(--bg)}
+.tiles{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.tile .th{width:100%;height:96px;border-radius:var(--r);margin-bottom:10px}
+.tile .th .i{width:36px;height:36px}
+.tile b{display:block;font-size:15px;line-height:1.25}
+.seg{display:grid;grid-template-columns:1fr 1fr;margin:6px 20px 6px;padding:4px;border-radius:calc(var(--r) - 2px);background:var(--surf)}
+.seg span{text-align:center;padding:9px;border-radius:calc(var(--r) - 6px);font-weight:700;font-size:15px;color:var(--mute)}
+.seg span.on{background:var(--bg);color:var(--ink);box-shadow:0 1px 3px #0002}
+.q{font-size:22px;line-height:1.2;font-weight:700;letter-spacing:-.01em;margin:6px 0 16px}
+.op{padding:14px 16px;border-radius:calc(var(--r) - 4px);box-shadow:inset 0 0 0 1.5px var(--line);margin-bottom:10px;font-weight:600}
+.op.ok{background:var(--pri);color:var(--on);box-shadow:none}
+.op.ko{box-shadow:inset 0 0 0 2px #E5484D;color:var(--ink)}
+.fb{display:flex;gap:10px;align-items:center;margin-top:6px}
+.fb .btn{flex:1}
+.msg{max-width:84%;padding:12px 14px;border-radius:var(--r);margin-bottom:10px;font-size:15px}
+.msg.t{background:var(--surf)}
+.msg.u{background:var(--ink);color:var(--bg);margin-left:auto}
+.lk{display:inline-flex;align-items:center;gap:6px;margin-top:10px;padding:8px 12px;border-radius:99px;background:var(--bg);font-weight:700;font-size:14px;box-shadow:inset 0 0 0 1.5px var(--line)}
+.lk .i{width:16px;height:16px}
+.inp{position:absolute;left:16px;right:16px;bottom:104px;display:flex;align-items:center;gap:8px;padding:6px 6px 6px 16px;border-radius:99px;background:var(--bg);box-shadow:inset 0 0 0 1.5px var(--line)}
+.inp span{flex:1;color:var(--mute)}
+.inp b{width:40px;height:40px;border-radius:50%;background:var(--pri);color:var(--on);display:grid;place-items:center}
+.inp .i{width:18px;height:18px}
+.note{position:absolute;left:20px;right:20px;bottom:160px;font-size:13px;color:var(--mute);text-align:center}
+.av{width:64px;height:64px;border-radius:50%;background:var(--pri);color:var(--on);display:grid;place-items:center;font-weight:800;font-size:22px;flex:none}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.stats .card{padding:14px 12px}
+.stats b{display:block;font-size:24px;letter-spacing:-.02em}
+.list>div{display:flex;align-items:center;gap:14px;padding:14px 0;border-bottom:1px solid var(--line);font-weight:600}
+.list>div>span:not(.th):not(.sc):not(.tm):not(.lk){flex:1}
+.list small{display:block;font-weight:400;color:var(--mute);font-size:13px;line-height:1.35;margin-top:2px}
+.list>div>.i:last-child{color:var(--mute);width:18px;height:18px}
+.tm{font-weight:700;color:var(--prt);width:46px;font-variant-numeric:tabular-nums}
+.sc{width:48px;height:48px;border-radius:calc(var(--r) - 6px);display:grid;place-items:center;font-weight:800;font-size:15px;background:var(--surf);flex:none;font-variant-numeric:tabular-nums}
+.sc.ok{background:var(--pri);color:var(--on)}
+.field{display:flex;justify-content:space-between;align-items:center;height:46px;padding:0 14px;border-radius:calc(var(--r) - 6px);background:var(--bg);box-shadow:inset 0 0 0 1.5px var(--line);font-weight:600;margin:12px 0 10px}
+.field .i{width:18px;height:18px;transform:rotate(90deg);color:var(--mute)}
+.chs{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
+.chs span{padding:7px 12px;border-radius:99px;font-weight:700;font-size:14px;box-shadow:inset 0 0 0 1.5px var(--line)}
+.chs span.on{background:var(--ink);color:var(--bg);box-shadow:none}
+.vid{position:relative;aspect-ratio:16/9;border-radius:var(--r);background:var(--dk);overflow:hidden}
+.vid::before{content:"";position:absolute;width:180px;height:180px;border-radius:50%;background:var(--pri);opacity:.18;right:-40px;top:-60px}
+.vid::after{content:"";position:absolute;width:120px;height:120px;border-radius:50%;background:var(--sec);opacity:.15;left:-30px;bottom:-50px}
+.vp{position:absolute;inset:0;margin:auto;width:54px;height:54px;border-radius:50%;background:#fff;color:#16191A;display:grid;place-items:center;z-index:1}
+.vp .i{fill:currentColor;margin-left:3px}
+.vt{position:absolute;left:12px;bottom:14px;color:#fff;font-size:13px;font-weight:600;z-index:1}
+.vb{position:absolute;left:0;right:0;bottom:0;height:4px;background:#ffffff40;z-index:1}.vb i{display:block;height:100%;width:33%;background:var(--pri)}
+.lt{font-size:22px;line-height:1.15;font-weight:700;letter-spacing:-.01em;margin:14px 0 2px}
+
+.isl{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);display:flex;gap:4px;padding:6px}
+.isl span{display:grid;justify-items:center;align-content:center;gap:2px;width:64px;height:52px;font-size:11px;font-weight:700;color:var(--mute)}
+.isl em{display:none;font-style:normal}
+
+/* shorts */
+.sh{position:absolute;inset:0;background:var(--dk);color:#fff}
+.sh .blob{position:absolute;border-radius:50%;background:var(--pri);opacity:.14}
+.sh .sb,.sh .hd{position:relative;color:#fff}
+.sh .bell i{box-shadow:0 0 0 2px var(--dk)}
+.segs{display:flex;gap:4px;margin:6px 20px 0}.segs i{flex:1;height:3px;border-radius:3px;background:#ffffff44}.segs i.on{background:#fff}
+.cap{position:absolute;left:20px;right:84px;top:150px;font-size:30px;line-height:1.08;font-weight:700;letter-spacing:-.02em}
+.code{position:absolute;left:20px;right:84px;top:330px;background:#00000059;border-radius:14px;padding:14px 16px;font:500 13.5px/1.65 ui-monospace,Menlo,monospace;white-space:pre;color:#E8EEEE}
+.code em{font-style:normal;color:var(--prl)}
+.rail{position:absolute;right:14px;bottom:170px;display:grid;gap:18px}
+.rail span{display:grid;justify-items:center;gap:5px;width:62px;font-size:11.5px;font-weight:700;text-align:center;line-height:1.15}
+.rail b{width:46px;height:46px;border-radius:50%;background:#ffffff26;display:grid;place-items:center}
+.meta{position:absolute;left:20px;right:90px;bottom:110px;font-size:14px;line-height:1.35}
+.meta b{display:block;font-size:15px}
+
+/* limpio */
+.wall[data-d=limpio] .isl{background:#fff;border-radius:99px;box-shadow:0 6px 24px #16191A26,0 0 0 1px #16191A0d}
+.wall[data-d=limpio] .isl span{width:56px;color:#5F6768}
+.wall[data-d=limpio] .isl span.on{color:var(--on)}
+.wall[data-d=limpio] .isl span.on .i{background:var(--pri);border-radius:50%;padding:9px;width:42px;height:42px}
+
+/* nocturno */
+.wall[data-d=nocturno] .isl{background:color-mix(in oklab,var(--dk),#fff 10%);border-radius:99px;box-shadow:0 0 0 1px var(--line)}
+.wall[data-d=nocturno] .isl span.on{color:var(--prl)}
+.wall[data-d=nocturno] .isl span.on em{display:block}
+.wall[data-d=nocturno] .seg span.on,.wall[data-d=nocturno] .tabs span.on,.wall[data-d=nocturno] .chs span.on{background:var(--pri);color:var(--on);box-shadow:none}
+.wall[data-d=nocturno] .msg.u{background:var(--pri);color:var(--on)}
+.wall[data-d=nocturno] .t3{background:var(--line);color:var(--ink)}
+.wall[data-d=nocturno] .op.ko{box-shadow:inset 0 0 0 2px #FF6B6F}
+.wall[data-d=nocturno] .sh,.wall[data-d=nocturno] .vid{background:color-mix(in oklab,var(--dk),#000 30%)}
+
+/* bloque */
+.wall[data-d=bloque] .scr>.sb{background:var(--pri);color:var(--on)}
+.wall[data-d=bloque] .scr>.head{background:var(--pri);color:var(--on);border-radius:0 0 28px 28px;padding-bottom:18px}
+.wall[data-d=bloque] .scr>.head p,.wall[data-d=bloque] .scr>.head .m{color:var(--on);opacity:.8}
+.wall[data-d=bloque] .scr>.head .bell i{box-shadow:0 0 0 2px var(--pri);background:var(--on)}
+.wall[data-d=bloque] .scr>.head .seg{background:color-mix(in oklab,var(--on) 12%,transparent)}
+.wall[data-d=bloque] .scr>.head .seg span{color:var(--on)}
+.wall[data-d=bloque] .scr>.head .seg span.on{background:var(--bg);color:var(--ink)}
+.wall[data-d=bloque] .card,.wall[data-d=bloque] .msg.t{box-shadow:inset 0 0 0 1.5px var(--line)}
+.wall[data-d=bloque] .isl{left:16px;right:16px;transform:none;justify-content:space-around;background:var(--ink);border-radius:20px}
+.wall[data-d=bloque] .isl span{color:#ffffffa6}
+.wall[data-d=bloque] .isl em{display:block}
+.wall[data-d=bloque] .isl span.on{color:var(--prl)}
+.wall[data-d=bloque] .head h2{font-size:30px;font-weight:800}
+.wall[data-d=bloque] .av{background:var(--on);color:var(--pri)}
+
+/* tonal (Material) */
+.wall[data-d=tonal] .btn{border-radius:99px}
+.wall[data-d=tonal] .btn2{background:transparent;box-shadow:inset 0 0 0 1px #74797C}
+.wall[data-d=tonal] .head h2{font-weight:500;font-size:30px}
+.wall[data-d=tonal] .seg{background:transparent;box-shadow:inset 0 0 0 1px #74797C;border-radius:99px;padding:0;overflow:hidden;gap:0}
+.wall[data-d=tonal] .seg span{border-radius:0;color:var(--ink)}
+.wall[data-d=tonal] .seg span.on{background:var(--surf);box-shadow:inset 0 0 0 1px #74797C}
+.wall[data-d=tonal] .tabs span,.wall[data-d=tonal] .chs span{border-radius:8px;box-shadow:inset 0 0 0 1px #74797C;color:var(--ink)}
+.wall[data-d=tonal] .tabs span.on,.wall[data-d=tonal] .chs span.on{background:var(--surf);color:var(--ink);box-shadow:none}
+.wall[data-d=tonal] .op{box-shadow:none;background:var(--surf)}
+.wall[data-d=tonal] .op.ko{box-shadow:inset 0 0 0 2px #E5484D;background:var(--bg)}
+.wall[data-d=tonal] .msg.u{background:var(--pri);color:var(--on)}
+.wall[data-d=tonal] .isl{left:0;right:0;bottom:0;transform:none;justify-content:space-around;background:var(--surf);padding:12px 8px 30px;border-radius:0}
+.wall[data-d=tonal] .isl span{color:var(--ink);gap:4px;height:auto}
+.wall[data-d=tonal] .isl em{display:block;font-weight:600}
+.wall[data-d=tonal] .isl .i{width:60px;height:32px;padding:4px 18px;border-radius:16px}
+.wall[data-d=tonal] .isl span.on .i{background:var(--line)}
+.wall[data-d=tonal] .inp{bottom:112px;background:var(--surf);box-shadow:none}
+.wall[data-d=tonal] .note{bottom:168px}
+
+/* agrupado (iOS) */
+.wall[data-d=agrupado] .head h2{font-size:34px;font-weight:800;letter-spacing:-.03em}
+.wall[data-d=agrupado] .btn{border-radius:12px}
+.wall[data-d=agrupado] .btn2{background:#fff;box-shadow:none;color:var(--prt)}
+.wall[data-d=agrupado] .list{background:#fff;border-radius:14px;padding:0 16px}
+.wall[data-d=agrupado] .list>div:last-child{border-bottom:0}
+.wall[data-d=agrupado] .seg{background:#E3E3E8;border-radius:10px;padding:3px}
+.wall[data-d=agrupado] .seg span{border-radius:8px;padding:7px;color:var(--ink);font-weight:600}
+.wall[data-d=agrupado] .seg span.on{background:#fff;box-shadow:0 1px 4px #0002}
+.wall[data-d=agrupado] .op{background:#fff;box-shadow:none}
+.wall[data-d=agrupado] .op.ko{box-shadow:inset 0 0 0 2px #FF3B30}
+.wall[data-d=agrupado] .msg.t{background:#E9E9EE}
+.wall[data-d=agrupado] .msg.u{background:var(--pri);color:var(--on)}
+.wall[data-d=agrupado] .sc{background:#F2F2F7}
+.wall[data-d=agrupado] .field{background:#fff;box-shadow:none}
+.wall[data-d=agrupado] .isl{background:#ffffffd9;backdrop-filter:blur(14px);border-radius:99px;box-shadow:0 0 0 .5px #0000002e,0 6px 20px #0000001a}
+.wall[data-d=agrupado] .isl em{display:block;font-weight:600}
+.wall[data-d=agrupado] .isl span{color:#8E8E93}
+.wall[data-d=agrupado] .isl span.on{color:var(--prt)}
+
+/* contorno */
+.wall[data-d=contorno] .card,.wall[data-d=contorno] .msg.t,.wall[data-d=contorno] .seg,.wall[data-d=contorno] .inp,.wall[data-d=contorno] .th,.wall[data-d=contorno] .sc,.wall[data-d=contorno] .field,.wall[data-d=contorno] .op{box-shadow:inset 0 0 0 1.5px #121414}
+.wall[data-d=contorno] .t2,.wall[data-d=contorno] .t3{background:#fff;color:#121414}
+.wall[data-d=contorno] .btn{background:#121414;color:#fff}
+.wall[data-d=contorno] .btn2{background:#fff;color:#121414;box-shadow:inset 0 0 0 1.5px #121414}
+.wall[data-d=contorno] .prog{background:#fff;box-shadow:inset 0 0 0 1.5px #121414;height:10px}
+.wall[data-d=contorno] .op.ok{box-shadow:inset 0 0 0 1.5px #121414}
+.wall[data-d=contorno] .op.ko{box-shadow:inset 0 0 0 2.5px #E5484D}
+.wall[data-d=contorno] .seg span.on{background:#121414;color:#fff;box-shadow:none}
+.wall[data-d=contorno] .msg.u{background:#121414;color:#fff}
+.wall[data-d=contorno] .list>div{border-bottom:1.5px solid #121414}
+.wall[data-d=contorno] .isl{background:#fff;border-radius:99px;box-shadow:inset 0 0 0 1.5px #121414}
+.wall[data-d=contorno] .isl span{color:#121414;width:58px}
+.wall[data-d=contorno] .isl span.on .i{background:var(--pri);color:var(--on);border-radius:50%;padding:9px;width:42px;height:42px;box-shadow:0 0 0 1.5px #121414}
+.wall[data-d=contorno] .inp b{box-shadow:0 0 0 1.5px #121414}
+.wall[data-d=contorno] .tm{color:#121414;text-decoration:underline;text-decoration-color:var(--pri);text-decoration-thickness:3px;text-underline-offset:3px}
+
+/* suave */
+.wall[data-d=suave] .card,.wall[data-d=suave] .op,.wall[data-d=suave] .msg.t,.wall[data-d=suave] .sc,.wall[data-d=suave] .field{background:#fff;box-shadow:0 10px 24px -14px #1D202340}
+.wall[data-d=suave] .op.ok{background:var(--pri)}
+.wall[data-d=suave] .op.ko{box-shadow:inset 0 0 0 2px #E5484D}
+.wall[data-d=suave] .btn{border-radius:99px}
+.wall[data-d=suave] .btn2{background:#fff;box-shadow:none}
+.wall[data-d=suave] .seg{background:#fff;border-radius:99px}
+.wall[data-d=suave] .seg span{border-radius:99px}
+.wall[data-d=suave] .seg span.on{background:var(--pri);color:var(--on);box-shadow:none}
+.wall[data-d=suave] .head h2{font-weight:800}
+.wall[data-d=suave] .list{background:#fff;border-radius:24px;padding:0 16px;box-shadow:0 10px 24px -14px #1D202340}
+.wall[data-d=suave] .list>div:last-child{border-bottom:0}
+.wall[data-d=suave] .isl{background:#fff;border-radius:99px;box-shadow:0 10px 30px -10px #1D202355;gap:2px}
+.wall[data-d=suave] .isl span{width:50px;color:var(--mute)}
+.wall[data-d=suave] .isl span.on{display:flex;align-items:center;gap:6px;width:auto;padding:0 16px;border-radius:99px;background:var(--pri);color:var(--on)}
+.wall[data-d=suave] .isl span.on em{display:block;font-size:13px}
+.wall[data-d=suave] .inp{background:#fff;box-shadow:0 10px 24px -14px #1D202340}
+
+/* layout variants */
+.pbtn{width:44px;height:44px;border-radius:50%;background:var(--pri);color:var(--on);display:grid;place-items:center;flex:none}
+.pbtn .i{fill:currentColor;width:18px;height:18px}
+.hs{display:flex;gap:12px;overflow:hidden;margin-right:-20px}
+.hs .tile{width:140px;flex:none}
+.hs .tile .th{height:84px}
+.cg{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.cg .card{display:grid;gap:8px;align-content:start}
+.cg b{font-size:15px;line-height:1.25}
+.flush{margin:0 -20px;border-radius:0}
+.acts3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:14px 0}
+.acts3 .card{display:grid;justify-items:center;gap:4px;text-align:center;padding:14px 6px;font-weight:700;font-size:14px}
+.acts3 .card .i{color:var(--prt)}
+.acts3 small{font-weight:500;color:var(--mute);font-size:12.5px}
+.og{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.og .op{margin:0;min-height:92px;display:flex;align-items:flex-end;line-height:1.25}
+.sheet{position:absolute;left:12px;right:12px;bottom:96px;background:var(--surf);border-radius:var(--r);padding:16px;box-shadow:0 -6px 28px #00000024}
+.sheet p{margin:4px 0 12px}
+.bad{display:flex;gap:10px;align-items:center;padding:12px 14px;border-radius:calc(var(--r) - 4px);background:#E5484D21;font-weight:600;margin-bottom:12px}
+.bad .i{color:#E5484D}
+.ltr{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:8px;background:var(--line);margin-right:12px;font-weight:800;font-size:13px;flex:none}
+.op.ok .ltr{background:color-mix(in oklab,var(--on) 18%,transparent)}
+.card .op{background:var(--bg)}
+.dots{display:flex;gap:4px;margin:8px 0 4px}.dots i{flex:1;height:6px;border-radius:6px;background:var(--line)}.dots i.on{background:var(--pri)}.dots i.ko{background:#E5484D}
+.cap.low{top:auto;bottom:180px;font-size:26px}
+.code.mid{top:170px}
+.shs{position:absolute;left:0;right:0;top:430px;bottom:0;background:var(--bg);color:var(--ink);border-radius:28px 28px 0 0;padding:22px 20px}
+.shs .q{margin:0 0 4px}
+.gen{background:var(--pri);color:var(--on)}
+.gen p{margin:4px 0 12px;opacity:.85}
+.gen .chs span{box-shadow:inset 0 0 0 1.5px color-mix(in oklab,var(--on) 40%,transparent)}
+.gen .btn{background:var(--on);color:var(--pri)}
+.fab{position:absolute;right:18px;bottom:104px;display:flex;align-items:center;gap:8px;height:52px;padding:0 20px;border-radius:var(--r);background:var(--pri);color:var(--on);font-weight:700;box-shadow:0 8px 20px -6px #0006}
+.ctx{display:flex;gap:12px;align-items:center;margin-bottom:14px;padding:12px}
+.ctx .th{width:40px;height:40px}
+.ctx b{display:block}
+.sugs{position:absolute;left:16px;right:16px;bottom:166px;display:flex;gap:8px}
+.sugs span{padding:8px 12px;border-radius:99px;box-shadow:inset 0 0 0 1.5px var(--line);font-weight:600;font-size:13.5px;background:var(--bg);white-space:nowrap}
+.tw{display:grid;grid-template-columns:36px 1fr;gap:12px;padding:12px 0;border-bottom:1px solid var(--line)}
+.tw .a{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;font-weight:800;font-size:13px}
+.tw b{display:block;font-size:14px}
+.cen{display:grid;justify-items:center;text-align:center;gap:2px;padding:4px 20px 10px}
+.cen .av{width:84px;height:84px;font-size:28px;margin-bottom:8px}
+.st3{display:grid;grid-template-columns:repeat(3,1fr)}
+.st3>div{text-align:center;padding:2px}
+.st3>div+div{border-left:1px solid var(--line)}
+.st3 b{display:block;font-size:22px}
+.pc{padding:12px 0;border-bottom:1px solid var(--line)}
+.pc div{display:flex;justify-content:space-between;font-weight:600}
+.pc .prog{margin:8px 0 0}
+.wall[data-d=tonal] .fab{bottom:112px}
+.wall[data-d=tonal] .sugs{bottom:178px}
+.wall[data-d=contorno] .sheet,.wall[data-d=contorno] .fab,.wall[data-d=contorno] .pbtn,.wall[data-d=contorno] .gen,.wall[data-d=contorno] .sugs span{box-shadow:inset 0 0 0 1.5px #121414}
+.wall[data-d=contorno] .pbtn,.wall[data-d=contorno] .fab{background:#121414;color:#fff}
+.wall[data-d=contorno] .bad{box-shadow:inset 0 0 0 2px #E5484D;background:#fff}
+.wall[data-d=suave] .sugs span{background:#fff;box-shadow:0 6px 16px -10px #1D202355}
+.wall[data-d=agrupado] .tw{border-color:#D8D8DE}
+/* per-mockup layout switch */
+.lv{display:flex;gap:4px;margin-top:10px;padding:3px;border-radius:12px;background:var(--pl);width:max-content;max-width:100%;flex-wrap:wrap}
+.lv button{border:0;background:transparent;border-radius:9px;padding:6px 10px;font-size:13.5px;font-weight:600;color:var(--pm);min-height:34px}
+.lv button[aria-pressed=true]{background:var(--pg);color:var(--pi);box-shadow:0 1px 3px #0002}
+/* states always win over design surfaces */
+.wall .op.ok,.wall .sc.ok{background:var(--pri);color:var(--on)}
+</style>
+</head>
+<body>
+<div class="top" id="top">
+ <h1>480Academy: propuestas de diseño</h1>
+ <p>Las ventanas principales de la app. Al cambiar el diseño o la paleta se actualizan todas a la vez, para comparar el conjunto. Al bajar, tienes un selector pequeño abajo para seguir cambiando.</p>
+ <div class="ctl">
+  <span>Diseño</span><div class="opts" id="d"></div>
+  <p class="desc" id="dd"></p>
+  <span>Paleta</span><div id="p"></div>
+  <p class="desc" id="pd"></p>
+  <span>Layout</span><div class="opts" id="l"></div>
+  <p class="desc">Cada ventana tiene tres versiones. Aquí las cambias todas a la vez; debajo de cada móvil, una a una.</p>
+ </div>
+</div>
+<main class="wall" id="wall" data-d="limpio" data-p="p480"></main>
+<p class="foot">Concepto del equipo D para el hackathon Hackadō, no es una app oficial de 480. Cursos, alumna y cifras son de ejemplo. La dirección de la página guarda el diseño y la paleta elegidos.</p>
+<div class="mini" id="mini" aria-label="Cambiar diseño y paleta"><button data-step="d" data-dir="-1" aria-label="Diseño anterior">‹</button><span id="md"></span><button data-step="d" data-dir="1" aria-label="Diseño siguiente">›</button><hr><button data-step="p" data-dir="-1" aria-label="Paleta anterior">‹</button><span id="mp"></span><button data-step="p" data-dir="1" aria-label="Paleta siguiente">›</button></div>
+<script>
+{
+const P={home:'<path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/>',book:'<path d="M4 19V5a2 2 0 0 1 2-2h14v14H6a2 2 0 0 0-2 2 2 2 0 0 0 2 2h14"/>',rev:'<path d="M21 12a9 9 0 0 1-13 8l-5 1 1.5-4.5A9 9 0 1 1 21 12z"/><path d="M8.5 12l2.5 2.5 4.5-5"/>',user:'<circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/>',bell:'<path d="M6 16v-5a6 6 0 0 1 12 0v5l2 2H4z"/><path d="M10 21h4"/>',back:'<path d="M15 5l-7 7 7 7"/>',play:'<path d="M7 4l13 8-13 8z"/>',send:'<path d="M4 12l16-8-6 17-3-7z"/>',chat:'<path d="M4 5h16v11H9l-5 4z"/>',film:'<rect x="5" y="3" width="14" height="18" rx="3"/><path d="M10 9l5 3-5 3z"/>',chev:'<path d="M9 5l7 7-7 7"/>',code:'<path d="M8 7l-5 5 5 5M16 7l5 5-5 5"/>',chart:'<path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/>',branch:'<circle cx="6" cy="5" r="2"/><circle cx="6" cy="19" r="2"/><circle cx="18" cy="8" r="2"/><path d="M6 7v10M18 10c0 4-6 4-11 7"/>',shield:'<path d="M12 3l8 3v6c0 5-4 8-8 9-4-1-8-4-8-9V6z"/>',cert:'<circle cx="12" cy="9" r="5"/><path d="M9 13l-2 8 5-3 5 3-2-8"/>',bellS:'<path d="M6 16v-5a6 6 0 0 1 12 0v5l2 2H4z"/>',gear:'<circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1"/>',x:'<path d="M6 6l12 12M18 6L6 18"/>',spark:'<path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/>'};
+const ic=n=>`<svg class="i" viewBox="0 0 24 24" aria-hidden="true">${P[n]}</svg>`;
+const D={limpio:['Limpio','Fondo blanco, tarjetas grises sin bordes y una isla flotante solo con iconos. Lo más sencillo de leer.'],nocturno:['Nocturno','Fondo oscuro teñido con la paleta; el color principal solo en lo que se puede tocar. Cansa menos de noche.'],bloque:['Bloque de color','La parte de arriba de cada ventana va en el color principal, así se sabe dónde estás de un vistazo. La isla lleva nombres.'],tonal:['Tonal','Al estilo de Material You en Android: fondos teñidos del color principal, botones en píldora y barra inferior con indicador.'],agrupado:['Agrupado','Al estilo de iOS: fondo gris claro, listas agrupadas en bloques blancos, títulos grandes e isla translúcida.'],contorno:['Contorno','Todo dibujado con línea negra y casi sin rellenos; el color principal solo marca progreso y selección.'],suave:['Suave','Fondo teñido del color secundario, tarjetas blancas muy redondeadas con sombra ligera y la sección activa en píldora.']};
+const G={marca:'De la marca 480',apps:'Típicas de apps',nuevas:'Nuevas'};
+const PA={p480:['480 original','marca','#39FE90','#1CF9FC','#1F2222','Los colores de la marca tal cual: verde 480 y grafito, con el cian de apoyo.'],complementario:['Complementario','marca','#FF3DA5','#39FE90','#24131D','El opuesto del verde 480 en el círculo cromático: magenta como principal y el verde de acento.'],cianycoral:['Cian y coral','marca','#1CF9FC','#FF4950','#10262A','Los dos colores secundarios de la web de 480 pasan a protagonistas.'],ios:['Azul sistema','apps','#0A84FF','#FF9F0A','#0F1A2B','El azul de sistema de iOS con naranja: lo que el usuario ya reconoce como pulsable.'],indigo:['Índigo','apps','#5B5BD6','#F5A524','#17162F','Índigo con ámbar, muy común en plataformas educativas y de productividad.'],esmeralda:['Esmeralda','apps','#10B981','#0EA5E9','#0E211C','Verde esmeralda con azul cielo, el esquema típico de apps de aprendizaje y progreso.'],violeta:['Violeta','apps','#7C3AED','#F472B6','#1B1430','Violeta con rosa, habitual en apps para público joven.'],mono:['Monocromo','apps','#16191A','#C9CFCF','#161819','Negro y grises: el contenido manda y nada compite con los vídeos.'],ambar:['Ámbar','apps','#FFC400','#2563EB','#1E1A0F','Amarillo con azul, mucho contraste y fácil de distinguir.'],azul:['Azul eléctrico','nuevas','#3D5AFE','#C6FF3A','#12173A','Azul de estudio con lima, mantiene la energía del verde 480 sin copiarlo.'],mandarina:['Mandarina','nuevas','#FF7A1A','#0E8C7E','#1F1813','Naranja con verde azulado, más cálida y menos corporativa.']};
+const sb=()=>`<div class="sb"><span>9:41</span><span><svg class="i" viewBox="0 0 24 24" style="width:17px;height:17px"><path d="M2 20h3v-4H2zM8 20h3v-8H8zM14 20h3V8h-3zM20 20h3V4h-3z" fill="currentColor" stroke="none"/></svg><span class="batt"><i></i></span></span></div>`;
+const hd=back=>`<div class="hd">${back?`<span class="bell">${ic('back')}</span>`:'<span></span>'}<span class="lg"><b>480</b>Academy</span><span class="bell">${ic('bell')}<i></i></span></div>`;
+const isl=a=>`<div class="isl">${[['home','Inicio'],['book','Cursos'],['rev','Repaso'],['user','Perfil']].map(([i,l],k)=>`<span class="${k===a?'on':''}">${ic(i)}<em>${l}</em></span>`).join('')}</div>`;
+const ring=(v,s=52)=>`<svg viewBox="0 0 36 36" width="${s}" height="${s}" aria-hidden="true"><circle cx="18" cy="18" r="15" fill="none" stroke="var(--line)" stroke-width="3.5"/><circle cx="18" cy="18" r="15" fill="none" stroke="var(--pri)" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="${(v*.9425).toFixed(1)} 95" transform="rotate(-90 18 18)"/><text x="18" y="21.5" text-anchor="middle" font-size="9.5" font-weight="700" fill="currentColor">${v}%</text></svg>`;
+const tile=(t,i,n,m)=>`<div class="tile"><span class="th ${t}">${ic(i)}</span><b>${n}</b><span class="m">${m}</span></div>`;
+const vid=(x='')=>`<div class="vid ${x}"><span class="vp">${ic('play')}</span><span class="vt">03:12 / 09:40</span><span class="vb"><i></i></span></div>`;
+const code=`{tareas.map(t =>
+  &lt;li <em>key={t.id}</em>&gt;
+    {t.texto}
+  &lt;/li&gt;
+)}`;
+const shBg=`<span class="blob" style="width:300px;height:300px;left:-90px;top:420px"></span><span class="blob" style="width:220px;height:220px;right:-70px;top:90px"></span>`;
+const segs=`<div class="segs"><i class="on"></i><i class="on"></i><i></i><i></i><i></i></div>`;
+const rail=`<div class="rail"><span><b>${ic('chat')}</b>Preguntar al tutor</span><span><b>${ic('play')}</b>Ver en el vídeo</span></div>`;
+const meta=`<div class="meta"><b>React desde cero</b>2.3 Listas y keys, clip 2 de 5</div>`;
+const segT=(t)=>`<div class="seg"><span class="${t?'':'on'}">Tests</span><span class="${t?'on':''}">Tutor</span></div>`;
+const inp=`<div class="inp"><span>Pregunta sobre el curso</span><b>${ic('send')}</b></div>`;
+const plist=`<div class="list"><div>${ic('cert')}<span>Certificados</span>${ic('chev')}</div><div>${ic('shield')}<span>Mis datos y privacidad<small>Qué recibe el tutor y cómo borrarlo</small></span>${ic('chev')}</div><div>${ic('gear')}<span>Ajustes de la cuenta</span>${ic('chev')}</div></div>`;
+/* [name, caption, island index, shorts?, [[variant name, html], x3]] */
+const S=[
+['Inicio','Retomar la lección en un toque y ver otros cursos.',0,0,[
+['Tarjeta',`<div class="head">${hd()}<h2>Hola, Lucía</h2><p>Te quedaste a mitad de una lección.</p></div>
+<div class="bd"><div class="card"><div class="rw"><span class="th t1">${ic('code')}</span><div><b>React desde cero</b><span class="m">2.3 Listas y keys</span></div></div><div class="prog"><i style="width:33%"></i></div><p class="m" style="margin:0 0 14px">Te quedan 6 minutos</p><div class="btn">${ic('play')}Continuar</div></div>
+<p class="sec">Cursos para ti</p><div class="tabs"><span class="on">Nuevos</span><span>Tendencia</span><span>Destacados</span></div>
+<div class="tiles">${tile('t2','shield','Ciberseguridad para todos','10 lecciones')}${tile('t3','chart','Python para analizar datos','12 lecciones')}</div></div>`],
+['Vídeo grande',`<div class="head">${hd()}<h2>Hola, Lucía</h2></div>
+<div class="bd" style="padding-top:4px">${vid()}<p class="lt" style="font-size:19px">Continuar React desde cero</p><span class="m">2.3 Listas y keys, te quedan 6 minutos</span>
+<p class="sec">Novedades</p><div class="list"><div><span class="th t2">${ic('shield')}</span><span>Ciberseguridad para todos<small>10 lecciones, nivel inicial</small></span>${ic('chev')}</div><div><span class="th t3">${ic('chart')}</span><span>Python para analizar datos<small>12 lecciones, con test inicial</small></span>${ic('chev')}</div></div></div>`],
+['Secciones',`<div class="head">${hd()}<h2>Inicio</h2></div>
+<div class="bd" style="padding-top:4px"><div class="card rw"><span class="th t1">${ic('code')}</span><div style="flex:1"><b>2.3 Listas y keys</b><span class="m">React desde cero, 6 min</span></div><span class="pbtn">${ic('play')}</span></div>
+<p class="sec">Nuevos</p><div class="hs">${tile('t2','shield','Ciberseguridad','10 lecciones')}${tile('t3','chart','Python para datos','12 lecciones')}${tile('t1','branch','Git en equipo','5 lecciones')}</div>
+<p class="sec">Tendencia</p><div class="hs">${tile('t3','code','React desde cero','9 lecciones')}${tile('t1','spark','IA generativa','8 lecciones')}${tile('t2','chart','Excel avanzado','11 lecciones')}</div></div>`]]],
+['Cursos','Tus cursos con su progreso. La siguiente lección se abre en vídeo o en shorts.',1,0,[
+['Destacado',`<div class="head">${hd()}<h2>Mis cursos</h2></div>
+<div class="bd"><div class="card"><div class="rw"><span class="th t1">${ic('code')}</span><div style="flex:1"><b>React desde cero</b><span class="m">Lección 6 de 9</span></div></div><div class="prog"><i style="width:62%"></i></div>
+<p style="margin:10px 0 12px;font-weight:600">Siguiente: 2.3 Listas y keys</p><div class="fb" style="margin:0"><div class="btn">${ic('play')}Vídeo</div><div class="btn btn2">${ic('film')}Shorts</div></div></div>
+<div class="list" style="margin-top:12px"><div><span class="th t3">${ic('branch')}</span><span>Git y GitHub en equipo<small>Lección 4 de 5</small></span>${ic('chev')}</div><div><span class="th t2">${ic('chart')}</span><span>Python para analizar datos<small>Lección 2 de 12</small></span>${ic('chev')}</div></div></div>`],
+['Cuadrícula',`<div class="head">${hd()}<h2>Mis cursos</h2></div>
+<div class="bd"><div class="cg">${[[62,'React desde cero','Lección 6 de 9'],[80,'Git y GitHub en equipo','Lección 4 de 5'],[17,'Python para analizar datos','Lección 2 de 12'],[0,'Ciberseguridad para todos','Sin empezar']].map(c=>`<div class="card">${ring(c[0])}<b>${c[1]}</b><span class="m">${c[2]}</span></div>`).join('')}</div>
+<div class="btn btn2" style="margin-top:14px">Ver cursos terminados (2)</div></div>`],
+['Pestañas',`<div class="head">${hd()}<h2>Mis cursos</h2>${segT(0).replace('Tests','En curso').replace('Tutor','Terminados')}</div>
+<div class="bd" style="display:grid;gap:10px">${[['t1','code','React desde cero','2.3 Listas y keys',62],['t3','branch','Git y GitHub en equipo','1.4 Resolver conflictos',80],['t2','chart','Python para analizar datos','1.2 Listas y diccionarios',17]].map(c=>`<div class="card"><div class="rw"><span class="th ${c[0]}">${ic(c[1])}</span><div style="flex:1"><b>${c[2]}</b><span class="m">Siguiente: ${c[3]}</span></div><span class="pbtn">${ic('play')}</span></div><div class="prog" style="margin-bottom:0"><i style="width:${c[4]}%"></i></div></div>`).join('')}</div>`]]],
+['Lección','El vídeo, el acceso a sus shorts y el test de la lección, que vive aquí dentro.',1,0,[
+['Bloques',`<div class="head">${hd(1)}</div>
+<div class="bd" style="padding-top:4px">${vid()}<p class="lt">2.3 Listas y keys</p><span class="m">React desde cero, módulo 2</span>
+<div class="btn btn2" style="margin-top:14px">${ic('film')}Ver en shorts, 5 clips</div>
+<div class="card" style="margin-top:14px"><b class="ct">Test de la lección</b><p class="m" style="margin:4px 0 14px">Hazlo después del vídeo para ver si lo entendiste, o antes para saltarte la lección si ya la dominas.</p><div class="btn">Hacer el test</div></div>
+<div class="list" style="margin-top:6px"><div><span class="tm">01:20</span><span>map() dentro de JSX</span></div><div><span class="tm">03:12</span><span>Qué es una key</span></div></div></div>`],
+['Pestañas',`<div class="head">${hd(1)}</div>
+<div class="bd" style="padding-top:0">${vid('flush')}<p class="lt">2.3 Listas y keys</p><span class="m">React desde cero, módulo 2</span>
+<div class="tabs" style="margin-top:16px"><span class="on">Temas</span><span>Shorts</span><span>Test</span></div>
+<div class="list"><div><span class="tm">00:00</span><span>Por qué pintar listas</span></div><div><span class="tm">01:20</span><span>map() dentro de JSX</span></div><div><span class="tm">03:12</span><span>Qué es una key</span></div><div><span class="tm">05:30</span><span>El índice como key</span></div></div></div>`],
+['Acciones',`<div class="head">${hd(1)}</div>
+<div class="bd" style="padding-top:4px">${vid()}<p class="lt">2.3 Listas y keys</p><span class="m">React desde cero, módulo 2</span>
+<div class="acts3"><div class="card">${ic('play')}Vídeo<small>9:40</small></div><div class="card">${ic('film')}Shorts<small>5 clips</small></div><div class="card">${ic('rev')}Test<small>5 preguntas</small></div></div>
+<div class="card"><b class="ct">¿Ya sabes esto?</b><p class="m" style="margin:4px 0 14px">Haz el test antes de ver la lección. Si lo apruebas, pasas a la 2.4.</p><div class="btn btn2">Hacer el test para saltarla</div></div></div>`]]],
+['Test de la lección','Si fallas, te dice qué minuto del vídeo volver a ver. Si aciertas todo antes de verla, te la saltas.',1,0,[
+['Lista',`<div class="head">${hd(1)}<h2>Test de la lección</h2><p>2.3 Listas y keys, pregunta 2 de 5</p></div>
+<div class="bd"><div class="prog" style="margin-top:0"><i style="width:40%"></i></div>
+<p class="q">¿Para qué sirve la prop key?</p><div class="op">Para darle estilo al elemento</div><div class="op ok">Para que React distinga cada elemento</div><div class="op ko">Para ordenar la lista</div>
+<p style="margin:6px 0 12px">Esta no. Vuelve a ver el vídeo desde el 03:12.</p><div class="fb"><div class="btn btn2">${ic('play')}Ver 03:12</div><div class="btn">Siguiente</div></div></div>`],
+['Cuadrícula',`<div class="head">${hd(1)}<h2>Pregunta 2 de 5</h2><p>Test de 2.3 Listas y keys</p></div>
+<div class="bd"><div class="dots" style="margin-top:0"><i class="on"></i><i class="ko"></i><i></i><i></i><i></i></div>
+<p class="q" style="margin-top:14px">¿Para qué sirve la prop key?</p><div class="og"><div class="op">Darle estilo al elemento</div><div class="op ok">Que React distinga cada elemento</div><div class="op ko">Ordenar la lista</div><div class="op">Hacerlo accesible</div></div></div>
+<div class="sheet"><div class="rw"><span class="bad" style="margin:0;padding:8px">${ic('x')}</span><b style="font-size:17px">Esta no es</b></div><p>Se explica en el vídeo, desde el minuto 03:12.</p><div class="fb" style="margin:0"><div class="btn btn2">${ic('play')}Ver 03:12</div><div class="btn">Siguiente</div></div></div>`],
+['Tarjeta',`<div class="head">${hd(1)}<h2>Test de la lección</h2><p>2.3 Listas y keys</p></div>
+<div class="bd"><div class="bad">${ic('play')}Incorrecta. Repasa el vídeo desde el 03:12.</div>
+<div class="card"><span class="m">Pregunta 2 de 5</span><p class="q" style="margin:4px 0 14px;font-size:20px">¿Para qué sirve la prop key?</p><div class="op"><span class="ltr">A</span>Darle estilo al elemento</div><div class="op ok"><span class="ltr">B</span>Que React distinga cada elemento</div><div class="op ko"><span class="ltr">C</span>Ordenar la lista</div><div class="op" style="margin:0"><span class="ltr">D</span>Hacerlo accesible</div></div>
+<div class="fb" style="margin-top:14px"><div class="btn btn2">Ver 03:12</div><div class="btn">Siguiente</div></div></div>`]]],
+['Shorts','La lección partida en clips cortos. Desde cada clip se salta al minuto del vídeo o al tutor.',1,1,[
+['Texto arriba',`<div class="sh">${shBg}${sb()}${hd(1)}${segs}<p class="cap">Cada elemento de una lista necesita una key</p><div class="code">${code}</div>${rail}${meta}</div>`],
+['Texto abajo',`<div class="sh">${shBg}${sb()}${hd(1)}${segs}<div class="code mid">${code}</div><p class="cap low">Cada elemento de una lista necesita una key</p>${rail}${meta}</div>`],
+['Dividida',`<div class="sh">${shBg}${sb()}${hd(1)}${segs}<div class="code mid" style="right:20px">${code}</div>
+<div class="shs"><span class="m">Clip 2 de 5, React desde cero</span><p class="q" style="margin-top:6px">Cada elemento de una lista necesita una key</p><div class="fb" style="margin-top:16px"><div class="btn btn2">${ic('chat')}Preguntar</div><div class="btn">${ic('play')}Ver en el vídeo</div></div><p class="m" style="text-align:center;margin:14px 0 0">Desliza hacia arriba para el siguiente clip</p></div></div>`]]],
+['Repaso: tests','Genera tests nuevos de lo que quieras repasar y consulta los anteriores con sus fallos.',2,0,[
+['Generador',`<div class="head">${hd()}${segT(0)}</div>
+<div class="bd"><div class="card"><b class="ct">Nuevo test de repaso</b><div class="field">React desde cero${ic('chev')}</div>
+<div class="chs"><span>2.1</span><span class="on">2.2</span><span class="on">2.3</span><span>2.4</span><span>10 preguntas</span></div><div class="btn">${ic('spark')}Generar test</div></div>
+<p class="sec">Tests anteriores</p><div class="list"><div><span class="sc">4/5</span><span>Repaso de 2.1 a 2.3<small>Ayer. Fallaste: para qué sirve la key</small></span>${ic('chev')}</div><div><span class="sc ok">5/5</span><span>Test de 2.2 Eventos<small>Lunes. Sin fallos</small></span>${ic('chev')}</div><div><span class="sc">2/3</span><span>Test inicial de Git<small>15 nov. Fallaste: ramas</small></span>${ic('chev')}</div></div></div>`],
+['Bloque de color',`<div class="head">${hd()}${segT(0)}</div>
+<div class="bd"><div class="card gen"><b class="ct" style="font-size:20px">Genera un test de repaso</b><p>Elige qué repasar y te preparamos las preguntas.</p><div class="chs"><span>React desde cero</span><span>2.2 y 2.3</span><span>10 preguntas</span></div><div class="btn">${ic('spark')}Generar test</div></div>
+<p class="sec">Anteriores</p><div style="display:grid;gap:10px">${[[80,'Repaso de 2.1 a 2.3','Ayer, 1 fallo'],[100,'Test de 2.2 Eventos','Lunes, sin fallos']].map(t=>`<div class="card rw">${ring(t[0],48)}<div style="flex:1"><b>${t[1]}</b><span class="m">${t[2]}</span></div>${ic('chev')}</div>`).join('')}</div></div>`],
+['Fallos primero',`<div class="head">${hd()}${segT(0)}</div>
+<div class="bd"><div class="stats"><div class="card"><b>12</b><span class="m">tests hechos</span></div><div class="card"><b>82 %</b><span class="m">aciertos</span></div><div class="card"><b>3</b><span class="m">fallos por repasar</span></div></div>
+<p class="sec">Fallos para repasar</p><div class="list"><div><span>¿Para qué sirve la prop key?<small>React, 2.3. Respondiste: ordenar la lista</small></span><span class="lk" style="margin:0">03:12</span></div><div><span>¿Qué hace git rebase?<small>Git, 1.2. Respondiste: borra la rama</small></span><span class="lk" style="margin:0">04:40</span></div><div><span>¿Qué devuelve len([3, 5, 8])?<small>Python, 1.2. Respondiste: 8</small></span><span class="lk" style="margin:0">02:05</span></div></div></div>
+<div class="fab">${ic('spark')}Nuevo test</div>`]]],
+['Repaso: tutor','Dudas solo sobre el curso y la plataforma, con enlaces al vídeo.',2,0,[
+['Burbujas',`<div class="head">${hd()}${segT(1)}</div>
+<div class="bd"><div class="msg t">Fallaste la pregunta sobre la prop key. ¿La repasamos?</div><div class="msg u">Sí, no entiendo para qué sirve</div>
+<div class="msg t">La key le dice a React qué elemento es cuál cuando la lista cambia, así no los repinta todos.<br><span class="lk">${ic('play')}Ver 03:12 en el vídeo</span></div></div>
+<p class="note">El tutor recibe tu id de alumno, no tu nombre ni tu email.</p>${inp}`],
+['Con contexto',`<div class="head">${hd()}${segT(1)}</div>
+<div class="bd"><div class="card ctx"><span class="th t1">${ic('code')}</span><div style="flex:1"><b style="font-size:15px">React desde cero, 2.3</b><span class="m">El tutor solo responde sobre este curso</span></div></div>
+<div class="msg u">No entiendo para qué sirve la key</div><div class="msg t">Le dice a React qué elemento es cuál cuando la lista cambia, así no los repinta todos.<br><span class="lk">${ic('play')}Ver 03:12 en el vídeo</span></div></div>
+<div class="sugs"><span>Ponme un ejemplo</span><span>¿Qué entra en el test?</span></div>${inp}`],
+['Conversación',`<div class="head">${hd()}${segT(1)}</div>
+<div class="bd" style="padding-top:4px"><div class="tw"><span class="a t1">T</span><div><b>Tutor</b>Fallaste la pregunta sobre la prop key. ¿La repasamos?</div></div><div class="tw"><span class="a t3">LF</span><div><b>Tú</b>Sí, no entiendo para qué sirve</div></div><div class="tw" style="border:0"><span class="a t1">T</span><div><b>Tutor</b>La key le dice a React qué elemento es cuál cuando la lista cambia, así no los repinta todos.<br><span class="lk">${ic('play')}Ver 03:12 en el vídeo</span></div></div></div>
+<p class="note">El tutor recibe tu id de alumno, no tu nombre ni tu email.</p>${inp}`]]],
+['Perfil','Tu progreso y qué datos usa la app.',3,0,[
+['Resumen',`<div class="head">${hd()}<div class="rw" style="padding:8px 20px 6px"><span class="av">LF</span><div><b style="font-size:22px">Lucía Ferrer</b><span class="m">Alumna desde septiembre</span></div></div></div>
+<div class="bd"><div class="stats"><div class="card"><b>3</b><span class="m">cursos</span></div><div class="card"><b>34</b><span class="m">lecciones</span></div><div class="card"><b>82 %</b><span class="m">aciertos</span></div></div>
+<div class="list" style="margin-top:12px"><div>${ic('cert')}<span>Certificados</span>${ic('chev')}</div><div>${ic('shield')}<span>Mis datos y privacidad<small>Qué recibe el tutor y cómo borrarlo</small></span>${ic('chev')}</div><div>${ic('bellS')}<span>Notificaciones</span>${ic('chev')}</div><div>${ic('gear')}<span>Ajustes de la cuenta</span>${ic('chev')}</div></div></div>`],
+['Centrado',`<div class="head">${hd()}<div class="cen"><span class="av">LF</span><b style="font-size:22px">Lucía Ferrer</b><span class="m">Alumna desde septiembre</span></div></div>
+<div class="bd"><div class="card st3"><div><b>3</b><span class="m">cursos</span></div><div><b>34</b><span class="m">lecciones</span></div><div><b>82 %</b><span class="m">aciertos</span></div></div><div style="margin-top:6px">${plist}</div></div>`],
+['Por curso',`<div class="head">${hd()}<div class="rw" style="padding:8px 20px 6px"><span class="av">LF</span><div><b style="font-size:22px">Lucía Ferrer</b><span class="m">34 lecciones hechas</span></div></div></div>
+<div class="bd"><p class="sec" style="margin-top:6px">Progreso por curso</p>${[['React desde cero',62],['Git y GitHub en equipo',80],['Python para analizar datos',17]].map(c=>`<div class="pc"><div><span>${c[0]}</span><span>${c[1]} %</span></div><div class="prog"><i style="width:${c[1]}%"></i></div></div>`).join('')}<div style="margin-top:8px">${plist}</div></div>`]]]];
+const wall=document.getElementById('wall');
+const DK=Object.keys(D),PK=Object.keys(PA);
+const L=S.map(()=>0);
+const $=id=>document.getElementById(id);
+wall.innerHTML=S.map(([n,c],w)=>`<figure><div class="frame"><div class="ph"><div class="scr" id="s${w}"></div></div></div><figcaption><b>${n}</b>${c}<div class="lv" id="v${w}" role="group" aria-label="Layout de ${n}"></div></figcaption></figure>`).join('');
+function paint(w){const[, ,a,sh,V]=S[w];$('s'+w).innerHTML=(sh?'':sb())+V[L[w]][1]+isl(a);
+ $('v'+w).innerHTML=V.map((v,k)=>`<button data-w="${w}" data-v="${k}" aria-pressed="${k===L[w]}">${k+1}. ${v[0]}</button>`).join('')}
+function draw(){const d=wall.dataset.d,p=wall.dataset.p,all=L.every(x=>x===L[0])?L[0]:-1;
+ $('d').innerHTML=DK.map(k=>`<button data-d="${k}" aria-pressed="${k===d}">${D[k][0]}</button>`).join('');
+ $('p').innerHTML=Object.keys(G).map(g=>`<div class="grp"><small>${G[g]}</small><div class="opts">${PK.filter(k=>PA[k][1]===g).map(k=>`<button data-p="${k}" aria-pressed="${k===p}"><span class="trio"><i style="background:${PA[k][2]}"></i><i style="background:${PA[k][3]}"></i><i style="background:${PA[k][4]}"></i></span>${PA[k][0]}</button>`).join('')}</div></div>`).join('');
+ $('l').innerHTML=[0,1,2].map(k=>`<button data-all="${k}" aria-pressed="${k===all}">Versión ${k+1}</button>`).join('');
+ $('dd').textContent=D[d][1];$('pd').textContent=PA[p][5];$('md').textContent=D[d][0];$('mp').textContent=PA[p][0]}
+function save(){location.hash=wall.dataset.d+'-'+wall.dataset.p+'-'+L.map(x=>x+1).join('')}
+function read(){const[d,p,l]=location.hash.slice(1).split('-');if(D[d])wall.dataset.d=d;if(PA[p])wall.dataset.p=p;
+ if(/^[1-3]+$/.test(l||''))S.forEach((_,w)=>{if(l[w])L[w]=+l[w]-1});S.forEach((_,w)=>paint(w));draw()}
+document.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;const x=b.dataset;
+ if(x.d)wall.dataset.d=x.d;
+ else if(x.p)wall.dataset.p=x.p;
+ else if(x.all!=null)L.fill(+x.all);
+ else if(x.w!=null)L[+x.w]=+x.v;
+ else if(x.step){const K=x.step==='d'?DK:PK,cur=wall.dataset[x.step];wall.dataset[x.step]=K[(K.indexOf(cur)+ +x.dir+K.length)%K.length]}
+ else return;
+ save()});
+addEventListener('hashchange',read);
+const fit=new ResizeObserver(es=>{for(const e of es)e.target.style.setProperty('--k',e.contentRect.width/391)});
+document.querySelectorAll('.frame').forEach(f=>fit.observe(f));
+const io=new IntersectionObserver(([e])=>$('mini').classList.toggle('on',!e.isIntersecting));
+io.observe($('d'));
+read();
+}
+</script>
+</body>
+</html>
