@@ -15,3 +15,8 @@
 
 - Se enlazó la pestaña Cursos con la cuadrícula de Mis cursos, los detalles de progreso y el listado de cursos terminados. Los accesos a Vídeo y Shorts muestran el estado del contenido de muestra.
 - Se comprobó la navegación en Expo Web a 320 y 375 px y se verificó que la pestaña activa se anuncia al navegar con teclado.
+
+## Perfil · 27/11/2026
+
+- Se incorporó a la rama Perfil la base Expo de Cursos y se implementó el resumen del alumno con los accesos a certificados, privacidad, notificaciones y ajustes de la cuenta.
+- Se comprobó la pantalla en Expo Web a 320 y 375 px, incluida la navegación con teclado y la apertura de los cuatro accesos. Se generaron las compilaciones de Android, iOS y web.

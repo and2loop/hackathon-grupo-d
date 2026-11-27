@@ -3,6 +3,7 @@ import { Modal, Pressable, ScrollView, StyleSheet, Text, View } from 'react-nati
 import CoursesScreen from './cursos/CoursesScreen';
 import HomeIcon from './inicio/HomeIcon';
 import HomeScreen, { resumeLesson, resumeLessonDetail } from './inicio/HomeScreen';
+import ProfileScreen from './perfil/ProfileScreen';
 import { colors } from './theme';
 
 const destinations = [
@@ -32,13 +33,13 @@ export default function AcademyScreen({ fonts }) {
   }
 
   function openDestination(label) {
-    if (label === 'Inicio' || label === 'Cursos') {
-      scrollToTop();
-      setScreen(label);
+    if (label === 'Repaso') {
+      setDetail({ title: label, message: 'Esta sección se incorporará cuando esté disponible.' });
       return;
     }
 
-    setDetail({ title: label, message: 'Esta sección se incorporará cuando esté disponible.' });
+    scrollToTop();
+    setScreen(label);
   }
 
   return (
@@ -60,10 +61,14 @@ export default function AcademyScreen({ fonts }) {
           </Pressable>
         </View>
 
-        {screen === 'Cursos' ? (
+        {screen === 'Cursos' && (
           <CoursesScreen fonts={fonts} onOpenDetail={setDetail} onScrollToTop={scrollToTop} />
-        ) : (
+        )}
+        {screen === 'Inicio' && (
           <HomeScreen fonts={fonts} onOpenDetail={setDetail} />
+        )}
+        {screen === 'Perfil' && (
+          <ProfileScreen fonts={fonts} onOpenDetail={setDetail} onOpenNotifications={openNotifications} />
         )}
       </ScrollView>
 
