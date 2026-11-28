@@ -11,8 +11,8 @@
 
 ## 2. Modelo y proveedor de IA
 
-  * Provedor: Open AI.
-  *Modelos: 
+  * Provedor: Open AI
+  * *Modelos: 
     - Gpt 6.2 Astra
     - Gpt 6.2 Sol
     - Gpt 6.1 Terra
