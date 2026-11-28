@@ -1,0 +1,2876 @@
+{
+ "schemaVersion": 1,
+ "shortsMode": "virtual",
+ "course": {
+  "id": "java-desde-0",
+  "title": "MEGA Curso JAVA desde 0 [DAM - DAW]",
+  "channel": "Aula en la nube",
+  "playlistId": "PLG1qdjD__qH6ULjW5iN8E45m5nkaCNbUu",
+  "description": null,
+  "isNew": false,
+  "trending": false,
+  "promoted": false,
+  "modules": [
+   {
+    "id": "1",
+    "number": 1,
+    "title": "Presentación e introducción a la programación",
+    "lessons": [
+     {
+      "id": "1.1",
+      "title": "Presentación del curso",
+      "video": {
+       "youtubeId": "NFDjCN4r_68",
+       "duration": 789
+      },
+      "transcript": "transcripts/1.1.json",
+      "sections": [
+       {
+        "id": "1.1.1",
+        "title": "El profesor y el formato del curso",
+        "segments": [
+         {
+          "id": "1.1.1-a",
+          "start": 0,
+          "end": 63,
+          "sentences": [
+           0,
+           8
+          ],
+          "title": "Un profesor de DAM y DAW y un curso semipresencial",
+          "explanation": "El autor es profesor de informática en un instituto y enseña el módulo de programación de los ciclos de grado superior DAM y DAW. Este curso lo imparte en modelo semipresencial: sus alumnos no tienen que ir a clase, solo presentarse a los exámenes.",
+          "isShort": true
+         },
+         {
+          "id": "1.1.1-b",
+          "start": 61,
+          "end": 120,
+          "sentences": [
+           9,
+           17
+          ],
+          "title": "Un curso práctico para aprender desde cero",
+          "explanation": "Adapta sus materiales para que el curso sea lo más práctico y detallado posible, con muchos ejemplos y ejercicios resueltos, propuestos y de ampliación. Aunque está pensado para sus clases, sirve a cualquiera que quiera aprender a programar desde cero.",
+          "isShort": true
+         }
+        ]
+       },
+       {
+        "id": "1.1.2",
+        "title": "Qué vas a aprender en este curso",
+        "segments": [
+         {
+          "id": "1.1.2-a",
+          "start": 120,
+          "end": 206,
+          "sentences": [
+           18,
+           27
+          ],
+          "title": "Qué vas a aprender: a programar, desde cero y con Java",
+          "explanation": "El objetivo es aprender a programar sin conocimientos previos. El curso se orienta a Java, pero antes hay una primera unidad sin ningún lenguaje para aprender la lógica: qué es una variable, una estructura de control o un bucle.",
+          "isShort": true
+         }
+        ]
+       },
+       {
+        "id": "1.1.3",
+        "title": "Por qué Java",
+        "segments": [
+         {
+          "id": "1.1.3-a",
+          "start": 204,
+          "end": 293,
+          "sentences": [
+           28,
+           39
+          ],
+          "title": "Por qué Java como primer lenguaje",
+          "explanation": "Java fue su primer lenguaje y le ayudó a aprender otros como JavaScript: tiene un tipado estricto, hay que declarar el tipo de dato y está orientado a objetos. Otros lenguajes como C++ le parecen más complejos para empezar.",
+          "isShort": true
+         },
+         {
+          "id": "1.1.3-b",
+          "start": 291,
+          "end": 357,
+          "sentences": [
+           40,
+           47
+          ],
+          "title": "Más difícil no es peor, y es de los más populares",
+          "explanation": "No hay que aprender a programar con el lenguaje más fácil. Java estaba en la posición 3 del índice TIOBE de septiembre de 2022, por detrás de Python y C.",
+          "isShort": true
+         },
+         {
+          "id": "1.1.3-c",
+          "start": 356,
+          "end": 409,
+          "sentences": [
+           48,
+           53
+          ],
+          "title": "Otras ventajas de Java",
+          "explanation": "Es el tercero en GitHub, es multiplataforma gracias a la máquina virtual de Java, está orientado a objetos con tipado fuerte, es maduro y tiene mucha documentación, y lo usan empresas como Amazon, Google o Microsoft.",
+          "isShort": true
+         }
+        ]
+       },
+       {
+        "id": "1.1.4",
+        "title": "Índice del curso",
+        "segments": [
+         {
+          "id": "1.1.4-a",
+          "start": 407,
+          "end": 471,
+          "sentences": [
+           54,
+           61
+          ],
+          "title": "Tema 1: introducción a la programación",
+          "explanation": "El curso tiene 10 unidades. La primera, sin ningún lenguaje, tiene una parte teórica (algoritmo, compilador, intérprete) y otra para representar algoritmos con diagramas de flujo y pseudocódigo.",
+          "isShort": true
+         },
+         {
+          "id": "1.1.4-b",
+          "start": 470,
+          "end": 513,
+          "sentences": [
+           62,
+           68
+          ],
+          "title": "Tema 2: primeros pasos con Java",
+          "explanation": "Qué es Java y cómo ha evolucionado, instalar el JDK y Visual Studio Code, variables, cadenas de texto, operadores y expresiones, condicionales y bucles, entrada de datos y conversión de tipos.",
+          "isShort": true
+         },
+         {
+          "id": "1.1.4-c",
+          "start": 511,
+          "end": 579,
+          "sentences": [
+           69,
+           77
+          ],
+          "title": "Temas 3 y 4: métodos, arrays y matrices",
+          "explanation": "El tema 3 trata métodos y funciones: parámetros, el método main, variables locales y globales, la pila de llamadas y la recursión. El tema 4, arrays y matrices: recorrerlos, copiarlos, ordenarlos y algoritmos de ordenación.",
+          "isShort": true
+         },
+         {
+          "id": "1.1.4-d",
+          "start": 577,
+          "end": 621,
+          "sentences": [
+           78,
+           82
+          ],
+          "title": "Tema 5: programación orientada a objetos",
+          "explanation": "Base teórica de la orientación a objetos, diseño con UML y programación en Java: clase, instancia, objeto, constructores, métodos, this, atributos, visibilidad, elementos estáticos, ArrayList de objetos, clases y paquetes.",
+          "isShort": true
+         },
+         {
+          "id": "1.1.4-e",
+          "start": 619,
+          "end": 671,
+          "sentences": [
+           83,
+           88
+          ],
+          "title": "Tema 6: herencia, APIs y excepciones",
+          "explanation": "Herencia y jerarquía de clases, sobrescritura de métodos, interfaces, clases abstractas y polimorfismo; después, leer documentación y usar APIs de Java, y por último el tratamiento de excepciones.",
+          "isShort": true
+         },
+         {
+          "id": "1.1.4-f",
+          "start": 669,
+          "end": 736,
+          "sentences": [
+           89,
+           95
+          ],
+          "title": "Temas 7 y 8: estructuras de datos, ficheros y bases de datos",
+          "explanation": "El tema 7 ve estructuras de datos (pila, cola, lista, árbol, tabla, grafo), las interfaces Iterable, Iterator, Collection y Map, interfaces funcionales y expresiones lambda. El tema 8, ficheros binarios y de texto, flujos y bases de datos.",
+          "isShort": true
+         },
+         {
+          "id": "1.1.4-g",
+          "start": 735,
+          "end": 788,
+          "sentences": [
+           96,
+           103
+          ],
+          "title": "Temas 9 y 10: interfaces gráficas y mejores prácticas",
+          "explanation": "El tema 9 recorre la evolución de las interfaces gráficas en Java: AWT, Swing y JavaFX. El tema 10 enseña a mejorar el código con buenas prácticas, patrones de diseño, testing y Clean Code.",
+          "isShort": true
+         }
+        ]
+       }
+      ],
+      "questions": []
+     },
+     {
+      "id": "1.2",
+      "title": "Problemas, algoritmos y programas",
+      "video": {
+       "youtubeId": "dfEEG4A_Hoo",
+       "duration": 1217
+      },
+      "transcript": "transcripts/1.2.json",
+      "sections": [
+       {
+        "id": "1.2.1",
+        "title": "Problemas, algoritmos y programas",
+        "segments": [
+         {
+          "id": "1.2.1-a",
+          "start": 55,
+          "end": 107,
+          "sentences": [
+           9,
+           16
+          ],
+          "title": "Programar es resolver problemas",
+          "explanation": "Un algoritmo es una secuencia de acciones que se realizan para resolver un problema. Programar es resolver problemas, simples o muy complejos, y se hace a través de algoritmos.",
+          "isShort": true
+         },
+         {
+          "id": "1.2.1-b",
+          "start": 105,
+          "end": 168,
+          "sentences": [
+           17,
+           24
+          ],
+          "title": "Algoritmo, lenguaje y programa",
+          "explanation": "Un algoritmo tiene un número finito de instrucciones en un orden concreto y es independiente del lenguaje de programación. Un programa es un algoritmo escrito con las sentencias de un lenguaje concreto.",
+          "isShort": true
+         },
+         {
+          "id": "1.2.1-c",
+          "start": 166,
+          "end": 242,
+          "sentences": [
+           25,
+           35
+          ],
+          "title": "Características de un algoritmo",
+          "explanation": "Un algoritmo debe ser finito, preciso (sin ambigüedades), efectivo (se puede escribir con papel y lápiz) y general: si comprueba si un número es primo, debe servir para cualquier número.",
+          "isShort": true
+         }
+        ]
+       },
+       {
+        "id": "1.2.2",
+        "title": "Esquema de un algoritmo",
+        "segments": [
+         {
+          "id": "1.2.2-a",
+          "start": 240,
+          "end": 279,
+          "sentences": [
+           36,
+           39
+          ],
+          "title": "Entrada, algoritmo y salida",
+          "explanation": "El ordenador recibe unos datos de entrada, los procesa con el algoritmo y genera una información de salida. Por ejemplo: entra un número y sale si es primo o no.",
+          "isShort": true
+         },
+         {
+          "id": "1.2.2-b",
+          "start": 277,
+          "end": 339,
+          "sentences": [
+           40,
+           46
+          ],
+          "title": "Ejemplo: la receta de la tortilla de patatas",
+          "explanation": "Un algoritmo no tiene por qué ser numérico: la receta de la tortilla tiene datos de entrada (huevos, aceite, patatas, cebolla, sartén y fuego), unas instrucciones en orden y una salida, la tortilla.",
+          "isShort": true
+         },
+         {
+          "id": "1.2.2-c",
+          "start": 337,
+          "end": 370,
+          "sentences": [
+           47,
+           50
+          ],
+          "title": "La receta como esquema de algoritmo",
+          "explanation": "Si se siguen las instrucciones en orden se obtiene la tortilla. En el esquema, la entrada son los ingredientes y quien procesa el algoritmo es una persona en lugar de un ordenador.",
+          "isShort": true
+         },
+         {
+          "id": "1.2.2-d",
+          "start": 369,
+          "end": 429,
+          "sentences": [
+           51,
+           57
+          ],
+          "title": "Precisión: el ejemplo de la raíz cuadrada",
+          "explanation": "\"Determinar la raíz cuadrada positiva de un número n entero no negativo\" es más preciso que \"determinar la raíz cuadrada positiva de un número n\", porque limita los valores de n.",
+          "isShort": true
+         },
+         {
+          "id": "1.2.2-e",
+          "start": 428,
+          "end": 507,
+          "sentences": [
+           58,
+           67
+          ],
+          "title": "Problemas computacionales y no computacionales",
+          "explanation": "Solo se pueden resolver con un algoritmo los problemas con solución mecánica, llamados computacionales: el área de un cuadrado a partir de su lado sí lo es; el color favorito de una persona a partir de su nombre, no.",
+          "isShort": true
+         }
+        ]
+       },
+       {
+        "id": "1.2.3",
+        "title": "Ejemplo: algoritmo de la multiplicación",
+        "segments": [
+         {
+          "id": "1.2.3-a",
+          "start": 505,
+          "end": 575,
+          "sentences": [
+           68,
+           76
+          ],
+          "title": "El algoritmo de la multiplicación de varias cifras",
+          "explanation": "Las operaciones aritméticas son algoritmos típicos. Para multiplicar se multiplica el multiplicando por cada cifra del multiplicador de derecha a izquierda, se escribe cada resultado desplazado un lugar a la izquierda y se suman todas las filas.",
+          "isShort": true
+         }
+        ]
+       },
+       {
+        "id": "1.2.4",
+        "title": "Conceptos básicos de programación",
+        "segments": [
+         {
+          "id": "1.2.4-a",
+          "start": 573,
+          "end": 632,
+          "sentences": [
+           77,
+           83
+          ],
+          "title": "Procesador, programa y lenguaje de programación",
+          "explanation": "El procesador interpreta y ejecuta instrucciones. Un programa son uno o más algoritmos escritos en un lenguaje de programación, que es el conjunto de reglas que determina lo que se puede escribir.",
+          "isShort": true
+         },
+         {
+          "id": "1.2.4-b",
+          "start": 630,
+          "end": 712,
+          "sentences": [
+           84,
+           94
+          ],
+          "title": "Proceso y estado de un programa",
+          "explanation": "Un proceso es un algoritmo en constante ejecución que va cambiando de estado, como los del sistema operativo. El estado de un programa es el conjunto de valores de sus datos (sus variables) en un momento determinado.",
+          "isShort": true
+         },
+         {
+          "id": "1.2.4-c",
+          "start": 710,
+          "end": 765,
+          "sentences": [
+           95,
+           102
+          ],
+          "title": "Cómputo, instrucción y datos",
+          "explanation": "El cómputo es la transformación del estado al ejecutar instrucciones; una instrucción es cada paso del algoritmo, como leer o escribir un dato; y los datos son información preparada para que la trate un ordenador, internamente en binario.",
+          "isShort": true
+         }
+        ]
+       },
+       {
+        "id": "1.2.5",
+        "title": "Escala y ciclo de vida de un programa",
+        "segments": [
+         {
+          "id": "1.2.5-a",
+          "start": 763,
+          "end": 820,
+          "sentences": [
+           103,
+           108
+          ],
+          "title": "Programación a escala reducida y a gran escala",
+          "explanation": "En el curso se hará programación a escala reducida: pocas líneas de código y una sola persona. Los programas reales, como un sistema operativo, se hacen a gran escala, con muchas líneas y equipos de programadores.",
+          "isShort": true
+         },
+         {
+          "id": "1.2.5-b",
+          "start": 818,
+          "end": 852,
+          "sentences": [
+           109,
+           112
+          ],
+          "title": "El ciclo de vida de un programa",
+          "explanation": "Primero se desarrolla el programa y después viene un ciclo continuo de mantenimiento: se corrigen errores, se actualiza y así van saliendo las versiones.",
+          "isShort": true
+         }
+        ]
+       },
+       {
+        "id": "1.2.6",
+        "title": "Lenguajes de bajo y alto nivel y su evolución",
+        "segments": [
+         {
+          "id": "1.2.6-a",
+          "start": 850,
+          "end": 921,
+          "sentences": [
+           113,
+           121
+          ],
+          "title": "Código máquina: ceros y unos",
+          "explanation": "Los ordenadores solo entienden código binario, porque sus circuitos detectan si pasa tensión o no. Esa secuencia de ceros y unos es el código o lenguaje máquina, y los compiladores traducen a él el código que escribimos.",
+          "isShort": true
+         },
+         {
+          "id": "1.2.6-b",
+          "start": 919,
+          "end": 978,
+          "sentences": [
+           122,
+           130
+          ],
+          "title": "Ensamblador y lenguajes de bajo nivel",
+          "explanation": "El ensamblador usa nemotécnicos y es legible, pero sirve para programas pequeños que acceden a dispositivos o al sistema operativo. El lenguaje máquina y el ensamblador son lenguajes de bajo nivel, próximos a la máquina.",
+          "isShort": true
+         },
+         {
+          "id": "1.2.6-c",
+          "start": 977,
+          "end": 1053,
+          "sentences": [
+           131,
+           140
+          ],
+          "title": "Lenguajes de alto nivel",
+          "explanation": "Tienen operadores y estructuras próximas a nuestro lenguaje, ayudan a no cometer errores, el código es transportable e independiente de la máquina y más legible, como el ejemplo en Java.",
+          "isShort": true
+         },
+         {
+          "id": "1.2.6-d",
+          "start": 1052,
+          "end": 1099,
+          "sentences": [
+           141,
+           147
+          ],
+          "title": "Breve historia de los lenguajes",
+          "explanation": "Los primeros ensambladores aparecen en 1951. Tras la crisis del software nace la programación estructurada (C, Pascal), en 1980 llega C++ y hacia los 90 la programación orientada a objetos con lenguajes como Java.",
+          "isShort": true
+         }
+        ]
+       },
+       {
+        "id": "1.2.7",
+        "title": "Compiladores e intérpretes",
+        "segments": [
+         {
+          "id": "1.2.7-a",
+          "start": 1097,
+          "end": 1136,
+          "sentences": [
+           148,
+           151
+          ],
+          "title": "Intérpretes",
+          "explanation": "Los programas se traducen a código máquina con un intérprete o con un compilador. El intérprete traduce cada instrucción por separado a medida que se ejecuta, como ocurre con JavaScript.",
+          "isShort": true
+         },
+         {
+          "id": "1.2.7-b",
+          "start": 1135,
+          "end": 1207,
+          "sentences": [
+           152,
+           160
+          ],
+          "title": "Compiladores y lenguajes compilados",
+          "explanation": "El compilador traduce todo el programa de una vez a un nuevo archivo y antes avisa de los errores de sintaxis. Java es un lenguaje compilado: siempre hay una compilación previa antes de ejecutar.",
+          "isShort": true
+         }
+        ]
+       }
+      ],
+      "questions": []
+     }
+    ]
+   },
+   {
+    "id": "2",
+    "number": 2,
+    "title": "Representación de algoritmos y expresiones",
+    "lessons": [
+     {
+      "id": "2.1",
+      "title": "Representación de algoritmos",
+      "video": {
+       "youtubeId": "b003s0CJ2KU",
+       "duration": 593
+      },
+      "transcript": "transcripts/2.1.json",
+      "sections": [
+       {
+        "id": "2.1.1",
+        "title": "Cómo se representa un algoritmo",
+        "segments": [
+         {
+          "id": "2.1.1-a",
+          "start": 24,
+          "end": 105,
+          "sentences": [
+           3,
+           11
+          ],
+          "title": "La calidad de un algoritmo: tiempo y recursos",
+          "explanation": "Un mismo problema se puede resolver con distintos algoritmos. Es mejor el que necesita menos tiempo (menos instrucciones) y menos recursos, como memoria; en un algoritmo, eso significa no declarar más variables de las necesarias.",
+          "isShort": true
+         },
+         {
+          "id": "2.1.1-b",
+          "start": 103,
+          "end": 138,
+          "sentences": [
+           12,
+           16
+          ],
+          "title": "Dos formas de representar: ordinogramas y pseudocódigo",
+          "explanation": "Los diagramas de flujo u ordinogramas usan símbolos y líneas de flujo que indican la secuencia de instrucciones. El pseudocódigo, que es lo que se usará en el curso, es una notación próxima al lenguaje humano.",
+          "isShort": true
+         }
+        ]
+       },
+       {
+        "id": "2.1.2",
+        "title": "Símbolos de los ordinogramas",
+        "segments": [
+         {
+          "id": "2.1.2-a",
+          "start": 137,
+          "end": 203,
+          "sentences": [
+           17,
+           26
+          ],
+          "title": "Los símbolos de un ordinograma",
+          "explanation": "El óvalo marca el inicio y el fin; el rectángulo, un proceso; el rombo, una decisión; el paralelogramo, la entrada o salida de datos; el círculo, un conector; la flecha, la siguiente instrucción; y otro tipo de rectángulo, un subprograma.",
+          "isShort": true
+         }
+        ]
+       },
+       {
+        "id": "2.1.3",
+        "title": "Ejemplo de ordinograma",
+        "segments": [
+         {
+          "id": "2.1.3-a",
+          "start": 202,
+          "end": 270,
+          "sentences": [
+           27,
+           33
+          ],
+          "title": "Recorrido por un ordinograma",
+          "explanation": "El ejemplo tiene una estructura alternativa, que sigue un camino u otro según se cumpla una condición, y una estructura repetitiva, que se repite mientras la condición se cumpla.",
+          "isShort": true
+         },
+         {
+          "id": "2.1.3-b",
+          "start": 268,
+          "end": 344,
+          "sentences": [
+           34,
+           42
+          ],
+          "title": "Ejemplo: mostrar imágenes mientras digas que sí",
+          "explanation": "El programa pregunta si quieres ver una imagen, guarda la respuesta y, mientras sea sí, muestra otra y vuelve a preguntar. Eso es un bucle; la estructura alternativa, en cambio, evalúa la condición una sola vez.",
+          "isShort": true
+         }
+        ]
+       },
+       {
+        "id": "2.1.4",
+        "title": "Qué es el pseudocódigo",
+        "segments": [
+         {
+          "id": "2.1.4-a",
+          "start": 342,
+          "end": 407,
+          "sentences": [
+           43,
+           51
+          ],
+          "title": "Qué es el pseudocódigo",
+          "explanation": "Es un lenguaje sencillo, claro y flexible, basado en el lenguaje natural, para describir el comportamiento de un algoritmo. En el curso tendrá dos partes: el nombre del programa con sus variables y después las instrucciones.",
+          "isShort": true
+         }
+        ]
+       },
+       {
+        "id": "2.1.5",
+        "title": "Estructura de un algoritmo en pseudocódigo",
+        "segments": [
+         {
+          "id": "2.1.5-a",
+          "start": 406,
+          "end": 471,
+          "sentences": [
+           52,
+           58
+          ],
+          "title": "La estructura del pseudocódigo del curso",
+          "explanation": "Se escribe PROGRAMA y el nombre, VARIABLES con la declaración tabulada, ALGORITMO con las instrucciones y FIN. Las palabras clave van en mayúsculas para distinguirlas de las variables.",
+          "isShort": true
+         }
+        ]
+       },
+       {
+        "id": "2.1.6",
+        "title": "Ejemplo: área de un círculo",
+        "segments": [
+         {
+          "id": "2.1.6-a",
+          "start": 469,
+          "end": 519,
+          "sentences": [
+           59,
+           64
+          ],
+          "title": "Área del círculo: variables y lectura del radio",
+          "explanation": "El programa área círculo declara las variables área y radio de tipo real, para guardar decimales. LEER radio guarda en la variable radio el número que se introduce, por ejemplo 15.",
+          "isShort": true
+         },
+         {
+          "id": "2.1.6-b",
+          "start": 517,
+          "end": 571,
+          "sentences": [
+           65,
+           72
+          ],
+          "title": "Área del círculo: cálculo y resultado",
+          "explanation": "La instrucción área = 3,14 · radio · radio guarda el resultado en área y ESCRIBIR lo muestra por pantalla. El mismo algoritmo aparece también como diagrama de flujo.",
+          "isShort": true
+         }
+        ]
+       }
+      ],
+      "questions": []
+     },
+     {
+      "id": "2.2",
+      "title": "Datos, variables y expresiones aritméticas",
+      "video": {
+       "youtubeId": "pgF8U9WxPts",
+       "duration": 959
+      },
+      "transcript": "transcripts/2.2.json",
+      "sections": [
+       {
+        "id": "2.2.1",
+        "title": "Elementos de un algoritmo",
+        "segments": [
+         {
+          "id": "2.2.1-a",
+          "start": 28,
+          "end": 113,
+          "sentences": [
+           4,
+           14
+          ],
+          "title": "Datos, expresiones e instrucciones",
+          "explanation": "Un algoritmo tiene tres elementos: los datos, que se guardan en variables; las expresiones, que combinan variables y constantes con operadores; y las instrucciones, las acciones básicas como sumar, leer o escribir.",
+          "isShort": true
+         }
+        ]
+       },
+       {
+        "id": "2.2.2",
+        "title": "Datos y tipos de datos",
+        "segments": [
+         {
+          "id": "2.2.2-a",
+          "start": 112,
+          "end": 172,
+          "sentences": [
+           15,
+           22
+          ],
+          "title": "Los datos ocupan memoria",
+          "explanation": "Un dato es información preparada para que la trate un ordenador. Para guardarlo se reserva un espacio de memoria que depende de lo que se guarde: una edad ocupa poco; una imagen o un texto largo, más.",
+          "isShort": true
+         },
+         {
+          "id": "2.2.2-b",
+          "start": 170,
+          "end": 249,
+          "sentences": [
+           23,
+           30
+          ],
+          "title": "El tipo de dato y los cuatro tipos del curso",
+          "explanation": "El tipo de dato define los valores posibles y las operaciones permitidas: se pueden sumar números, pero no letras. En el pseudocódigo del curso hay cuatro tipos: entero, real, texto y booleano (verdadero o falso).",
+          "isShort": true
+         }
+        ]
+       },
+       {
+        "id": "2.2.3",
+        "title": "Variables",
+        "segments": [
+         {
+          "id": "2.2.3-a",
+          "start": 247,
+          "end": 306,
+          "sentences": [
+           31,
+           37
+          ],
+          "title": "Qué es una variable",
+          "explanation": "Una variable es un espacio de memoria reservado para guardar un tipo de dato, y su valor puede cambiar durante la ejecución. Los tipos de datos se escriben en mayúsculas.",
+          "isShort": true
+         },
+         {
+          "id": "2.2.3-b",
+          "start": 304,
+          "end": 359,
+          "sentences": [
+           38,
+           45
+          ],
+          "title": "Declarar variables en pseudocódigo",
+          "explanation": "Ejemplos: base y altura de tipo entero; nombre y apellidos de tipo texto y mayor edad de tipo booleano. Las variables de distinto tipo van en líneas distintas bajo VARIABLES, tras PROGRAMA y el nombre.",
+          "isShort": true
+         }
+        ]
+       },
+       {
+        "id": "2.2.4",
+        "title": "Expresiones aritméticas",
+        "segments": [
+         {
+          "id": "2.2.4-a",
+          "start": 358,
+          "end": 418,
+          "sentences": [
+           46,
+           53
+          ],
+          "title": "Operandos y operadores aritméticos",
+          "explanation": "Una expresión aritmética da un resultado numérico y combina operandos (constantes y variables) con operadores: suma, resta, multiplicación, división y módulo, que es el resto de la división.",
+          "isShort": true
+         },
+         {
+          "id": "2.2.4-b",
+          "start": 416,
+          "end": 467,
+          "sentences": [
+           54,
+           61
+          ],
+          "title": "Incremento y decremento",
+          "explanation": "precio++ es una forma abreviada de precio = precio + 1: si valía 15, pasa a 16. precio-- equivale a precio = precio - 1: de 15 pasa a 14.",
+          "isShort": true
+         },
+         {
+          "id": "2.2.4-c",
+          "start": 466,
+          "end": 535,
+          "sentences": [
+           62,
+           70
+          ],
+          "title": "Operadores con asignación",
+          "explanation": "a += b equivale a a = a + b: con a = 3 y b = 2, a pasa a valer 5. Con los demás pasa lo mismo: si a = 3 y b = 4, a *= b guarda 12 en a.",
+          "isShort": true
+         }
+        ]
+       },
+       {
+        "id": "2.2.5",
+        "title": "Expresiones aritméticas, ejemplos 1 y 2",
+        "segments": [
+         {
+          "id": "2.2.5-a",
+          "start": 534,
+          "end": 610,
+          "sentences": [
+           71,
+           79
+          ],
+          "title": "Expresión 1: área = base · altura",
+          "explanation": "Se declaran base, altura y área como enteros. Se guarda 5 en base y 10 en altura, y área = base · altura guarda 50 en área.",
+          "isShort": true
+         },
+         {
+          "id": "2.2.5-b",
+          "start": 608,
+          "end": 659,
+          "sentences": [
+           80,
+           85
+          ],
+          "title": "Expresión 2: módulo e incremento",
+          "explanation": "Con a = 3 y b = 2, c = b módulo a: 2 entre 3 cabe a 0 y el resto es 2, así que c vale 2. Después c++ lo incrementa y al terminar c vale 3.",
+          "isShort": true
+         }
+        ]
+       },
+       {
+        "id": "2.2.6",
+        "title": "Expresiones aritméticas, ejemplos 3 y 4",
+        "segments": [
+         {
+          "id": "2.2.6-a",
+          "start": 658,
+          "end": 722,
+          "sentences": [
+           86,
+           93
+          ],
+          "title": "Expresión 3: suma, multiplicación con asignación y decremento",
+          "explanation": "c = a + b guarda 5 (3 + 2). c *= a es lo mismo que c = c · a, así que c vale 15. Por último, c-- lo deja en 14.",
+          "isShort": true
+         },
+         {
+          "id": "2.2.6-b",
+          "start": 721,
+          "end": 782,
+          "sentences": [
+           94,
+           102
+          ],
+          "title": "Expresión 4: módulo, resta y suma con asignación",
+          "explanation": "Con a = 2 y b = 1, c = a módulo b vale 0 y d = c - b vale -1. Después d += a + b equivale a d = d + a + b: -1 + 2 + 1, así que d acaba valiendo 2.",
+          "isShort": true
+         }
+        ]
+       },
+       {
+        "id": "2.2.7",
+        "title": "Expresiones aritméticas, ejemplos 5 y 6",
+        "segments": [
+         {
+          "id": "2.2.7-a",
+          "start": 781,
+          "end": 857,
+          "sentences": [
+           103,
+           111
+          ],
+          "title": "Expresión 5: multiplicar variables reales",
+          "explanation": "a vale 2: a *= b lo deja en 6; multiplicar por c = 0,5 da 3 y otra vez 1,5; y por último a *= b da 4,5. Como las variables son reales, se guardan los decimales.",
+          "isShort": true
+         },
+         {
+          "id": "2.2.7-b",
+          "start": 856,
+          "end": 907,
+          "sentences": [
+           112,
+           117
+          ],
+          "title": "Expresión 6: con enteros se pierden los decimales",
+          "explanation": "Las mismas instrucciones con variables enteras: 3 · 0,5 da 1,5, pero en una variable entera no se puede guardar el ,5, así que se trunca y se guarda 1.",
+          "isShort": true
+         },
+         {
+          "id": "2.2.7-c",
+          "start": 905,
+          "end": 951,
+          "sentences": [
+           118,
+           123
+          ],
+          "title": "Truncar o redondear: mismo código, distinto resultado",
+          "explanation": "Según el lenguaje se redondea o se trunca, pero una variable entera nunca guarda 1,5. Al final a vale 3: las instrucciones son las mismas, pero el resultado cambia porque las variables no son del mismo tipo.",
+          "isShort": true
+         }
+        ]
+       }
+      ],
+      "questions": []
+     },
+     {
+      "id": "2.3",
+      "title": "Expresiones lógicas y operadores relacionales",
+      "video": {
+       "youtubeId": "98m39gc3YpM",
+       "duration": 467
+      },
+      "transcript": "transcripts/2.3.json",
+      "sections": [
+       {
+        "id": "2.3.1",
+        "title": "Expresiones lógicas",
+        "segments": [
+         {
+          "id": "2.3.1-a",
+          "start": 52,
+          "end": 136,
+          "sentences": [
+           8,
+           18
+          ],
+          "title": "Una expresión lógica devuelve verdadero o falso",
+          "explanation": "El resultado de una expresión lógica es siempre un booleano, true o false. Se usan en condicionales y bucles; de momento el resultado se guarda en variables booleanas. Sus operandos pueden ser constantes, variables u otras expresiones lógicas.",
+          "isShort": true
+         }
+        ]
+       },
+       {
+        "id": "2.3.2",
+        "title": "Operadores relacionales",
+        "segments": [
+         {
+          "id": "2.3.2-a",
+          "start": 134,
+          "end": 182,
+          "sentences": [
+           19,
+           26
+          ],
+          "title": "Los operadores relacionales",
+          "explanation": "Sirven para comparar variables y constantes: igual, distinto, mayor, menor, mayor o igual y menor o igual. Si a vale 5 y b vale 6, a == b es false y a != b es true.",
+          "isShort": true
+         }
+        ]
+       },
+       {
+        "id": "2.3.3",
+        "title": "Operadores relacionales, ejemplos 7 y 8",
+        "segments": [
+         {
+          "id": "2.3.3-a",
+          "start": 180,
+          "end": 237,
+          "sentences": [
+           27,
+           34
+          ],
+          "title": "Expresión 7: primero se evalúa la derecha del igual",
+          "explanation": "a vale false porque 1 no es mayor que 2. Siempre se evalúa primero la expresión a la derecha del igual y después el resultado se asigna a la variable de la izquierda.",
+          "isShort": true
+         },
+         {
+          "id": "2.3.3-b",
+          "start": 235,
+          "end": 280,
+          "sentences": [
+           35,
+           40
+          ],
+          "title": "Expresión 7: los valores de b y c",
+          "explanation": "b vale true porque 2 es mayor que 1. En c, la parte izquierda da 3 y la de la derecha, (1 + 2) · 1, también 3; como 3 no es mayor que 3, c vale false.",
+          "isShort": true
+         },
+         {
+          "id": "2.3.3-c",
+          "start": 279,
+          "end": 338,
+          "sentences": [
+           41,
+           47
+          ],
+          "title": "Expresión 8: B1, b2 y B3",
+          "explanation": "Con x = 5 e y = 1: B1 es true porque 5 es distinto de 1; b2 es false porque 1 no es mayor que 5; y B3 es true porque x + y es 6 y 6 es igual a 6.",
+          "isShort": true
+         }
+        ]
+       },
+       {
+        "id": "2.3.4",
+        "title": "Operadores relacionales, ejemplos 9 y 10",
+        "segments": [
+         {
+          "id": "2.3.4-a",
+          "start": 337,
+          "end": 384,
+          "sentences": [
+           48,
+           52
+          ],
+          "title": "Expresión 9: también se comparan booleanos",
+          "explanation": "a es false porque 4 no es mayor que 5 y b es true porque 6 es distinto de 3. Las variables booleanas también se comparan: false y true no son iguales, así que el resultado es false.",
+          "isShort": true
+         },
+         {
+          "id": "2.3.4-b",
+          "start": 383,
+          "end": 446,
+          "sentences": [
+           53,
+           61
+          ],
+          "title": "Expresión 10: asignar y comparar booleanos",
+          "explanation": "B1 es true porque 7 es mayor o igual que 6, y b2 es false porque 4 + 6 = 10 no es mayor que 10. B1 = b2 copia false en B1, y B1 == b2 da true porque los dos son false.",
+          "isShort": true
+         }
+        ]
+       }
+      ],
+      "questions": []
+     },
+     {
+      "id": "2.4",
+      "title": "Operadores lógicos",
+      "video": {
+       "youtubeId": "GwwRkMo012Y",
+       "duration": 1096
+      },
+      "transcript": "transcripts/2.4.json",
+      "sections": [
+       {
+        "id": "2.4.1",
+        "title": "Operadores lógicos: not, and, or y xor",
+        "segments": [
+         {
+          "id": "2.4.1-a",
+          "start": 31,
+          "end": 104,
+          "sentences": [
+           4,
+           11
+          ],
+          "title": "Para qué sirven los operadores lógicos",
+          "explanation": "Los operadores lógicos más habituales son la negación (not), la conjunción (and), la disyunción (or) y la disyunción exclusiva (xor). Sirven para unir varias expresiones que devuelven verdadero o falso en una sola.",
+          "isShort": true
+         }
+        ]
+       },
+       {
+        "id": "2.4.2",
+        "title": "Tabla de verdad",
+        "segments": [
+         {
+          "id": "2.4.2-a",
+          "start": 102,
+          "end": 167,
+          "sentences": [
+           12,
+           19
+          ],
+          "title": "La and: verdadera solo si las dos lo son",
+          "explanation": "En la tabla de verdad, x and y (escrito con dos ampersand) solo es true cuando las dos expresiones son true; en todos los demás casos es false, porque se tiene que cumplir una y otra.",
+          "isShort": true
+         },
+         {
+          "id": "2.4.2-b",
+          "start": 165,
+          "end": 204,
+          "sentences": [
+           20,
+           25
+          ],
+          "title": "La or: falsa solo si las dos lo son",
+          "explanation": "La or (dos barras) es verdadera en cuanto una de las dos expresiones lo es. Solo es falsa cuando las dos son falsas.",
+          "isShort": true
+         },
+         {
+          "id": "2.4.2-c",
+          "start": 202,
+          "end": 277,
+          "sentences": [
+           26,
+           35
+          ],
+          "title": "La xor y la negación",
+          "explanation": "La xor es falsa cuando las dos expresiones tienen el mismo valor y verdadera cuando son distintas. La negación cambia el valor: lo verdadero pasa a falso y lo falso a verdadero.",
+          "isShort": true
+         }
+        ]
+       },
+       {
+        "id": "2.4.3",
+        "title": "Ejemplos con operadores lógicos",
+        "segments": [
+         {
+          "id": "2.4.3-a",
+          "start": 275,
+          "end": 359,
+          "sentences": [
+           36,
+           44
+          ],
+          "title": "Un valor entre 15 y 20 con and",
+          "explanation": "valor >= 15 and valor <= 20 solo es verdadera si se cumplen las dos, es decir, si valor está entre 15 y 20, ambos incluidos. Con un 4 se cumple la segunda parte pero no la primera, así que es falsa.",
+          "isShort": true
+         },
+         {
+          "id": "2.4.3-b",
+          "start": 357,
+          "end": 410,
+          "sentences": [
+           45,
+           51
+          ],
+          "title": "Una condición imposible",
+          "explanation": "valor <= 15 and valor >= 20 es siempre falsa: ningún número es a la vez menor o igual que 15 y mayor o igual que 20. Hay que tener cuidado con los operadores lógicos, porque pueden crear condiciones que no se cumplen nunca.",
+          "isShort": true
+         },
+         {
+          "id": "2.4.3-c",
+          "start": 408,
+          "end": 462,
+          "sentences": [
+           52,
+           58
+          ],
+          "title": "Mayor que 15 o igual a 15",
+          "explanation": "valor > 15 or valor == 15 es verdadera si valor es mayor o igual que 15: con 16, 17 o 18 se cumple la primera, y con 15 se cumple la segunda. Con una or basta con que una sea verdadera.",
+          "isShort": true
+         },
+         {
+          "id": "2.4.3-d",
+          "start": 460,
+          "end": 495,
+          "sentences": [
+           59,
+           62
+          ],
+          "title": "Siempre verdadera excepto con 15",
+          "explanation": "valor > 15 or valor < 15 es verdadera con cualquier valor salvo con 15, porque 15 no es mayor ni menor que 15.",
+          "isShort": true
+         },
+         {
+          "id": "2.4.3-e",
+          "start": 493,
+          "end": 542,
+          "sentences": [
+           63,
+           68
+          ],
+          "title": "Prioridad: la and antes que la or",
+          "explanation": "Cuando se combinan, la and tiene más prioridad que la or: primero se resuelve la and y su resultado se compara con la or, aunque la and esté escrita después.",
+          "isShort": true
+         },
+         {
+          "id": "2.4.3-f",
+          "start": 540,
+          "end": 611,
+          "sentences": [
+           69,
+           77
+          ],
+          "title": "Combinar and y or, y negar una expresión",
+          "explanation": "(valor >= 15 and valor <= 20) or valor > 30 es verdadera entre 15 y 20 o por encima de 30. La negación de valor > 15 solo es verdadera si valor es 15 o menor.",
+          "isShort": true
+         }
+        ]
+       },
+       {
+        "id": "2.4.4",
+        "title": "Expresiones 11 y 12",
+        "segments": [
+         {
+          "id": "2.4.4-a",
+          "start": 610,
+          "end": 677,
+          "sentences": [
+           78,
+           85
+          ],
+          "title": "Expresión 11: c con and y con or",
+          "explanation": "Con a = true y b = false, a and b da false porque hay una falsa. a or b da true porque basta con que una sea verdadera.",
+          "isShort": true
+         },
+         {
+          "id": "2.4.4-b",
+          "start": 675,
+          "end": 732,
+          "sentences": [
+           86,
+           93
+          ],
+          "title": "Expresión 11: combinar con operadores relacionales",
+          "explanation": "a and 6 != 3 da true porque las dos partes son verdaderas. Siempre se resuelve antes la expresión a la derecha del igual y después se guarda en c; en la última línea una de las partes es falsa y c vale false.",
+          "isShort": true
+         },
+         {
+          "id": "2.4.4-c",
+          "start": 730,
+          "end": 774,
+          "sentences": [
+           94,
+           99
+          ],
+          "title": "Expresión 12: B1 y b2 con x += x",
+          "explanation": "Con x = 10, B1 = (x == 10) es true. x += x equivale a x = x + x y guarda 20, así que b2 = (x == 10) es false.",
+          "isShort": true
+         },
+         {
+          "id": "2.4.4-d",
+          "start": 773,
+          "end": 829,
+          "sentences": [
+           100,
+           107
+          ],
+          "title": "Expresión 12: and, negación y or",
+          "explanation": "B1 = B1 and b2 da false porque una es falsa. Después, not B1 es true y, como va seguida de una or, b2 ya es verdadero sin evaluar el resto.",
+          "isShort": true
+         }
+        ]
+       },
+       {
+        "id": "2.4.5",
+        "title": "Expresión 13",
+        "segments": [
+         {
+          "id": "2.4.5-a",
+          "start": 827,
+          "end": 889,
+          "sentences": [
+           108,
+           118
+          ],
+          "title": "Expresión 13: B1 con la and por delante",
+          "explanation": "La and tiene prioridad: x + y > 20 es falso y x > 10 también, así que esa parte es false. Después, la or con y - x < 10 (0 < 10) es true, así que B1 vale true.",
+          "isShort": true
+         },
+         {
+          "id": "2.4.5-b",
+          "start": 887,
+          "end": 951,
+          "sentences": [
+           119,
+           126
+          ],
+          "title": "Expresión 13: x += y + x y el valor de b2",
+          "explanation": "La operación y - x anterior no cambiaba ninguna variable porque no se guardaba. x += y + x deja x en 30; not (x == 20) es true, pero not B1 es false, así que b2 vale false.",
+          "isShort": true
+         },
+         {
+          "id": "2.4.5-c",
+          "start": 949,
+          "end": 993,
+          "sentences": [
+           127,
+           132
+          ],
+          "title": "Expresión 13: B1 = B1 and b2 or B1 or b2",
+          "explanation": "Primero la and: B1 and b2 es false. Después, false or B1 da true porque B1 es true, y el resto ya no hace falta resolverlo: B1 vale true.",
+          "isShort": true
+         },
+         {
+          "id": "2.4.5-d",
+          "start": 992,
+          "end": 1042,
+          "sentences": [
+           133,
+           139
+          ],
+          "title": "Expresión 13: primero las dos and",
+          "explanation": "Aunque la or aparezca antes, hay que resolver primero las dos and. not b2 and b2 es false porque una de las dos es falsa, y al combinarlo con B1 en otra and sigue siendo false.",
+          "isShort": true
+         },
+         {
+          "id": "2.4.5-e",
+          "start": 1040,
+          "end": 1088,
+          "sentences": [
+           140,
+           144
+          ],
+          "title": "Expresión 13: no hace falta evaluarlo todo",
+          "explanation": "Como B1 es true y va con una or, toda la expresión vale true sin analizar el resto. El operador and tiene mayor prioridad que el or, y por eso las partes con and se evalúan primero.",
+          "isShort": true
+         }
+        ]
+       }
+      ],
+      "questions": []
+     }
+    ]
+   },
+   {
+    "id": "3",
+    "number": 3,
+    "title": "Instrucciones y estructuras de control en pseudocódigo",
+    "lessons": [
+     {
+      "id": "3.1",
+      "title": "Instrucciones en pseudocódigo",
+      "video": {
+       "youtubeId": "taSJeALBVGk",
+       "duration": 541
+      },
+      "transcript": "transcripts/3.1.json",
+      "sections": [
+       {
+        "id": "3.1.1",
+        "title": "Tipos de instrucciones y declarativas",
+        "segments": [
+         {
+          "id": "3.1.1-a",
+          "start": 16,
+          "end": 90,
+          "sentences": [
+           2,
+           11
+          ],
+          "title": "Instrucciones declarativas y primitivas",
+          "explanation": "Las declarativas declaran variables y constantes con su nombre y su tipo. Las primitivas se ejecutan de forma inmediata, sin depender de ninguna condición: leer datos, mostrarlos y asignar un valor a una variable.",
+          "isShort": true
+         },
+         {
+          "id": "3.1.1-b",
+          "start": 88,
+          "end": 146,
+          "sentences": [
+           12,
+           17
+          ],
+          "title": "Instrucciones de control y un ejemplo de declarativas",
+          "explanation": "Las instrucciones de control evalúan expresiones lógicas y alteran el orden normal de ejecución: con ellas se crean las alternativas y los bucles. Declarar base, altura y área de tipo entero es un ejemplo de instrucción declarativa.",
+          "isShort": true
+         }
+        ]
+       },
+       {
+        "id": "3.1.2",
+        "title": "Instrucciones primitivas: entrada, salida y asignación",
+        "segments": [
+         {
+          "id": "3.1.2-a",
+          "start": 144,
+          "end": 192,
+          "sentences": [
+           18,
+           23
+          ],
+          "title": "LEER y ESCRIBIR",
+          "explanation": "Las primitivas son la entrada, la salida y la asignación. Para leer datos se escribe LEER y para mostrarlos, ESCRIBIR, siempre en mayúsculas y con el contenido entre paréntesis.",
+          "isShort": true
+         },
+         {
+          "id": "3.1.2-b",
+          "start": 190,
+          "end": 253,
+          "sentences": [
+           24,
+           29
+          ],
+          "title": "Concatenar texto y variables con +",
+          "explanation": "Con ESCRIBIR se puede unir texto literal con el valor de una variable usando el operador suma: ESCRIBIR(\"El resultado de la suma es \" + resultado) muestra el texto tal cual seguido del valor guardado, por ejemplo 20.",
+          "isShort": true
+         }
+        ]
+       },
+       {
+        "id": "3.1.3",
+        "title": "Ejemplo: área de un rectángulo",
+        "segments": [
+         {
+          "id": "3.1.3-a",
+          "start": 251,
+          "end": 309,
+          "sentences": [
+           30,
+           37
+          ],
+          "title": "Área del rectángulo: pedir la base y la altura",
+          "explanation": "Se declaran base, altura y área como enteros y se tabula para que se lea mejor. ESCRIBIR pide los datos, LEER los guarda en base y altura, y una asignación guarda en área la multiplicación de las dos.",
+          "isShort": true
+         },
+         {
+          "id": "3.1.3-b",
+          "start": 307,
+          "end": 350,
+          "sentences": [
+           38,
+           41
+          ],
+          "title": "Área del rectángulo: la salida",
+          "explanation": "Con base 3 y altura 4, área vale 12 y la salida es \"El área del rectángulo es 12\". El texto entre comillas se escribe siempre igual y después se añade el valor de área.",
+          "isShort": true
+         }
+        ]
+       },
+       {
+        "id": "3.1.4",
+        "title": "Ejercicio: millas marinas a metros",
+        "segments": [
+         {
+          "id": "3.1.4-a",
+          "start": 350,
+          "end": 431,
+          "sentences": [
+           42,
+           52
+          ],
+          "title": "De millas marinas a metros",
+          "explanation": "Una milla marina son 1852 metros. El programa calcular millas lee las millas, guarda en metros millas · 1852 y escribe el resultado: con 3 millas, 5556 metros.",
+          "isShort": true
+         }
+        ]
+       },
+       {
+        "id": "3.1.5",
+        "title": "Ejercicio: precio con descuento",
+        "segments": [
+         {
+          "id": "3.1.5-a",
+          "start": 429,
+          "end": 483,
+          "sentences": [
+           53,
+           58
+          ],
+          "title": "Precio con descuento: leer tarifa y porcentaje",
+          "explanation": "Hay que escribir el precio pagado en una compra a partir del precio y el porcentaje de descuento. Se declaran tarifa, porcentaje y precio pagado, y se leen dos variables a la vez separadas por coma: 1000 y 15.",
+          "isShort": true
+         },
+         {
+          "id": "3.1.5-b",
+          "start": 481,
+          "end": 532,
+          "sentences": [
+           59,
+           64
+          ],
+          "title": "Precio con descuento: el cálculo",
+          "explanation": "precio pagado = tarifa - tarifa · porcentaje / 100: 1000 · 15 / 100 son 150, que restados a 1000 dan 850. La salida es \"El precio a pagar es: 850\".",
+          "isShort": true
+         }
+        ]
+       }
+      ],
+      "questions": []
+     },
+     {
+      "id": "3.2",
+      "title": "Estructuras alternativas (SI)",
+      "video": {
+       "youtubeId": "tldDbZ9MSoA",
+       "duration": 584
+      },
+      "transcript": "transcripts/3.2.json",
+      "sections": [
+       {
+        "id": "3.2.1",
+        "title": "Qué es una estructura de control",
+        "segments": [
+         {
+          "id": "3.2.1-a",
+          "start": 21,
+          "end": 102,
+          "sentences": [
+           3,
+           13
+          ],
+          "title": "Qué es una estructura de control",
+          "explanation": "Evalúa una expresión lógica y, según el resultado, ejecuta unas instrucciones u otras. Las hay alternativas y repetitivas (bucles), y el código que va dentro de ellas debe ir tabulado.",
+          "isShort": true
+         }
+        ]
+       },
+       {
+        "id": "3.2.2",
+        "title": "Alternativas simple, doble y anidada",
+        "segments": [
+         {
+          "id": "3.2.2-a",
+          "start": 101,
+          "end": 175,
+          "sentences": [
+           14,
+           22
+          ],
+          "title": "Alternativas simple y doble",
+          "explanation": "En la simple, SI (condición) ejecuta las instrucciones tabuladas solo si la condición es verdadera; lo que está a la altura del SI se ejecuta siempre. La doble añade un SINO con lo que se hace cuando es falsa.",
+          "isShort": true
+         },
+         {
+          "id": "3.2.2-b",
+          "start": 173,
+          "end": 221,
+          "sentences": [
+           23,
+           29
+          ],
+          "title": "Alternativas anidadas",
+          "explanation": "Dentro de un SINO puede haber otro SI con su SINO. Si se cumple la primera condición se ejecuta su bloque; si no, se comprueba la segunda, y si no se cumple ninguna, se ejecuta el último SINO. Lo de fuera se ejecuta siempre.",
+          "isShort": true
+         },
+         {
+          "id": "3.2.2-c",
+          "start": 220,
+          "end": 252,
+          "sentences": [
+           30,
+           32
+          ],
+          "title": "Simple y doble en un ordinograma",
+          "explanation": "En la simple, si la condición es verdadera se ejecuta una instrucción y si es falsa se sigue sin ella. En la doble se ejecutan unas instrucciones u otras y después se continúa con el resto del código.",
+          "isShort": true
+         }
+        ]
+       },
+       {
+        "id": "3.2.3",
+        "title": "Ejercicio: ¿es un número par?",
+        "segments": [
+         {
+          "id": "3.2.3-a",
+          "start": 250,
+          "end": 317,
+          "sentences": [
+           33,
+           43
+          ],
+          "title": "¿Es par? El resto de dividir entre 2",
+          "explanation": "Se lee un número en num. Para saber si es par se calcula num módulo 2: el resto solo puede ser 0 o 1. Si es 0 es par; si es 1, es impar.",
+          "isShort": true
+         },
+         {
+          "id": "3.2.3-b",
+          "start": 315,
+          "end": 386,
+          "sentences": [
+           44,
+           51
+          ],
+          "title": "¿Es par? SI-SINO y concatenar varias veces",
+          "explanation": "Si num módulo 2 == 0 se escribe que es par; si no, que es impar. El + puede concatenar más de una vez, con el número en medio del texto: con 6 sale \"El número 6 es par\" y con 5, \"El número 5 es impar\".",
+          "isShort": true
+         }
+        ]
+       },
+       {
+        "id": "3.2.4",
+        "title": "Ejercicio: ¿n es divisible por m?",
+        "segments": [
+         {
+          "id": "3.2.4-a",
+          "start": 385,
+          "end": 464,
+          "sentences": [
+           52,
+           60
+          ],
+          "title": "¿n es divisible por m?",
+          "explanation": "Se leen n y m y se comprueba si n módulo m == 0. Con 15 y 5 el resto es 0, así que 15 es divisible entre 5; con 14 y 5 sobran 4 y se entra en el SINO: no es divisible.",
+          "isShort": true
+         }
+        ]
+       },
+       {
+        "id": "3.2.5",
+        "title": "Ejercicio: comparar dos valores",
+        "segments": [
+         {
+          "id": "3.2.5-a",
+          "start": 463,
+          "end": 529,
+          "sentences": [
+           61,
+           68
+          ],
+          "title": "Comparar dos valores: ¿son iguales?",
+          "explanation": "Hay que leer dos números y decir si son iguales y, si no, cuál es mayor. Primero un SI comprueba si num1 == num2 y, si lo son, escribe num1 = num2 (por ejemplo, con 5 y 5).",
+          "isShort": true
+         },
+         {
+          "id": "3.2.5-b",
+          "start": 527,
+          "end": 574,
+          "sentences": [
+           69,
+           75
+          ],
+          "title": "Comparar dos valores: ¿cuál es mayor?",
+          "explanation": "Si no son iguales se entra en el SINO, que a su vez tiene otro SI con su SINO para ver cuál es mayor. Con 5 y 6 se escribe que 5 es menor que 6.",
+          "isShort": true
+         }
+        ]
+       }
+      ],
+      "questions": []
+     },
+     {
+      "id": "3.3",
+      "title": "Bucles y el bucle MIENTRAS",
+      "video": {
+       "youtubeId": "gWYWRs9d_ZI",
+       "duration": 932
+      },
+      "transcript": "transcripts/3.3.json",
+      "sections": [
+       {
+        "id": "3.3.1",
+        "title": "Estructuras de control repetitivas",
+        "segments": [
+         {
+          "id": "3.3.1-a",
+          "start": 17,
+          "end": 72,
+          "sentences": [
+           2,
+           9
+          ],
+          "title": "Qué es una estructura repetitiva",
+          "explanation": "Es un bloque de código que puede ejecutarse una vez, varias o ninguna según una condición. Mientras la condición se cumpla, el bloque se repite, y solo se sale cuando deja de cumplirse.",
+          "isShort": true
+         }
+        ]
+       },
+       {
+        "id": "3.3.2",
+        "title": "El bucle mientras y su ordinograma",
+        "segments": [
+         {
+          "id": "3.3.2-a",
+          "start": 70,
+          "end": 144,
+          "sentences": [
+           10,
+           18
+          ],
+          "title": "El bucle mientras",
+          "explanation": "MIENTRAS (condición) ejecuta las instrucciones tabuladas y vuelve a comprobar la condición, hasta que alguna instrucción haga que deje de cumplirse. Si no se cumple desde el principio, no se entra. En programación se llama bucle while.",
+          "isShort": true
+         },
+         {
+          "id": "3.3.2-b",
+          "start": 260,
+          "end": 310,
+          "sentences": [
+           34,
+           39
+          ],
+          "title": "El ordinograma del mientras",
+          "explanation": "Tras las instrucciones previas se evalúa la condición: si es verdadera se ejecuta el bloque y se vuelve a la condición; si es falsa se sale. Si es falsa desde el inicio, el bloque no se ejecuta nunca.",
+          "isShort": true
+         }
+        ]
+       },
+       {
+        "id": "3.3.3",
+        "title": "Repetir-mientras y para: visión general",
+        "segments": [
+         {
+          "id": "3.3.3-a",
+          "start": 142,
+          "end": 189,
+          "sentences": [
+           19,
+           24
+          ],
+          "title": "Repetir-mientras: al menos una vez",
+          "explanation": "En REPETIR... MIENTRAS la condición está al final, así que el cuerpo del bucle se ejecuta siempre al menos una vez. En programación se llama do while.",
+          "isShort": true
+         },
+         {
+          "id": "3.3.3-b",
+          "start": 187,
+          "end": 262,
+          "sentences": [
+           25,
+           33
+          ],
+          "title": "Para: la forma abreviada del mientras",
+          "explanation": "El PARA es el más usado. En una línea reúne la inicialización del contador, la condición y el incremento o decremento. Se puede resolver lo mismo con un mientras que con un para.",
+          "isShort": true
+         }
+        ]
+       },
+       {
+        "id": "3.3.4",
+        "title": "Ejercicio: potencia de un número",
+        "segments": [
+         {
+          "id": "3.3.4-a",
+          "start": 308,
+          "end": 370,
+          "sentences": [
+           40,
+           46
+          ],
+          "title": "Ejercicio: la potencia con un bucle",
+          "explanation": "Hay que calcular la potencia de un número dada la base y el exponente pensando qué se repite. La solución propuesta, calcular potencia, declara base, exponente, contador y potencia como enteros.",
+          "isShort": true
+         },
+         {
+          "id": "3.3.4-b",
+          "start": 368,
+          "end": 427,
+          "sentences": [
+           47,
+           53
+          ],
+          "title": "Potencia y contador empiezan en 1",
+          "explanation": "Se piden la base y el exponente: 2 elevado a 4 es 16. potencia y contador se inicializan a 1, y el bucle MIENTRAS se repite mientras contador sea menor que exponente.",
+          "isShort": true
+         },
+         {
+          "id": "3.3.4-c",
+          "start": 425,
+          "end": 498,
+          "sentences": [
+           54,
+           62
+          ],
+          "title": "El cuerpo del bucle",
+          "explanation": "El exponente indica cuántas veces se multiplica la base. En cada pasada, potencia = potencia · base y contador = contador + 1 (se podría escribir contador++).",
+          "isShort": true
+         },
+         {
+          "id": "3.3.4-d",
+          "start": 496,
+          "end": 554,
+          "sentences": [
+           63,
+           70
+          ],
+          "title": "Algo falla: la tabla de seguimiento",
+          "explanation": "Para 2 elevado a 4 deberían hacerse 4 multiplicaciones, pero la condición no está bien escrita. Una tabla recoge el valor de las variables en cada pasada, empezando con potencia y contador a 1.",
+          "isShort": true
+         },
+         {
+          "id": "3.3.4-e",
+          "start": 552,
+          "end": 620,
+          "sentences": [
+           71,
+           78
+          ],
+          "title": "Las primeras pasadas: 2 y 4",
+          "explanation": "Como 4 es mayor que 1 se entra: potencia pasa a 2 y contador a 2. Se vuelve al mientras y, como 4 es mayor que 2, potencia pasa a 4 y contador a 3. Base y exponente no cambian.",
+          "isShort": true
+         },
+         {
+          "id": "3.3.4-f",
+          "start": 618,
+          "end": 674,
+          "sentences": [
+           79,
+           85
+          ],
+          "title": "La tercera pasada: potencia vale 8",
+          "explanation": "4 es mayor que 3: potencia pasa a 8 y contador a 4. Al volver al mientras, 4 no es mayor que 4, así que la condición ya no se cumple.",
+          "isShort": true
+         },
+         {
+          "id": "3.3.4-g",
+          "start": 672,
+          "end": 725,
+          "sentences": [
+           86,
+           91
+          ],
+          "title": "El resultado: 2 elevado a 4 es 8",
+          "explanation": "ESCRIBIR concatena la base, \"elevado a\", el exponente, \"=\" y la potencia. Con base 2 y exponente 4 la salida es \"2 elevado a 4 = 8\": el programa no funciona bien.",
+          "isShort": true
+         }
+        ]
+       },
+       {
+        "id": "3.3.5",
+        "title": "Corrigiendo la solución",
+        "segments": [
+         {
+          "id": "3.3.5-a",
+          "start": 723,
+          "end": 800,
+          "sentences": [
+           92,
+           101
+          ],
+          "title": "La corrección: menor o igual",
+          "explanation": "El bucle hacía una pasada menos de las necesarias. Con el contador a 1, la condición debe ser contador <= exponente, para que con exponente 4 dé 4 vueltas y con 2 elevado a 1 entre una vez.",
+          "isShort": true
+         },
+         {
+          "id": "3.3.5-b",
+          "start": 798,
+          "end": 858,
+          "sentences": [
+           102,
+           109
+          ],
+          "title": "Ahora sí: 2 elevado a 4 es 16",
+          "explanation": "Antes se hacían exponente - 1 pasadas y ahora, exponente pasadas. Cuando contador y exponente valen 4 se hace una última multiplicación (8 · 2 = 16), contador pasa a 5 y se sale. La salida es correcta.",
+          "isShort": true
+         }
+        ]
+       },
+       {
+        "id": "3.3.6",
+        "title": "Solución alternativa",
+        "segments": [
+         {
+          "id": "3.3.6-a",
+          "start": 857,
+          "end": 932,
+          "sentences": [
+           110,
+           119
+          ],
+          "title": "Otra solución: el contador desde 0",
+          "explanation": "Con el contador a 0 la condición vuelve a ser contador < exponente; con <= haría una pasada de más. Con exponente 0 no se entra y el resultado sigue siendo 1. Hace las mismas pasadas, y es la que prefiere el profesor.",
+          "isShort": true
+         }
+        ]
+       }
+      ],
+      "questions": []
+     },
+     {
+      "id": "3.4",
+      "title": "Ejercicio: multiplicar sumando con MIENTRAS",
+      "video": {
+       "youtubeId": "P73Sa4dzvoc",
+       "duration": 482
+      },
+      "transcript": "transcripts/3.4.json",
+      "sections": [
+       {
+        "id": "3.4.1",
+        "title": "Enunciado y solución",
+        "segments": [
+         {
+          "id": "3.4.1-a",
+          "start": 14,
+          "end": 71,
+          "sentences": [
+           2,
+           8
+          ],
+          "title": "Enunciado: multiplicar con sumas sucesivas",
+          "explanation": "Hay que leer dos enteros y calcular su multiplicación sin usar el producto, sumando de forma sucesiva con un bucle. La solución, Calcula producto, declara num1, num2, producto y contador como enteros.",
+          "isShort": true
+         },
+         {
+          "id": "3.4.1-b",
+          "start": 69,
+          "end": 134,
+          "sentences": [
+           9,
+           18
+          ],
+          "title": "Contador y producto empiezan en 0",
+          "explanation": "Se leen num1 y num2: con 2 y 3, 2 · 3 = 6 se calcula como 2 + 2 + 2. producto guarda el resultado y contador controla el bucle, que se repite mientras num2 sea mayor que contador.",
+          "isShort": true
+         },
+         {
+          "id": "3.4.1-c",
+          "start": 132,
+          "end": 213,
+          "sentences": [
+           19,
+           28
+          ],
+          "title": "Cuántas pasadas hace el bucle",
+          "explanation": "Hay que sumar num1 tantas veces como indica num2. Con el contador a 0 y la condición num2 > contador, con num2 = 5 se hacen 5 pasadas; con mayor o igual se haría una pasada de más, 6.",
+          "isShort": true
+         }
+        ]
+       },
+       {
+        "id": "3.4.2",
+        "title": "Seguimiento del algoritmo con una tabla",
+        "segments": [
+         {
+          "id": "3.4.2-a",
+          "start": 211,
+          "end": 279,
+          "sentences": [
+           29,
+           38
+          ],
+          "title": "Seguimiento de 5 · 4: la primera pasada",
+          "explanation": "Con num1 = 5 y num2 = 4 el resultado es 20, sumando 5 cuatro veces. Se parte de producto y contador a 0; como 4 es mayor que 0 se entra: producto pasa a 5 y contador a 1.",
+          "isShort": true
+         },
+         {
+          "id": "3.4.2-b",
+          "start": 278,
+          "end": 334,
+          "sentences": [
+           39,
+           47
+          ],
+          "title": "Seguimiento de 5 · 4: sumando hasta 20",
+          "explanation": "En cada vuelta se comprueba la condición y se suma 5: producto pasa a 10, 15 y 20, mientras contador pasa a 2, 3 y 4.",
+          "isShort": true
+         },
+         {
+          "id": "3.4.2-c",
+          "start": 333,
+          "end": 371,
+          "sentences": [
+           48,
+           52
+          ],
+          "title": "Seguimiento de 5 · 4: fin y salida",
+          "explanation": "Con contador = 4, 4 no es mayor que 4 y se sale del bucle. ESCRIBIR concatena num1, el símbolo de multiplicar, num2, el igual y producto: la salida es 5 · 4 = 20.",
+          "isShort": true
+         }
+        ]
+       },
+       {
+        "id": "3.4.3",
+        "title": "Mejorando la solución",
+        "segments": [
+         {
+          "id": "3.4.3-a",
+          "start": 370,
+          "end": 415,
+          "sentences": [
+           53,
+           58
+          ],
+          "title": "Si num1 es 0, sobran las pasadas",
+          "explanation": "Con num1 = 0 y num2 = 4 el resultado es 0, pero el bucle da todas las vueltas sumando 0. El código se puede mejorar buscando condiciones específicas del algoritmo.",
+          "isShort": true
+         },
+         {
+          "id": "3.4.3-b",
+          "start": 413,
+          "end": 481,
+          "sentences": [
+           59,
+           66
+          ],
+          "title": "Un SI previo para evitarlas",
+          "explanation": "Se añade SI num1 != 0 y el bucle va tabulado dentro: si num1 es 0 se escribe directamente producto, que vale 0. Si num2 es 0, el bucle ni siquiera se ejecuta. La mejora es pequeña, pero importa empezar a verlo.",
+          "isShort": true
+         }
+        ]
+       }
+      ],
+      "questions": []
+     },
+     {
+      "id": "3.5",
+      "title": "El bucle REPETIR-MIENTRAS",
+      "video": {
+       "youtubeId": "bRwz1J9hxEg",
+       "duration": 417
+      },
+      "transcript": "transcripts/3.5.json",
+      "sections": [
+       {
+        "id": "3.5.1",
+        "title": "El bucle repetir-mientras",
+        "segments": [
+         {
+          "id": "3.5.1-a",
+          "start": 16,
+          "end": 93,
+          "sentences": [
+           2,
+           13
+          ],
+          "title": "El bucle repetir-mientras",
+          "explanation": "El cuerpo del bucle se ejecuta como mínimo una vez porque la condición se comprueba al final: se repite una o más veces. En el ordinograma, tras el bloque se evalúa la condición y, si se cumple, se vuelve al bloque.",
+          "isShort": true
+         }
+        ]
+       },
+       {
+        "id": "3.5.2",
+        "title": "Ejercicio: suma de los n primeros números naturales",
+        "segments": [
+         {
+          "id": "3.5.2-a",
+          "start": 94,
+          "end": 139,
+          "sentences": [
+           14,
+           20
+          ],
+          "title": "Enunciado: sumar los n primeros naturales",
+          "explanation": "Con un repetir-mientras hay que sumar los n primeros números naturales, con n mayor que 1: con n = 3 el resultado es 6 (3 + 2 + 1) y con n = 5, 5 + 4 + 3 + 2 + 1.",
+          "isShort": true
+         },
+         {
+          "id": "3.5.2-b",
+          "start": 139,
+          "end": 193,
+          "sentences": [
+           21,
+           28
+          ],
+          "title": "Variables: contador a 1 y suma a 0",
+          "explanation": "El programa Calcula suma declara n, contador y suma como enteros y lee n. El contador empieza en 1 y suma en 0, donde se irá acumulando cada número.",
+          "isShort": true
+         },
+         {
+          "id": "3.5.2-c",
+          "start": 191,
+          "end": 236,
+          "sentences": [
+           29,
+           35
+          ],
+          "title": "El cuerpo del repetir-mientras",
+          "explanation": "Como n es mayor que 1, siempre habrá al menos una pasada (también se podría hacer con un mientras). En cada vuelta suma += contador y contador++, y después se comprueba la condición del mientras.",
+          "isShort": true
+         },
+         {
+          "id": "3.5.2-d",
+          "start": 235,
+          "end": 279,
+          "sentences": [
+           36,
+           41
+          ],
+          "title": "Prueba con el valor mínimo, n = 2",
+          "explanation": "En la primera pasada suma vale 1 y contador 2; como 2 <= 2 se repite: suma pasa a 3 y contador a 3. Ahora 3 > 2 y el bucle termina: \"La suma de los dos números es 3\".",
+          "isShort": true
+         }
+        ]
+       },
+       {
+        "id": "3.5.3",
+        "title": "Seguimiento de la solución para n = 5",
+        "segments": [
+         {
+          "id": "3.5.3-a",
+          "start": 277,
+          "end": 339,
+          "sentences": [
+           42,
+           49
+          ],
+          "title": "Seguimiento con n = 5: primeras pasadas",
+          "explanation": "Suma y contador empiezan en 0 y 1. Primera pasada: suma = 0 + 1 = 1 y contador pasa a 2. Como 5 >= 2 se repite: suma = 1 + 2 = 3 y contador pasa a 3.",
+          "isShort": true
+         },
+         {
+          "id": "3.5.3-b",
+          "start": 338,
+          "end": 417,
+          "sentences": [
+           50,
+           59
+          ],
+          "title": "Seguimiento con n = 5: hasta 15",
+          "explanation": "Suma va pasando por 6, 10 y 15 mientras contador llega a 6. Como 5 no es mayor o igual que 6 se sale y se escribe \"La suma de los cinco números es 15\".",
+          "isShort": true
+         }
+        ]
+       }
+      ],
+      "questions": []
+     },
+     {
+      "id": "3.6",
+      "title": "El bucle PARA",
+      "video": {
+       "youtubeId": "ijz6rAu5Trw",
+       "duration": 526
+      },
+      "transcript": "transcripts/3.6.json",
+      "sections": [
+       {
+        "id": "3.6.1",
+        "title": "El bucle para",
+        "segments": [
+         {
+          "id": "3.6.1-a",
+          "start": 16,
+          "end": 76,
+          "sentences": [
+           2,
+           8
+          ],
+          "title": "La estructura para",
+          "explanation": "Se escribe PARA y entre paréntesis tres expresiones separadas por punto y coma, con las instrucciones del bucle tabuladas. Es el bucle más usado: hace lo mismo que un while, pero de forma abreviada.",
+          "isShort": true
+         },
+         {
+          "id": "3.6.1-b",
+          "start": 74,
+          "end": 114,
+          "sentences": [
+           9,
+           14
+          ],
+          "title": "Inicialización, condición y avance",
+          "explanation": "En la misma línea van la inicialización del contador, la condición y el incremento o decremento. Así en el cuerpo del bucle solo quedan las instrucciones importantes.",
+          "isShort": true
+         },
+         {
+          "id": "3.6.1-c",
+          "start": 112,
+          "end": 168,
+          "sentences": [
+           15,
+           21
+          ],
+          "title": "El para en un ordinograma",
+          "explanation": "La inicialización se ejecuta antes de la condición y una sola vez. Si la condición se cumple se ejecuta el cuerpo, después el avance (el incremento o decremento) y se vuelve a la condición; si no se cumple, se termina.",
+          "isShort": true
+         },
+         {
+          "id": "3.6.1-d",
+          "start": 166,
+          "end": 205,
+          "sentences": [
+           22,
+           26
+          ],
+          "title": "El orden de ejecución del para",
+          "explanation": "La inicialización se hace una única vez; después se comprueba la condición, se ejecuta todo el cuerpo y, como última instrucción, el avance. Luego se vuelve a la condición, y cuando no se cumple se sale.",
+          "isShort": true
+         }
+        ]
+       },
+       {
+        "id": "3.6.2",
+        "title": "Ejercicio: producto de cinco valores",
+        "segments": [
+         {
+          "id": "3.6.2-a",
+          "start": 204,
+          "end": 249,
+          "sentences": [
+           27,
+           32
+          ],
+          "title": "Enunciado: el producto de cinco valores",
+          "explanation": "Hay que leer cinco valores y calcular su producto con un PARA. Este bucle se usa mucho cuando se sabe de antemano cuántas pasadas hay que dar: con cinco valores, cinco vueltas.",
+          "isShort": true
+         },
+         {
+          "id": "3.6.2-b",
+          "start": 247,
+          "end": 325,
+          "sentences": [
+           33,
+           42
+          ],
+          "title": "Un para del 1 al 5",
+          "explanation": "El programa inicializa producto a 1 y usa PARA (contador = 1; contador <= 5; contador++), equivalente a un while con el contador fuera. Hace cinco pasadas; con < 5 haría cuatro.",
+          "isShort": true
+         }
+        ]
+       },
+       {
+        "id": "3.6.3",
+        "title": "Seguimiento de la solución",
+        "segments": [
+         {
+          "id": "3.6.3-a",
+          "start": 323,
+          "end": 392,
+          "sentences": [
+           43,
+           50
+          ],
+          "title": "Seguimiento: los primeros números",
+          "explanation": "Producto y contador empiezan en 1. Se lee un 3 y producto pasa a 3; contador pasa a 2. Se lee un 5 y producto pasa a 15; contador pasa a 3.",
+          "isShort": true
+         },
+         {
+          "id": "3.6.3-b",
+          "start": 390,
+          "end": 468,
+          "sentences": [
+           51,
+           63
+          ],
+          "title": "Seguimiento: hasta 420",
+          "explanation": "Con un 2 producto pasa a 30, con un 7 a 210 y con el último 2 a 420. El contador llega a 6, la condición deja de cumplirse y se escribe \"El producto de los cinco números es 420\".",
+          "isShort": true
+         }
+        ]
+       },
+       {
+        "id": "3.6.4",
+        "title": "Solución alternativa con el contador desde 0",
+        "segments": [
+         {
+          "id": "3.6.4-a",
+          "start": 468,
+          "end": 523,
+          "sentences": [
+           64,
+           71
+          ],
+          "title": "Otra forma: el contador desde 0",
+          "explanation": "PARA (contador = 0; contador < 5; ...) también da cinco vueltas: como el contador no se usa en ningún cálculo, da igual su valor. Al empezar en 0 se pone < en vez de <=, que es lo más habitual.",
+          "isShort": true
+         }
+        ]
+       }
+      ],
+      "questions": []
+     }
+    ]
+   },
+   {
+    "id": "4",
+    "number": 4,
+    "title": "Ejercicios y seguimiento de algoritmos",
+    "lessons": [
+     {
+      "id": "4.1",
+      "title": "Ejercicios resueltos",
+      "video": {
+       "youtubeId": "3FIomL6wFFM",
+       "duration": 1154
+      },
+      "transcript": "transcripts/4.1.json",
+      "sections": [
+       {
+        "id": "4.1.1",
+        "title": "Suma de los pares del 1 al 10",
+        "segments": [
+         {
+          "id": "4.1.1-a",
+          "start": 14,
+          "end": 64,
+          "sentences": [
+           2,
+           8
+          ],
+          "title": "Enunciado: sumar los pares del 1 al 10",
+          "explanation": "Hay que sumar 2 + 4 + 6 + 8 + 10. Serviría igual para cualquier límite, como 1000; se usa 10 para poder seguirlo en una tabla. La primera solución usa un bucle mientras.",
+          "isShort": true
+         },
+         {
+          "id": "4.1.1-b",
+          "start": 62,
+          "end": 147,
+          "sentences": [
+           9,
+           19
+          ],
+          "title": "Solución con un mientras y un SI",
+          "explanation": "Calcula suma pares declara contador y suma como enteros; contador empieza en 2 y suma en 0. Mientras contador <= 10, un SI comprueba una condición y, si se cumple, suma += contador; contador++ se ejecuta siempre.",
+          "isShort": true
+         },
+         {
+          "id": "4.1.1-c",
+          "start": 145,
+          "end": 214,
+          "sentences": [
+           20,
+           29
+          ],
+          "title": "Seguimiento: el 2 sí se suma",
+          "explanation": "Con suma = 0 y contador = 2 se entra en el bucle. 2 módulo 2 da resto 0, así que se cumple el SI y suma pasa a 0 + 2 = 2. Después contador pasa a 3.",
+          "isShort": true
+         },
+         {
+          "id": "4.1.1-d",
+          "start": 213,
+          "end": 283,
+          "sentences": [
+           30,
+           37
+          ],
+          "title": "Seguimiento: los impares no se suman",
+          "explanation": "Con contador = 3 el resto es 1: no se suma y solo se incrementa el contador. Con 4 suma pasa a 6; con 5, que es impar, solo aumenta el contador.",
+          "isShort": true
+         },
+         {
+          "id": "4.1.1-e",
+          "start": 281,
+          "end": 336,
+          "sentences": [
+           38,
+           45
+          ],
+          "title": "Seguimiento: hasta 30",
+          "explanation": "Cada dos pasadas se suma: 12 con el 6, 20 con el 8 y 30 con el 10. Contador pasa a 11, que ya es mayor que 10, y se escribe que la suma de los pares es 30.",
+          "isShort": true
+         }
+        ]
+       },
+       {
+        "id": "4.1.2",
+        "title": "Una solución más eficiente",
+        "segments": [
+         {
+          "id": "4.1.2-a",
+          "start": 334,
+          "end": 386,
+          "sentences": [
+           46,
+           51
+          ],
+          "title": "De dos en dos, sin el SI",
+          "explanation": "En la solución anterior hay pasadas que solo hacen una comprobación falsa e incrementan el contador. Si el contador se incrementa de dos en dos empezando en 2, siempre es par y no hace falta ningún SI.",
+          "isShort": true
+         },
+         {
+          "id": "4.1.2-b",
+          "start": 384,
+          "end": 463,
+          "sentences": [
+           52,
+           62
+          ],
+          "title": "Un seguimiento mucho más corto",
+          "explanation": "contador += 2 equivale a contador = contador + 2. suma pasa por 2, 6, 12, 20 y 30 mientras contador va 4, 6, 8, 10 y 12. La última comprobación compara 10 con 12, pero el resultado es correcto.",
+          "isShort": true
+         },
+         {
+          "id": "4.1.2-c",
+          "start": 462,
+          "end": 531,
+          "sentences": [
+           63,
+           73
+          ],
+          "title": "Por qué es mejor, y la versión con PARA",
+          "explanation": "Da menos vueltas y además no hace la comprobación del SI en cada vuelta, que es cómputo adicional para el procesador. La misma solución con un PARA: contador desde 2, contador <= 10 y contador += 2.",
+          "isShort": true
+         }
+        ]
+       },
+       {
+        "id": "4.1.3",
+        "title": "Puntuaciones hasta introducir un cero",
+        "segments": [
+         {
+          "id": "4.1.3-a",
+          "start": 529,
+          "end": 577,
+          "sentences": [
+           74,
+           80
+          ],
+          "title": "Enunciado: puntuaciones hasta introducir un cero",
+          "explanation": "Se leen puntuaciones hasta que se introduce un 0. Si una puntuación está entre 2000 y 3000, ambas incluidas, se acumula multiplicada por 0,3; si no, por 0,2. Por ejemplo, 1000 suma 200.",
+          "isShort": true
+         },
+         {
+          "id": "4.1.3-b",
+          "start": 575,
+          "end": 636,
+          "sentences": [
+           81,
+           88
+          ],
+          "title": "El total empieza en 0 y el bucle sigue mientras no sea 0",
+          "explanation": "El ejemplo introduce 1000, 2000, 3000 y 0. Calcular puntuación lee una puntuación antes del bucle; total empieza en 0 porque, si la primera es 0, no se entra en el MIENTRAS (puntuación != 0) y se muestra 0.",
+          "isShort": true
+         },
+         {
+          "id": "4.1.3-c",
+          "start": 634,
+          "end": 681,
+          "sentences": [
+           89,
+           94
+          ],
+          "title": "SI-SINO dentro del bucle y leer al final",
+          "explanation": "Dentro del bucle, un SI-SINO hace un cálculo u otro según el intervalo, y después siempre se lee una nueva puntuación. Al introducir un 0 la condición del mientras es falsa y se escribe el mensaje.",
+          "isShort": true
+         },
+         {
+          "id": "4.1.3-d",
+          "start": 679,
+          "end": 730,
+          "sentences": [
+           95,
+           100
+          ],
+          "title": "La condición con and: entre 2000 y 3000",
+          "explanation": "Las dos condiciones se unen con una and: es verdadera si puntuación >= 2000 y puntuación <= 3000. Entonces total = total + puntuación · 0,3; si no, total = total + puntuación · 0,2.",
+          "isShort": true
+         },
+         {
+          "id": "4.1.3-e",
+          "start": 729,
+          "end": 780,
+          "sentences": [
+           101,
+           108
+          ],
+          "title": "Seguimiento: 1000 y 2000",
+          "explanation": "Con 1000 se va al SINO: total = 0 + 1000 · 0,2 = 200. Con 2000 se cumple el SI: 2000 · 0,3 son 600 y total pasa a 800.",
+          "isShort": true
+         },
+         {
+          "id": "4.1.3-f",
+          "start": 779,
+          "end": 829,
+          "sentences": [
+           109,
+           115
+          ],
+          "title": "Seguimiento: 3000 y el cero final",
+          "explanation": "Con 3000 se vuelve a cumplir el SI: 3000 · 0,3 son 900 y total pasa a 1700. Al introducir un 0 la condición es falsa y se escribe \"La puntuación total es 1700\".",
+          "isShort": true
+         }
+        ]
+       },
+       {
+        "id": "4.1.4",
+        "title": "Factorial de un número",
+        "segments": [
+         {
+          "id": "4.1.4-a",
+          "start": 827,
+          "end": 886,
+          "sentences": [
+           116,
+           124
+          ],
+          "title": "Enunciado: el factorial, y practicar",
+          "explanation": "El factorial de 5 es 5 · 4 · 3 · 2 · 1. Hay muchas soluciones, incluso recursivas. Para aprender a programar hay que intentarlo, practicar y darle vueltas, no buscar soluciones de otros.",
+          "isShort": true
+         },
+         {
+          "id": "4.1.4-b",
+          "start": 884,
+          "end": 965,
+          "sentences": [
+           125,
+           133
+          ],
+          "title": "El contador empieza en num y baja",
+          "explanation": "El programa factorial declara num, contador y factorial. Lee num (5), pone factorial a 1 y contador a num. Como el contador empieza en el número más grande y se decrementa, la condición es contador >= 1.",
+          "isShort": true
+         },
+         {
+          "id": "4.1.4-c",
+          "start": 963,
+          "end": 1020,
+          "sentences": [
+           134,
+           141
+          ],
+          "title": "Decrementar y acumular",
+          "explanation": "En cada pasada, factorial = factorial · contador y después contador--, que va de 5 a 4, 3, 2, 1 y 0. Con 0 ya no se multiplica. En la primera pasada factorial vale 1 · 5 = 5.",
+          "isShort": true
+         },
+         {
+          "id": "4.1.4-d",
+          "start": 1018,
+          "end": 1083,
+          "sentences": [
+           142,
+           152
+          ],
+          "title": "Hasta 120, y sin multiplicar por 1",
+          "explanation": "factorial pasa por 20, 60, 120 y 120 · 1 = 120; al llegar contador a 0 se escribe \"El factorial de 5 es 120\". Con la condición contador > 1 se evita la última pasada, que solo multiplica por 1.",
+          "isShort": true
+         },
+         {
+          "id": "4.1.4-e",
+          "start": 1082,
+          "end": 1132,
+          "sentences": [
+           153,
+           158
+          ],
+          "title": "El factorial con un PARA",
+          "explanation": "PARA (contador = num; contador > 1; contador--) con factorial = factorial · contador dentro, que se puede abreviar como factorial *= contador. El PARA es una forma abreviada del mientras.",
+          "isShort": true
+         }
+        ]
+       }
+      ],
+      "questions": []
+     },
+     {
+      "id": "4.2",
+      "title": "Seguimiento de algoritmos",
+      "video": {
+       "youtubeId": "rH60985e4PM",
+       "duration": 835
+      },
+      "transcript": "transcripts/4.2.json",
+      "sections": [
+       {
+        "id": "4.2.1",
+        "title": "Para qué sirve el seguimiento",
+        "segments": [
+         {
+          "id": "4.2.1-a",
+          "start": 0,
+          "end": 57,
+          "sentences": [
+           0,
+           6
+          ],
+          "title": "Para qué sirve el seguimiento de algoritmos",
+          "explanation": "Sirve para comprobar si se entienden las estructuras de control, bucles y condicionales, mientras se repasan los operadores aritméticos, relacionales y lógicos. Se hace una traza apuntando el valor de las variables a medida que avanza el algoritmo.",
+          "isShort": true
+         }
+        ]
+       },
+       {
+        "id": "4.2.2",
+        "title": "Seguimiento del algoritmo 1",
+        "segments": [
+         {
+          "id": "4.2.2-a",
+          "start": 59,
+          "end": 104,
+          "sentences": [
+           7,
+           13
+          ],
+          "title": "Algoritmo 1: valores iniciales y primera pasada",
+          "explanation": "El objetivo es saber cuánto valen a y b al final. Las dos empiezan en 2. Como a > 0, se entra en el primer bucle: a-- la deja en 1 y b++ deja b en 3.",
+          "isShort": true
+         },
+         {
+          "id": "4.2.2-b",
+          "start": 102,
+          "end": 148,
+          "sentences": [
+           14,
+           19
+          ],
+          "title": "Algoritmo 1: fin del primer bucle",
+          "explanation": "El cuerpo del bucle son las dos instrucciones tabuladas. Como a vale 1, se vuelve a entrar: a pasa a 0 y b a 4. Ahora 0 no es mayor que 0 y se pasa al segundo bucle.",
+          "isShort": true
+         },
+         {
+          "id": "4.2.2-c",
+          "start": 146,
+          "end": 212,
+          "sentences": [
+           20,
+           27
+          ],
+          "title": "Algoritmo 1: el segundo bucle",
+          "explanation": "Mientras b > 0 se hace a++ y b--: a pasa por 1, 2, 3 y 4 mientras b baja por 3, 2, 1 y 0. Con b = 0 la condición deja de cumplirse.",
+          "isShort": true
+         },
+         {
+          "id": "4.2.2-d",
+          "start": 211,
+          "end": 251,
+          "sentences": [
+           28,
+           31
+          ],
+          "title": "Algoritmo 1: las instrucciones finales",
+          "explanation": "b += a equivale a b = b + a: 0 + 4 = 4. Después a *= b equivale a a = a · b: 4 · 4 = 16. Al final a vale 16 y b vale 4.",
+          "isShort": true
+         }
+        ]
+       },
+       {
+        "id": "4.2.3",
+        "title": "Seguimiento del algoritmo 2",
+        "segments": [
+         {
+          "id": "4.2.3-a",
+          "start": 249,
+          "end": 331,
+          "sentences": [
+           32,
+           43
+          ],
+          "title": "Algoritmo 2: un SI con and y or",
+          "explanation": "a, b y c empiezan en 1, 0 y 0. La and tiene prioridad sobre la or. b != c es falso; a != b es verdadero y a == b, falso, así que su and es falsa. Todo es falso y no se entra en el SI.",
+          "isShort": true
+         },
+         {
+          "id": "4.2.3-b",
+          "start": 329,
+          "end": 408,
+          "sentences": [
+           44,
+           54
+          ],
+          "title": "Algoritmo 2: un SI con módulo",
+          "explanation": "c módulo a es 0, así que se entra: c = c + a vale 1; a *= 2 deja a en 2; b pasa a -2; y c dividido entre 2 vale 0, porque en un entero no se puede guardar 0,5.",
+          "isShort": true
+         }
+        ]
+       },
+       {
+        "id": "4.2.4",
+        "title": "Seguimiento del algoritmo 3",
+        "segments": [
+         {
+          "id": "4.2.4-a",
+          "start": 406,
+          "end": 457,
+          "sentences": [
+           55,
+           60
+          ],
+          "title": "Algoritmo 3: la primera pasada",
+          "explanation": "a = 5, b = 3 y c = 2. Mientras a > c: b *= c deja b en 6, c++ deja c en 3 y a-- deja a en 4.",
+          "isShort": true
+         },
+         {
+          "id": "4.2.4-b",
+          "start": 455,
+          "end": 520,
+          "sentences": [
+           61,
+           69
+          ],
+          "title": "Algoritmo 3: segunda pasada y final",
+          "explanation": "4 > 3: b pasa a 18, c a 4 y a a 3. Ahora a no es mayor que c y se sale. a += b da 3 + 18 = 21, y c -= a da 4 - 21 = -17.",
+          "isShort": true
+         }
+        ]
+       },
+       {
+        "id": "4.2.5",
+        "title": "Seguimiento del algoritmo 4",
+        "segments": [
+         {
+          "id": "4.2.5-a",
+          "start": 518,
+          "end": 590,
+          "sentences": [
+           70,
+           79
+          ],
+          "title": "Algoritmo 4: la or se cumple en la primera pasada",
+          "explanation": "a = 5, b = 3 y c = 2. Mientras a > c, el SI comprueba a == b or a >= c + b: la primera es falsa, pero 5 >= 5 es verdadera, así que se ejecuta. b pasa a valer 6 y c a 3.",
+          "isShort": true
+         },
+         {
+          "id": "4.2.5-b",
+          "start": 588,
+          "end": 646,
+          "sentences": [
+           80,
+           86
+          ],
+          "title": "Algoritmo 4: pasadas en las que solo crece c",
+          "explanation": "Ahora c + b es 9 y a vale 5, así que la condición del SI es falsa y solo se hace c++: c pasa a 4 y después a 5. Con a = 5 y c = 5 el mientras devuelve false y se sale.",
+          "isShort": true
+         },
+         {
+          "id": "4.2.5-c",
+          "start": 645,
+          "end": 695,
+          "sentences": [
+           87,
+           92
+          ],
+          "title": "Algoritmo 4: módulo y división finales",
+          "explanation": "a %= b guarda en a el resto de 5 entre 6, que es 5: a no cambia. c /= a guarda 5 / 5 = 1 en c.",
+          "isShort": true
+         }
+        ]
+       },
+       {
+        "id": "4.2.6",
+        "title": "Seguimiento del algoritmo 5",
+        "segments": [
+         {
+          "id": "4.2.6-a",
+          "start": 694,
+          "end": 746,
+          "sentences": [
+           93,
+           99
+          ],
+          "title": "Algoritmo 5: la primera pasada",
+          "explanation": "a, b y c empiezan en 0. Mientras a < 5, si a módulo 2 es 0 se incrementa a, después b y otra vez a. Al acabar la primera pasada a vale 2 y b vale 1.",
+          "isShort": true
+         },
+         {
+          "id": "4.2.6-b",
+          "start": 744,
+          "end": 821,
+          "sentences": [
+           100,
+           109
+          ],
+          "title": "Algoritmo 5: hasta a = 6 y el resultado",
+          "explanation": "a sigue siendo par: pasa a 4 y b a 2, y luego a 6 y b a 3. Como 6 no es menor que 5 se sale. a += b da 9, y c += a + b da 9 + 3 + 0 = 12.",
+          "isShort": true
+         }
+        ]
+       }
+      ],
+      "questions": []
+     },
+     {
+      "id": "4.3",
+      "title": "Seguimiento con bucles anidados",
+      "video": {
+       "youtubeId": "V-WDyYJqPnY",
+       "duration": 659
+      },
+      "transcript": "transcripts/4.3.json",
+      "sections": [
+       {
+        "id": "4.3.1",
+        "title": "El algoritmo con dos bucles anidados",
+        "segments": [
+         {
+          "id": "4.3.1-a",
+          "start": 4,
+          "end": 59,
+          "sentences": [
+           1,
+           8
+          ],
+          "title": "Un algoritmo con dos bucles anidados",
+          "explanation": "Los bucles anidados son una estructura muy habitual que al principio cuesta ver. El algoritmo declara dos enteros, i y j, con i a 4, y tiene un bucle mientras i >= 0.",
+          "isShort": true
+         },
+         {
+          "id": "4.3.1-b",
+          "start": 58,
+          "end": 135,
+          "sentences": [
+           9,
+           19
+          ],
+          "title": "El bucle externo da cinco pasadas",
+          "explanation": "La última instrucción del bucle externo es i--, así que i vale 4, 3, 2, 1 y 0 y sale con -1. Dentro hay otro bucle mientras que se ejecuta entero en cada una de esas cinco pasadas.",
+          "isShort": true
+         }
+        ]
+       },
+       {
+        "id": "4.3.2",
+        "title": "Seguimiento de las cinco pasadas del bucle interno",
+        "segments": [
+         {
+          "id": "4.3.2-a",
+          "start": 133,
+          "end": 201,
+          "sentences": [
+           20,
+           28
+          ],
+          "title": "Primer bucle interno: 4 3 2 1 0",
+          "explanation": "Al entrar se hace j = i, así que j vale 4. Mientras j >= 0 se escribe j y se hace j--: se imprimen 4, 3, 2, 1 y 0. Con j = -1 el bucle interno termina.",
+          "isShort": true
+         },
+         {
+          "id": "4.3.2-b",
+          "start": 199,
+          "end": 236,
+          "sentences": [
+           29,
+           32
+          ],
+          "title": "Salto de línea y paso a i = 3",
+          "explanation": "Tras el bucle interno se hace un salto de línea. i y j valen 4 y -1; después i-- deja i en 3 y, como 3 >= 0, se vuelve a entrar en el bucle externo.",
+          "isShort": true
+         },
+         {
+          "id": "4.3.2-c",
+          "start": 234,
+          "end": 290,
+          "sentences": [
+           33,
+           39
+          ],
+          "title": "Segundo bucle interno: 3 2 1 0",
+          "explanation": "j toma el valor de i, 3, y se escribe 3 2 1 0: la misma línea que antes pero empezando por el 3. Al terminar, j vale -1 e i pasa a 2.",
+          "isShort": true
+         },
+         {
+          "id": "4.3.2-d",
+          "start": 288,
+          "end": 347,
+          "sentences": [
+           40,
+           46
+          ],
+          "title": "Tercer bucle interno: 2 1 0",
+          "explanation": "Con i = 2, j también pasa a 2 y se escriben los valores del 2 al 0. Al final j vale -1 y se sale del bucle interno; i se decrementa a 1.",
+          "isShort": true
+         },
+         {
+          "id": "4.3.2-e",
+          "start": 346,
+          "end": 392,
+          "sentences": [
+           47,
+           51
+          ],
+          "title": "Cuarto bucle interno: 1 0",
+          "explanation": "Con i = 1 se escribe 1 0. Cada bucle interno empieza con el valor actualizado de i: 4, 3, 2, 1 y por último 0.",
+          "isShort": true
+         },
+         {
+          "id": "4.3.2-f",
+          "start": 390,
+          "end": 436,
+          "sentences": [
+           52,
+           57
+          ],
+          "title": "Quinto bucle interno y fin del programa",
+          "explanation": "Con i = 0 el bucle interno da una sola pasada y escribe 0. Después i pasa a -1, el bucle externo devuelve falso y el programa termina con i y j a -1.",
+          "isShort": true
+         },
+         {
+          "id": "4.3.2-g",
+          "start": 434,
+          "end": 486,
+          "sentences": [
+           58,
+           63
+          ],
+          "title": "La salida completa",
+          "explanation": "La salida tiene cinco líneas: 4 3 2 1 0, 3 2 1 0, 2 1 0, 1 0 y 0. Decrementar i en el bucle externo hace que cada línea empiece con una unidad menos.",
+          "isShort": true
+         }
+        ]
+       },
+       {
+        "id": "4.3.3",
+        "title": "Tres modificaciones de las condiciones",
+        "segments": [
+         {
+          "id": "4.3.3-a",
+          "start": 484,
+          "end": 536,
+          "sentences": [
+           64,
+           71
+          ],
+          "title": "Modificación 1: i > 0 en el bucle externo",
+          "explanation": "Si el bucle externo usa i > 0 en lugar de i >= 0, da una pasada menos: no se hace la pasada con i = 0 y desaparece la última línea, que solo escribía un 0.",
+          "isShort": true
+         },
+         {
+          "id": "4.3.3-b",
+          "start": 534,
+          "end": 599,
+          "sentences": [
+           72,
+           79
+          ],
+          "title": "Modificación 2: j > 0 en el bucle interno",
+          "explanation": "Con j > 0 cada bucle interno da una vuelta menos y no escribe el 0: 4 3 2 1, 3 2 1, 2 1 y 1. El bucle externo sigue dando cinco pasadas, así que el salto de línea se ejecuta cinco veces.",
+          "isShort": true
+         },
+         {
+          "id": "4.3.3-c",
+          "start": 597,
+          "end": 644,
+          "sentences": [
+           80,
+           85
+          ],
+          "title": "Modificación 3: las dos condiciones con >",
+          "explanation": "Si las dos condiciones son > 0, ninguna línea escribe el 0 y tampoco se hace la última pasada del externo ni su salto de línea. Hay cuatro saltos de línea y el interno da 4 vueltas, luego 3, luego 2…",
+          "isShort": true
+         }
+        ]
+       }
+      ],
+      "questions": []
+     }
+    ]
+   }
+  ]
+ }
+}
