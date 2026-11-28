@@ -16,3 +16,15 @@
   2. Encaje del tutor digital sin caer en el "típico chatbot": El cliente pidió ir más allá de un chat genérico y garantizar la privacidad de menores bajo el RGPD.
      Resolución:
        Acotamos el tutor únicamente al contexto del temario mediante IDs anónimos (sin datos personales) usando una IA en local para que no salgan datos de la empresa,, y priorizamos los tests dinámicos con salto directo al segundo exacto del fallo en el vídeo. 
+
+## Catálogo · 28/11/2026
+
+- Hemos generado el catálogo de los 15 vídeos del curso de Java: 4 módulos, 15 lecciones, 72 apartados y 185 shorts de 30–90 s, en `src/data/`.
+- Lo ha hecho un agente (Claude Opus en T3 Code) a partir de los subtítulos de YouTube. Andrés ha validado el esquema, el temario y los tramos.
+- Los shorts son marcas de tiempo sobre el vídeo de YouTube, así que no hay que cortar ni subir vídeo.
+- Gasto: unos 17,8 M de tokens en total (≈ 1,2 M por vídeo, casi todo lectura de caché). Se hace una vez por vídeo, no por alumno.
+
+### Problemas
+
+  1. Los subtítulos automáticos venían sin puntuación y con errores ("dama y down" por "DAM y DAW").
+     Resolución: frases cortadas por pausas y un glosario con las correcciones claras.
